@@ -235,3 +235,68 @@
 	position: relative;
 	min-height: 35px;
 }
+.sm-comments{
+
+}
+textarea.sm-comments__ta_sm{
+	border-radius: 2px;
+	font-size: 13px;
+	padding: 9px 10px;
+	height: 38px;
+	transition: .5s;
+	color: #707070;
+}
+textarea.sm-comments__ta:focus{
+	outline: none;
+	height: 78px;
+}
+.btn-save-comment{
+	background-color: #93BE3D;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.btn-cansel-comment{
+	color: #333;
+	font-size: 12px;
+	background-color: transparent;
+}
+.sm-comments__item{
+	border-bottom: 1px solid #d5d5d5;
+	margin-bottom: 5px;
+}
+.sm-comments__com{
+	margin-bottom: 10px;
+	display: flex;
+}
+.sm-comments__l{
+	width: 40px;
+	flex: 0 0 auto;
+}
+.sm-comments__avatar{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.sm-comments__r{
+
+}
+.sm-comments__ttl{
+	font-size: 12px;
+	color: #898989;
+}
+span.sm-comments__name{
+	color: #333333;
+	font-size: 13px;
+	font-weight: bold;
+}
+.sm-comments__txt{
+	color: #333333;
+	font-size: 13px;
+}

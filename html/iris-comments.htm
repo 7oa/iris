@@ -2206,7 +2206,7 @@
                                 </i><!---->
                                     <!---->
                                     <!---->
-                                    RF1
+                                    Dermadrop.odt
                                 </h2>
                                 <button type="button" class="btn btn-link preview-toggler">
                                     <i class="fa fa-caret-right"></i>
@@ -2218,30 +2218,96 @@
                                 <div class="scrollable">
                                     <div active="folderTabs.activeTab">
                                         <ul class="nav nav-tabs" ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}" ng-transclude="">
-                                            <li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item active" index="&#39;Details&#39;" heading="Details">
+                                            <li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item" index="&#39;Details&#39;" heading="Details">
                                                 <a href="http://localhost:9001/ui/ui/dms/" ng-click="select($event)" class="nav-link" uib-tab-heading-transclude="">Details</a>
                                             </li>
-                                            <li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item" index="&#39;Comments&#39;">
-                                                <a href="http://localhost:9001/ui/ui/dms/" ng-click="select($event)" class="nav-link" uib-tab-heading-transclude=""><uib-tab-heading>
-                                                    <i class="fa fa-comments-o" uib-tooltip="Comments"></i>
-                                                </uib-tab-heading></a>
+                                            <li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item active" index="&#39;Comments&#39;">
+                                                <a href="http://localhost:9001/ui/ui/dms/" ng-click="select($event)" class="nav-link" uib-tab-heading-transclude="">
+                                                    Comments
+                                                </a>
                                             </li>
                                             <!----><li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item" index="&#39;Permissions&#39;" heading="Permissions" ng-if="::hasPermission(&#39;DMS&#39;, &#39;config&#39;, &#39;Module&#39;)">
-                                            <a href="http://localhost:9001/ui/ui/dms/" ng-click="select($event)" class="nav-link" uib-tab-heading-transclude="">Permissions</a>
+                                            <a href="http://localhost:9001/ui/ui/dms/" ng-click="select($event)" class="nav-link" uib-tab-heading-transclude="">History</a>
                                         </li><!---->
                                         </ul>
                                         <div class="tab-content">
+                                            <div class="tab-pane active">
+                                                <div class="sm-comments">
+                                                    <div class="sm-comments__add">
+                                                        <form class="iris-comment-form ng-pristine ng-valid" name="CommentForm">
+                                                            <textarea class="sm-comments__ta sm-comments__ta_sm" placeholder="Whrite a comment"></textarea>
+                                                            <button class="btn btn-save-comment">Post</button>
+                                                            <button class="btn btn-cansel-comment"><i class="fa fa-times"></i> Cancel</button>
+                                                            <!--<button ng-click="save()" ng-disabled="!comment.comment" class="btn btn-default" ng-if="!comment.id" disabled="disabled">-->
+                                                                <!--<i class="fa fa-plus"></i>-->
+                                                                <!--Add comment-->
+                                                            <!--</button>-->
+                                                        </form>
+                                                    </div>
+                                                    <!--end .sm-comments__add-->
+                                                    <div class="sm-comments__list">
+                                                        <div class="sm-comments__item">
+                                                            <div class="sm-comments__com">
+                                                                <div class="sm-comments__l">
+                                                                    <div class="sm-comments__avatar" style="background-image: url('https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png');"></div>
+                                                                </div>
+                                                                <div class="sm-comments__r">
+                                                                    <div class="sm-comments__ttl">
+                                                                        <span class="sm-comments__name">Alex Sailer</span> at 20 july, 15:28
+                                                                    </div>
+                                                                    <div class="sm-comments__txt">
+                                                                        The faded out image background makes it feel really warm and inviting.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sm-comments__repl">
+
+                                                            </div>
+
+                                                        </div>
+                                                        <!--end .sm-comments__item-->
+
+                                                        <div class="sm-comments__item">
+                                                            <div class="sm-comments__com">
+                                                                <div class="sm-comments__l">
+                                                                    <div class="sm-comments__avatar" style="background-image: url('https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png');"></div>
+                                                                </div>
+                                                                <div class="sm-comments__r">
+                                                                    <div class="sm-comments__ttl">
+                                                                        <span class="sm-comments__name">Joshua Krohn</span> at 20 july, 13:21
+                                                                    </div>
+                                                                    <div class="sm-comments__txt">
+                                                                        Good point. We'll take another look at that. A bit like that. It's crowdfunding for small loans but solely for sustainable and environmenta....
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sm-comments__repl">
+
+                                                            </div>
+
+                                                        </div>
+                                                        <!--end .sm-comments__item-->
+
+                                                    </div>
+                                                    <!--end .sm-comments__list-->
+
+                                                </div>
+                                                <!--end .sm-comments-->
+
+
+                                            </div>
                                             <!----><div class="tab-pane" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab">
 
 
-                                            <iris-comments module-name="dms" entity-name="folders" entity-id="081b2046-de0b-4205-b651-b52792b04d6f"><form class="iris-comment-form ng-pristine ng-valid" name="CommentForm">
-                                                <textarea mentio="" mentio-trigger-char="&#39;@&#39;" mentio-items="users" mentio-template-url="/people-mentions.tpl" mentio-search="searchPeople(term)" mentio-select="getPeopleTextRaw(item)" class="iris-comments-text ng-pristine ng-untouched ng-valid ng-empty" ng-model="comment.comment" autocomplete="off"></textarea>
-                                                <!----><button ng-click="save()" ng-disabled="!comment.comment" class="btn btn-default" ng-if="!comment.id" disabled="disabled">
-                                                <i class="fa fa-plus"></i>
-                                                Add comment
-                                            </button><!---->
-                                                <!---->
-                                            </form>
+                                            <iris-comments module-name="dms" entity-name="folders" entity-id="081b2046-de0b-4205-b651-b52792b04d6f">
+                                                <form class="iris-comment-form ng-pristine ng-valid" name="CommentForm">
+                                                    <textarea mentio="" mentio-trigger-char="&#39;@&#39;" mentio-items="users" mentio-template-url="/people-mentions.tpl" mentio-search="searchPeople(term)" mentio-select="getPeopleTextRaw(item)" class="iris-comments-text ng-pristine ng-untouched ng-valid ng-empty" ng-model="comment.comment" autocomplete="off"></textarea>
+                                                    <!----><button ng-click="save()" ng-disabled="!comment.comment" class="btn btn-default" ng-if="!comment.id" disabled="disabled">
+                                                    <i class="fa fa-plus"></i>
+                                                    Add comment
+                                                </button><!---->
+                                                    <!---->
+                                                </form>
 
                                                 <ul class="task-all-history">
                                                     <!---->
@@ -2255,7 +2321,8 @@
                                                         </li>
                                                     </ul>
                                                 </script></iris-comments>
-                                        </div><!----><div class="tab-pane active" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab">
+                                        </div><!---->
+                                            <div class="tab-pane" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab">
 
                                             <!----><div class="btn-toolbar" role="toolbar" ng-if="::hasPermission(&#39;DMS&#39;, &#39;config&#39;, &#39;Module&#39;)">
                                             <!----><button class="btn btn-link" ng-if="!folder.isLocked" uib-tooltip="Edit" ng-click="openEditFolder(folder)"><i class="fa fa-pencil"></i></button><!---->
