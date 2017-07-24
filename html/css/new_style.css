@@ -22,8 +22,11 @@
 	font-size: 17px;
 	max-width: 100px;
 	margin-left: 12px;
-	margin-top: 12px;
+	margin-top: 0;
 	line-height: 20px;
+	height: 68px;
+	display: flex;
+	align-items: center;
 }
 .project-search-wrapper{
 	width: 300px;
