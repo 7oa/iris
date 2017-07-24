@@ -1,0 +1,169 @@
+.iris-protocol-structure-editor-body .first-column {
+  position: relative;
+}
+
+.iris-protocol-structure-inline-button {
+  display: none;
+  margin-left: 5px;
+}
+
+.iris-protocol-structure-editor-body td:hover .iris-protocol-structure-inline-button {
+  display: inline;
+}
+
+.iris-protocol-structure-inline-checkbox {
+  padding: 5px 0 0 5px;
+  margin-bottom: -5px !important;
+}
+
+.iris-protocol-structure-editor-body thead{
+  border-bottom: 1px solid #DDD;
+}
+
+.iris-protocol-structure-editor-body table tbody td {
+  /*height: 47px;*/
+  border: none;
+}
+
+.iris-protocol-structure-editor-body .first-column input:not([type="checkbox"]) {
+  width: 200px;
+  display: inline;
+  color: #000;
+}
+
+.iris-protocol-structure-editor-body .checkbox,
+.iris-protocol-structure .checkbox {
+  margin: 3px 0 0 0;
+}
+
+.iris-protocol-structure-editor-body div[iris-field][inline],
+.iris-protocol-structure div[iris-field][inline] {
+  margin-left: 0;
+}
+
+.iris-protocol-structure .table {
+  margin-bottom: 5px;
+}
+
+.iris-protocol-structure .inline-group-wrapper {
+  margin-bottom: 15px;
+}
+
+.iris-protocol-structure  .data-placeholder {
+  text-align: center;
+  font-style: italic;
+}
+
+.iris-protocol-structure-editor-body select {
+  color: #000;
+}
+
+.iris-protocol-structure-editor-body .has-error {
+  border-color: #843534;
+}
+
+.iris-protocol-structure-editor-body .btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.iris-protocol-structure-editor-body .tree-button {
+  border: none;
+}
+
+.iris-protocol-structure-editor-body tr.not-valid {
+  background-color: #f2dede !important;
+}
+
+.iris-protocol-structure-editor-lv1 {
+  background-color: inherit;
+}
+
+.iris-protocol-structure-editor-lv2 {
+  background-color: #F9F9F9;
+}
+
+.iris-protocol-structure-editor-lv3 {
+  background-color: #F0F0F0;
+}
+
+
+.iris-protocol-structure-editor-lv2 .first-column {
+  padding-left: 50px;
+}
+
+.iris-protocol-structure-editor-lv3 .first-column {
+  padding-left: 100px;
+}
+
+.iris-protocol-structure-editor-name-col {
+  width: 420px;
+}
+
+.iris-protocol-structure-editor-type-col {
+  width: 100px;
+}
+
+.iris-protocol-structure-editor-default-col {
+  width: 250px;
+}
+
+.iris-protocol-structure-editor-alias-col{
+  width: 250px;
+}
+
+div[iris-protocol-structure-field][inline] .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.selectize-control.iris-selectize.dpm-plans-selectize .selectize-input {
+  cursor: default;
+}
+
+.selectize-control.iris-selectize.dpm-plans-selectize .selectize-input .item {
+  position: relative;
+  cursor: default;
+}
+
+.btn.dpm-plans-select-btn {
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.btn-link.dpm-plans-inner-btn {
+  display: block;
+  position: absolute;
+  top: 1px;
+  font-size: 12px;
+}
+
+.iris-protocol-structure-split-control {
+  margin-bottom: 0;
+}
+
+.iris-protocol-structure-split-control .dpm-half-left,
+.iris-protocol-structure-split-control .dpm-half-right {
+  width: 20%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.iris-protocol-structure-split-control .dpm-half-left .form-group {
+  margin-right: -25px;
+}
+
+.iris-protocol-structure-split-control .dpm-half-right .form-group {
+  margin-left: -25px;
+}
+
+.iris-form-property-inline, .iris-form-property-inline .form-group {
+  margin: 0 !important;
+}

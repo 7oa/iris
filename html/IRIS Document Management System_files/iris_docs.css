@@ -1,0 +1,168 @@
+.ui-grid-cell-contents.actions .btn {
+    padding: 6px;
+}
+
+.preview-document .preview-picture:hover .view-pdf,
+.preview-document .preview-picture:hover .without-preview {
+    color: #93be3d;
+}
+.preview-document .preview-picture:hover {
+    text-decoration: none;
+}
+.preview-document .preview-picture .view-pdf,
+.preview-document .preview-picture .without-preview {
+    margin-bottom: 0;
+}
+
+td .form-group {
+    margin-bottom: 0;
+}
+
+.left-label-form label.control-label {
+    text-align: left;
+}
+
+.folders-filter .col-md-12 {
+    padding: 0 5px;
+}
+
+.text-muted {
+    color: #CCC;
+}
+
+.advanced-search-selectize {
+    display: inline-block;
+    width: 200px;
+}
+
+.history td {
+    word-break: break-word;
+}
+
+.advanced-search-selectize div[type="selectize"][inline] {
+    display: inline-flex;
+    width: 100%;
+}
+
+.dms-bundle {
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+}
+
+.dms-bundle-icon {
+    font-size: 24px;
+}
+
+.folder-path-item,
+.folder-path-item > a {
+    display: inline-block;
+}
+
+.dms-breadcrumbs-link {
+    color: #707070;
+    vertical-align: middle;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.dms-breadcrumbs-link.active:hover {
+    color: #707070;
+    cursor: pointer;
+}
+.dms-breadcrumbs-link.active {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dms-breadcrumbs-link.short {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100px;
+}
+
+.folders-tree .tree-node .fa:not(.text-muted):not(.text-danger):not(.text-success) {
+    color: #707078;
+}
+.folders-tree .fa {
+    font-size: 14px;
+}
+
+.attachments {
+    display: flex;
+}
+
+.attachment-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+.attachment-buttons {
+    width: 95px;
+    flex-shrink: 0;
+}
+
+.ui-grid-menu-button {
+    position: absolute;
+    right: 65px;
+    top: -55px;
+    padding: 5px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.ui-grid-menu-button:hover {
+    color: #424242;
+    background-color: #cfcfcf;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+.ui-grid-menu-button div, .ui-grid-icon-menu:before {
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+}
+.scrollFiller {
+    border: none !important;
+}
+
+.hint {
+    display: inline-block;
+}
+
+.hint em {
+    background: yellow !important;
+}
+
+.expandableRow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 12px;
+}
+
+.tree-node .badge {
+    font-size: 10px;
+    padding: 1px 3px;
+}
+
+.tree-node.tree-node-content > button.filter {
+    left: 29px;
+}
+
+.tree-node.tree-node-content > a.selected {
+    background-color: #93be3d;
+    color: #000;
+}
+
+.tree-node:focus > a {
+    background-color: #ECECEC;
+}
+
+.tree-node.tree-node-content:focus {
+    outline: none;
+}

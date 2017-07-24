@@ -1,0 +1,60 @@
+.form-group .mce-tinymce.mce-panel,
+.form-group .mce-tinymce .mce-panel {
+    background-color: transparent;
+}
+.form-group .CodeMirror,
+.form-group .mce-tinymce.mce-panel {
+    border: 1px solid #ccc;
+}
+.form-group .mce-tinymce .mce-panel {
+    border-color: transparent;
+}
+.form-group .mce-tinymce .mce-btn {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+.form-group .mce-tinymce .mce-btn.mce-active button .mce-ico {
+    color: #93be3d !important;
+}
+.form-group .mce-tinymce .mce-btn-group {
+    border-left-color: transparent !important;
+}
+.form-group .mce-tinymce .mce-edit-area {
+    border-width: 1px !important;
+}
+.form-group .mce-tinymce .mce-toolbar,
+.form-group .mce-tinymce .mce-toolbar-grp,
+.form-group .mce-tinymce .mce-path,
+.form-group .mce-tinymce .mce-wordcount {
+    display: none;
+}
+.form-group .CodeMirror.CodeMirror-focused,
+.form-group.has-focus .mce-tinymce.mce-panel {
+    border-color: #424242;
+}
+.form-group.has-focus .mce-tinymce .mce-toolbar,
+.form-group.has-focus .mce-tinymce .mce-toolbar-grp,
+.form-group.has-focus .mce-tinymce .mce-path,
+.form-group.has-focus .mce-tinymce .mce-wordcount {
+    display: block;
+}
+.form-group.has-focus .mce-tinymce .mce-toolbar-grp {
+    border-bottom: 1px #424242 solid;
+}
+.form-group.has-focus .mce-tinymce .mce-toolbar-grp .mce-toolbar {
+    border-bottom: none;
+    margin-left: 6px;
+}
+.mce-content-body p:first-child {
+    margin-top: 0px;
+}
+
+.form-group .CodeMirror.cm-s-mdn-like .CodeMirror-gutters {
+    border-left-color: #F5F5F5;
+}
+
+.form-group .CodeMirror {
+    height: auto;
+    max-height: 600px;
+    border-radius: 3px;
+}

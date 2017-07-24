@@ -1,0 +1,11 @@
+.iris-my-tasks-container {
+    position: relative;
+    height: 100%;
+}
+
+.iris-my-tasks {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    height: auto;
+}

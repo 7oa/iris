@@ -1,0 +1,99 @@
+.navigation-view .align-left {
+    text-align: left;
+}
+
+.navigation-view .align-right {
+    text-align: right;
+}
+
+.navigation-view .row {
+    margin-right: 0;
+}
+
+.navigation-view .list-group-item-text {
+    font-weight: bold;
+    font-size: 2.0em;
+}
+.navigation-view  .list-group-item-text.col-md-6 {
+    padding: 0;
+}
+
+/***************** NAVI VIEW PAPERPLANE ***************/
+text.shadow {
+    stroke: #fff;
+    stroke-width: 2.5px;
+    opacity: 0.9;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    stroke-width: 1;
+    shape-rendering: geometricPrecision ;
+}
+
+.crosslines line{
+    fill: none;
+    stroke: black;
+    stroke-width: 1;
+    shape-rendering: geometricPrecision;
+}
+
+.roll path {
+    shape-rendering: geometricPrecision;
+}
+
+.grid .tick {
+    stroke: lightgrey;
+    stroke-opacity: 0.7;
+    shape-rendering: geometricPrecision;
+}
+
+/************ SELECTIZE *************/
+.form-inline > div[type="selectize"] > .form-group {
+    min-width: 200px;
+}
+
+.chainage-container {
+    padding-left: 10px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.border-right {
+    border-right: 1px solid #ddd;
+}
+.border-top {
+    border-top: 1px solid #ddd;
+}
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+.collapsed-options {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.chainage-container,
+.advance-container,
+.navi-view-info {
+    display: none;
+}
+.navi-view-extended .chainage-container,
+.navi-view-extended .advance-container,
+.navi-view-extended .navi-view-info {
+    display: block;
+}
+.navi-view-extended .collapsed-options {
+    display: none;
+}
+
+.vt-tendency-content,
+.paper-plane {
+    min-width: 200px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.paper-plane g.sm-ticks g.axis text {
+    font-size: 8px;
+}

@@ -1,0 +1,16 @@
+.iris-favorite-files-container {
+    position: relative;
+    height: 100%;
+}
+
+.iris-favorite-files {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    height: auto;
+}
+
+.iris-favorite-files .iris-dropdown-menu .items-container {
+    max-height: none;
+}

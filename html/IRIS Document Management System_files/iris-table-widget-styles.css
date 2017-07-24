@@ -1,0 +1,107 @@
+.slider-control.table-widget-slider {
+    height: auto;
+    padding: 0;
+    margin-left: 54px;
+}
+
+.table-widget-toolbar {
+    padding-bottom: 10px;
+    margin-left: 54px;
+}
+
+.table-widget-table {
+    width: 100%;
+}
+
+.table-widget-table .hidden-actions {
+    top: 5px;
+}
+
+.address-cell {
+    text-align: center;
+    height: 100%;
+}
+
+.table-widget-table thead .address-cell.hidden-address-cell {
+    border: none;
+    padding: 0;
+    height: 1px;
+    background-color: transparent;
+}
+
+.table-widget-table thead .address-cell {
+    height: 30px;
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: #eee;
+}
+
+.table-widget-table tbody .address-cell {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: #eee;
+}
+
+.table-widget-table .report-column.active:before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #d43f3a;
+    border-radius: 5px;
+    content: "";
+    z-index: 100;
+}
+
+.table-widget-table .column-type-label {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 13px;
+    color: #d43f3a;
+    font-size: 8px;
+    padding: 0 5px;
+    border: 1px solid #d43f3a;
+    border-radius: 5px;
+}
+
+.table-widget-table .column-content {
+    text-decoration: inherit;
+}
+
+.table-widget-table-edit .form-group {
+    margin-bottom: 0;
+}
+
+.table-widget-table-edit .report-column:hover
+{
+    background-color: #dff0d8;
+    cursor: pointer;
+}
+
+.form-group-right {
+    text-align: right;
+}
+
+.control-with-button .form-group {
+    margin-right: 25px;
+}
+
+.control-with-button .btn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+.table-widget-column-content {
+    width: 100%;
+    float: left;
+    word-wrap: break-word;
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
+    padding: 5px;
+}

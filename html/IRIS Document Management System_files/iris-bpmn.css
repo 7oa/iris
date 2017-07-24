@@ -1,0 +1,118 @@
+[class^="iris-bpmn-icon-"]:before, [class*=" iris-bpmn-icon-"]:before {
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    opacity: .8;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    font-size: 120%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+}
+
+.iris-bpmn-icon-plus:before { content: '+'; }
+.iris-bpmn-icon-minus:before { content: '\2212'; }
+
+.iris-bpmn .djs-container .djs-palette.open {
+    width: auto;
+    max-height: 50px;
+    height: 50px;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.iris-bpmn .djs-container .djs-palette.open .djs-palette-entries {
+    float: right;
+}
+
+.iris-bpmn .djs-container .djs-palette.open .djs-palette-toggle {
+    height: 50px;
+    width: 20px;
+    position: absolute;
+    left: 0;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.iris-bpmn .djs-palette .entry.iris-bpmn-tool-separator {
+    width: 1px;
+    border-left: #777 solid 1px;
+    margin: 8px 4px 4px 4px;
+    height: 34px;
+}
+
+.iris-bpmn .djs-palette .djs-palette-entries .group {
+    display: inline-block;
+}
+
+.djs-palette-entries .separator {
+    display: none;
+}
+
+
+
+.iris-bpmn-fs-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .5;
+    z-index: 10000;
+}
+
+.iris-bpmn-fs-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10001;
+}
+
+.iris-bpmn-fs-content {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    padding: 68px 0 0 0;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.iris-bpmn-fs-header {
+    height: 68px;
+    line-height: 68px;
+    margin-top: -68px;
+    border-bottom: 1px #DEDFE1 solid;
+    background-color: #39434D;
+}
+
+.iris-bpmn-fs-title {
+    color: #fff;
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+.iris-bpmn-fs-close-button {
+    color: #fff;
+    font-size: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.iris-bpmn-fs-body {
+    position: relative;
+    padding: 15px;
+    height: 100%;
+    line-height: 100%;
+    max-height: 100%;
+}

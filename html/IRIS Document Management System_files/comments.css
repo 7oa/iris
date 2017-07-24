@@ -1,0 +1,89 @@
+.iris-comments-line {
+    word-break: break-all;
+    word-wrap: break-word;
+    vertical-align: top;
+}
+
+.iris-comments-line p {
+    margin: 5px 0 0 0;
+}
+
+.iris-comments-date {
+    font-size: .8em;
+    font-style: italic;
+}
+
+.iris-comment-form {
+    margin-bottom: 10px;
+}
+
+.iris-comment-form button {
+    margin: 0 0 5px 0 !important;
+}
+
+.iris-comment-form textarea.iris-comments-text {
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.iris-comments-chng {
+    font-size: .8em;
+    margin-left: 3px;
+}
+
+ul.task-all-history {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+ul.task-all-history li {
+    position: relative;
+    padding-top: 5px;
+    display: flex;
+}
+
+ul.task-all-history .block {
+    margin-right: 20px;
+    float: left;
+    color: #aeb1b4;
+    width: 85px;
+    flex: 0 0 90px;
+}
+
+ul.task-all-history .block span.date {
+    color: #7d8287;
+}
+
+ul.task-all-history .block:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    border-right: 1px solid rgba(174, 177, 180, 0.3);
+    top: 0;
+    left: 5px;
+}
+
+ul.task-all-history li:first-child .block:after {
+    top: 15px;
+}
+
+ul.task-all-history li:last-child .block:after {
+    height: 10px;
+}
+
+ul.task-all-history .task-history-onepoint {
+    float: left;
+    margin: -5px 0 15px;
+    width: 100%;
+    position: relative;
+}
+
+.task-history-date {
+    margin-left: 10px;
+}

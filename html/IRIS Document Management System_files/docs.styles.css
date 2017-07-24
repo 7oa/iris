@@ -1,0 +1,3 @@
+.files-list .ui-grid-cell.ui-grid-disable-selection.ui-grid-row-header-cell {
+    pointer-events: auto;
+}

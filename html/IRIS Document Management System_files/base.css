@@ -1,0 +1,178 @@
+html, body {
+	min-width: 960px;
+	height: 100%;
+}
+
+.app-container, .app-body-container, .app-content-container, .app-sidebar, .app-content {
+	display: flex;
+}
+
+.app-container {
+	/* TODO some problems with vertical scroll in sidebar */
+	/*min-height: 100vh;*/
+	min-height: 100%;
+	height: 100%;
+}
+
+.app-body-container, .app-body, .app-content, .app-content-container {
+	flex: 1
+}
+
+.app-container, .app-body-container {
+	flex-direction: column;
+}
+
+.app-header {
+	height: 68px;
+	border-bottom: 1px #DEDFE1 solid;
+	background-color: #39434D;
+}
+
+.app-body, .app-toolbar, .app-header {
+	padding: 0 10px;
+}
+
+.app-toolbar {
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 4px;
+	padding-top: 4px;
+}
+
+.app-toolbar.app-toolbar-bordered {
+	border: 1px solid #CCCCCC;
+	padding: 9px 10px;
+	margin-bottom: 10px;
+}
+
+.app-sidebar.left {
+	border-right: 1px solid #CCCCCC;
+}
+
+.app-sidebar.right {
+	border-top-left-radius: 3px;
+	border-left: 1px solid #EDEDED;
+	background-color: #F5F5F5;
+	box-shadow: -1px 0 1px rgba(237, 237, 237, .3);
+}
+
+.app-sidebar.right:not(.stick) {
+	margin-right: -10px;
+	z-index: 1;
+}
+
+.app-body {
+	padding-top: 10px;
+	position: relative;
+}
+
+.app-toolbar + .app-body {
+	padding-top: 10px;
+}
+
+.app-sidebar.stick {
+	position: absolute;
+}
+
+.stick.right {
+	right: 0px;
+}
+
+.app-content-container {
+	position: relative;
+}
+
+.app-content-container .stick.right {
+	right: -10px;
+	bottom: 0;
+	top: 0px;
+	z-index: 999;
+}
+
+.scrollable {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}
+
+.app-sidebar.left .scrollable { overflow-x: visible; }
+
+.b-window {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	position: relative;
+}
+
+.b-window .b-header {
+	position: relative;
+	min-height: 55px;
+}
+
+.b-window .b-content {
+	flex: 1;
+	position: relative;
+}
+
+/*
+.app-sidebar.right .b-window .b-header { min-height: 30px; }*/
+
+.panel-default,
+.panel-default > .panel-heading {
+	border-color: #CCC;
+}
+
+.panel-default.active,
+.panel-default.active > .panel-heading {
+	border-color: #93be3d;
+}
+.panel-default.active {
+	border-width: 2px;
+}
+
+#user-notification-popover li:first-child {
+	border-top: none;
+}
+
+#user-notification-popover li .message {
+	line-height: 15px;
+}
+
+#user-notification-popover .list-group {
+	margin-bottom: 0;
+}
+
+#user-notification-popover .list-group-item {
+	padding: 15px 0 5px;
+}
+
+#user-notification-popover li {
+	line-height: 30px;
+	border: none;
+	border-top: solid 1px #ddd;
+}
+
+#user-notification-popover li .btn {
+	margin-left: 10px;
+}
+
+#user-notification-popover-link {
+	visibility:hidden;
+	position:absolute;
+	right:270px;
+	top:25px;
+}
+
+.popover {
+	max-width: 550px;
+}
+
+.modal-footer {
+	padding: 10px;
+}
+.close {
+	opacity: 1;
+	color: #585858;
+	line-height: 20px;
+}

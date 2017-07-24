@@ -1,0 +1,22 @@
+.alarm-limit-table {
+    width:80%;
+    margin:10px 0;
+}
+
+.alarm-limit-table th, .alarm-limit-table td {
+    padding: 5px;
+}
+
+.alarm-limit-table .limit-value-field {
+    width: 100%;
+}
+
+.alarm-limit-table .action-field {
+    text-align: right;
+    padding-right: 0;
+}
+
+.recipients-channel-checkbox .checkbox input {
+    margin-top: 3px !important;
+    margin-bottom: 4px !important;
+}

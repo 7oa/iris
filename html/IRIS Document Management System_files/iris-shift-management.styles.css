@@ -1,0 +1,10 @@
+.iris-shift-management-header {
+    text-align: center;
+}
+
+.shift-management-widget-codes .tree-root {
+    border: solid #ddd 1px;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+}

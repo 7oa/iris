@@ -1,0 +1,169 @@
+.iris-task-card {
+    height: 70px;
+    background-color: #fff;
+    color: #757575;
+    border: 1px solid #bfbfbf;
+    border-left-width: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    min-width: 250px;
+}
+
+.iris-task-card-sm {
+    background-color: #fff;
+    color: #757575;
+    border: 1px solid #bfbfbf;
+    border-left-width: 5px;
+    margin-bottom: 2px;
+    position: relative;
+}
+
+.iris-task-card-lg {
+    background-color: #fff;
+    color: #757575;
+    border: 1px solid #bfbfbf;
+    border-left-width: 10px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.iris-task-card.active,
+.iris-task-card-sm.active,
+.iris-task-card-lg.active{
+    border-color: #757575;
+    color: #424242;
+    background: #ffffff;
+}
+
+.iris-task-card.current,
+.iris-task-card-sm.current,
+.iris-task-card-lg.current{
+    border-color: #93be3d !important;
+}
+
+.iris-task-card .highlighter {
+    position: absolute;
+    top: 3px;
+    left: -7px;
+    bottom: 3px;
+    width: 4px;
+    background-color: #fff;
+}
+
+.iris-task-card-sm .highlighter {
+    position: absolute;
+    top: 1px;
+    left: -4px;
+    bottom: 1px;
+    width: 3px;
+    background-color: #fff;
+}
+
+.iris-task-card-lg .highlighter {
+    position: absolute;
+    top: 3px;
+    left: -7px;
+    bottom: 3px;
+    width: 4px;
+    background-color: #fff;
+}
+
+.task-resolved {
+    text-decoration: line-through;
+}
+
+/* card */
+.iris-task-card .task-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0 0 0 5px;
+    display: inline-block;
+    max-width: 85%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.iris-task-card .task-title-row {
+    padding: 5px;
+    width: 100%;
+}
+
+.iris-task-card .task-title-row > span:nth-child(2) > a {
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.iris-task-card .task-details {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    width: 100%;
+}
+
+.iris-task-card .task-details .deadline {
+    padding-top: 5px;
+}
+
+.iris-task-card .task-details .fa-stack {
+    font-size: 14px;
+}
+
+/* card sm */
+.iris-task-card-sm .task-info {
+    overflow: hidden;
+    height: 3.1em;
+    line-height: 3em;
+}
+
+.iris-task-card-sm .task-info .task-assignee {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.iris-task-card-sm .task-info .task-title {
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 3.2em;
+}
+
+.iris-task-card-sm .task-info .task-priority {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.iris-task-card-sm .task-info .ending {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 2em;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1));
+}
+
+/* card lg */
+.iris-task-card-lg .task-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.iris-task-card-lg .task-info {
+    margin: 2px 5px 2px 5px;
+}
+
+.iris-task-card-lg .card-bottom {
+    margin: 0 3px 4px 5px;
+}
+
+.iris-task-card-lg .card-bottom > div {
+    margin-right: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+}

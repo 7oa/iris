@@ -1,0 +1,7 @@
+.iris-fabric-tooltip {
+    position: absolute;
+    background-color: #424242;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}

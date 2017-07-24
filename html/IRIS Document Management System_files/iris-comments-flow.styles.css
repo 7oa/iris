@@ -1,0 +1,55 @@
+.comments-flow-container {
+    position: relative;
+    height: 100%;
+}
+
+.widget-bottom-button {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    height: 30px;
+    border: 1px solid rgba(174, 177, 180, 0.3);
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+ul.comments-flow {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    height: auto;
+}
+
+ul.comments-flow li {
+    position: relative;
+    margin: 10px 0 0 25px;
+    border-left: 1px solid rgba(174, 177, 180, 0.3);
+}
+
+ul.comments-flow .comment-header {
+    position: relative;
+    top: -5px;
+    left: -18px;
+}
+
+ul.comments-flow .comment-body {
+    padding: 0 0 10px 25px;
+    margin-top: -5px;
+}
+
+ul.comments-flow .comment-date {
+    /*font-size: .8em;*/
+    /*font-style: italic;*/
+    font-weight: bold;
+    color: #707070;
+    line-height: 36px;
+    float: right;
+    cursor: default;
+}
+
+ul.comments-flow .iris-user-name {
+    font-size: 1.2em;
+}

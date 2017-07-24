@@ -1,0 +1,9 @@
+.control-with-button .form-group {
+    margin-right: 25px;
+}
+
+.control-with-button .btn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}

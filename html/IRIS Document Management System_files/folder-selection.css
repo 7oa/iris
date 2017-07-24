@@ -1,0 +1,64 @@
+/* --- Tree --- */
+.folder-tree-root{
+    padding: 0;
+    margin: 0;
+}
+
+.folder-tree-root ul:first-of-type{
+    list-style-type: none;
+    padding: 0 0 0 0;
+}
+
+.folder-tree-root ul:not(:first-child){
+    list-style-type: none;
+    padding: 0 0 0 20px;
+}
+
+.folder-tree-node {
+    font-size: 14px;
+}
+
+.folder-tree-node-content.folder-tree-node-selected {
+    border:1px solid #93be3d;
+}
+
+.folder-tree-node-content {
+    margin: 0;
+    padding: 5px 10px 5px 0;
+    border: solid 1px transparent;
+}
+
+.folder-tree-node-content:hover {
+    border: solid 1px #93be3d;
+}
+
+/*---TILES---*/
+.folder-tile{
+    float: left;
+    width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+    border: solid 1px transparent;
+    margin: 20px;
+    text-align: center;
+}
+
+.folder-tile:hover{
+    border: solid 1px #93be3d;
+    cursor: pointer;
+}
+
+.folder-tile i{
+    font-size: 48px;
+}
+
+.folder-tile span{
+    display: block;
+    font-size: 14px;
+    padding: 2px;
+}
+
+.folder-tile-selected{
+    border:1px solid #93be3d;
+    cursor: pointer;
+}

@@ -1,0 +1,129 @@
+.iris-form-structure-editor-body .alert {
+    margin-bottom: 5px;
+}
+
+.iris-form-structure-editor-body .panel {
+    margin-bottom: 5px;
+}
+
+.iris-form-structure-editor-body .panel-body {
+    padding: 10px 10px 5px 10px;
+}
+
+.iris-form-structure-editor-body .panel-heading {
+    padding-bottom: 0;
+}
+
+.iris-form-structure-editor-title {
+    color: #424242;
+    display: inline-block;
+    /*font-size: 18px;*/
+    font-weight: bold;
+}
+
+.iris-form-structure-editor-info {
+    display: inline-block;
+    margin-left: 10px;
+    position: absolute;
+}
+
+.iris-form-structure-editor-property {
+    color: #424242;
+    background-color: #ddd;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 10px 15px 0 15px;
+    margin-bottom: 5px;
+}
+
+.iris-form-split-control {
+    margin-bottom: 0;
+}
+
+.iris-form-split-control .iris-form-half-left,
+.iris-form-split-control .iris-form-half-right {
+    width: 20%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.iris-form-split-control .iris-form-half-left .form-group {
+    margin-right: -25px;
+}
+
+.iris-form-split-control .iris-form-half-right .form-group {
+    margin-left: -25px;
+}
+
+.iris-form .checkbox {
+    margin: 3px 0 0 0;
+}
+
+.iris-form .table {
+    margin-bottom: 5px;
+}
+
+.iris-form .inline-group-wrapper {
+    margin-bottom: 15px;
+}
+
+.iris-form .data-placeholder {
+    text-align: center;
+    font-style: italic;
+}
+
+.iris-form-split-control .iris-form-split-control-left,
+.iris-form-split-control .iris-form-split-control-right {
+    width: 29%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.iris-form-split-control .iris-form-split-control-left .form-group {
+    margin-right: -25px;
+}
+
+.iris-form-split-control .iris-form-split-control-right .form-group {
+    margin-left: -25px;
+}
+
+.iris-form .panel-heading[data-toggle="collapse"] {
+    cursor: pointer;
+}
+
+.iris-form-collapse-button {
+    padding: 2px 10px 2px 2px;
+    cursor: pointer;
+}
+
+.iris-form-svg-container {
+    text-align: center;
+    position: relative;
+}
+
+.iris-form-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.iris-form-svg-point {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    border: solid 2px #424242;
+    cursor: pointer;
+}

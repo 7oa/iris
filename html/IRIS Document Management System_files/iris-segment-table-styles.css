@@ -1,0 +1,21 @@
+.segment-table th {
+    text-align: center;
+}
+
+.segment-table thead tr:first-child th {
+    font-size: 1.2em;
+}
+
+.control-with-button .form-group {
+    margin-right: 25px;
+}
+
+.control-with-button .btn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+.drag-target {
+    cursor: pointer;
+}

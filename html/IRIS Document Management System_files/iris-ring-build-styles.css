@@ -1,0 +1,46 @@
+.tabpane-inner-tabset {
+    margin: -15px;
+}
+
+.app-sidebar .form-horizontal hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 1px solid #DDD;
+}
+
+.ring-build-table-container {
+    width: 35%;
+    max-width: 350px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.ring-build-table-container table {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.ring-build-table-container th {
+    text-align: center;
+    font-size: .8em;
+}
+
+.ring-build-table-container thead tr:first-child th {
+    font-size: 1.2em;
+}
+
+.ring-build-side-row {
+    text-align: center;
+}
+
+.ring-build-middle-row {
+    text-align: center;
+}
+
+.ring-build-container {
+    width: 25%;
+    max-width: 250px;
+    display: inline-block;
+    vertical-align: middle;
+}
