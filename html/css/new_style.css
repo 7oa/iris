@@ -435,6 +435,7 @@ a.sm-comments__name{
 	border-bottom: none;
 }
 .sm-history__avatar {
+	display: block;
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
