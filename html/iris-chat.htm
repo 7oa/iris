@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://localhost:9001/ui/ui/dms/folders/081b2046-de0b-4205-b651-b52792b04d6f/files -->
+<html ng-app="irisApp" class="" lang="en">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IRIS Document Management System</title>
+
+    <link href="./IRIS Document Management System_files/css" rel="stylesheet">
+
+    <link href="./IRIS Document Management System_files/bpmn-embedded.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/bpmn.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/diagram-js.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/angular-csp.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/fullcalendar.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/bootstrap.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/angular-ui-grid.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/selectize.bootstrap3.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/font-awesome.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/glyphicons-to-fa.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/alertify.core.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/alertify.bootstrap.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/codemirror.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/dialog.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/fullscreen.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/show-hint.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/lint.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/mdn-like.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/ui-cropper.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/scroll.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/loader.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/editor.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/grid.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/base.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/flags.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/BootstrapXL.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-comments-flow.styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-damage-repair-styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-favorite-files.styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-my-processes.styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-my-tasks.styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-my-tasks-calendar.styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/navi-config.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-newsstream.styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-ring-build-styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-segment-table-styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-shift-management.styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-table-widget-styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-tunnelmeter-performance-styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/alarming.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/comments.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/dataseries-select-list.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/docs.styles.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/folder-selection.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-form.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-protocol-structure.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris-bpmn.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/irisFabricDirective.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/irisTaskCard.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/iris_docs.css" rel="stylesheet">
+    <link href="./IRIS Document Management System_files/process-management.css" rel="stylesheet">
+    <link href="css/new_style.css" rel="stylesheet">
+
+
+    <!--<base href="/ui/ui/dms/">--><base href=".">
+    <style type="text/css">[responsive-image] > img, [data-responsive-image] {overflow: hidden; padding: 0; } [responsive-image] > img, [data-responsive-image] > img { width: 100%;}</style></head>
+<body class="">
+
+<div class="app-container" id="content" ng-click="hideGlobalMenu($event)">
+
+
+    <div class="app-header new">
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <div class="global-menu-container dropdown" uib-dropdown="" dropdown-append-to-body="" auto-close="disabled" is-open="isGlobalMenuOpen" on-toggle="toggleGlobalMenu(open)">
+                        <button type="button" class="btn btn-link global-menu-toggler dropdown-toggle" uib-dropdown-toggle="" tooltip-placement="right" uib-tooltip="Show system menu" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-reorder"></i>
+                        </button>
+
+
+                        <div uib-dropdown-menu="" class="global-menu dropdown-menu" role="menu" style="top: 65px; display: none; left: 10px; right: auto;">
+                            <uib-accordion close-others="false"><div role="tablist" class="panel-group" ng-transclude="">
+                                <!----><div uib-accordion-group="" class="panel-default panel panel-open" is-open="mainItem.open" ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive" ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}"><div role="tab" id="accordiongroup-21-1294-tab" aria-selected="true" class="panel-heading" ng-keypress="toggleOpen($event)">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" href="http://localhost:9001/ui/ui/dms/" aria-expanded="true" aria-controls="accordiongroup-21-1294-panel" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading" ng-disabled="isDisabled" uib-tabindex-toggle=""><span uib-accordion-header="" ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw fa-angle-down" ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                        <!----><span ng-if="!mainItem.url">Project</span><!---->
+                                        <!---->
+                </span></a>
+                                </h4>
+                            </div>
+                                <div id="accordiongroup-21-1294-panel" aria-labelledby="accordiongroup-21-1294-tab" aria-hidden="false" role="tabpanel" class="panel-collapse collapse in" uib-collapse="!isOpen" aria-expanded="true">
+                                    <div class="panel-body" ng-transclude="">
+                                        <div uib-accordion-heading="" ng-class="{ &#39;active&#39;: mainItem.isActive }" class="active"></div>
+
+                                        <ul class="list-unstyled">
+                                            <!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/taskcalendar" href="http://localhost:9001/ui/ui/taskcalendar"> Calendar</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/dashboards" href="http://localhost:9001/ui/ui/dashboards"> Dashboards</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }" class="active">
+                                            <a ng-href="/ui/ui/dms" href="http://localhost:9001/ui/ui/dms"> Document Management System</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/ims" href="http://localhost:9001/ui/ui/ims"> Integrated Management System</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/maps" href="http://localhost:9001/ui/ui/maps"> IRIS Maps</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/kanban" href="http://localhost:9001/ui/ui/kanban"> Kanban board</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/process-management" href="http://localhost:9001/ui/ui/process-management"> Process Management</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/support" href="http://localhost:9001/ui/ui/support"> Support</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/taskmanagement" href="http://localhost:9001/ui/ui/taskmanagement"> Task management</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/workgroups" href="http://localhost:9001/ui/ui/workgroups"> Workgroups</a>
+                                        </li><!----><!---->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!----><div uib-accordion-group="" class="panel-default panel" is-open="mainItem.open" ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive" ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}"><div role="tab" id="accordiongroup-23-7986-tab" aria-selected="false" class="panel-heading" ng-keypress="toggleOpen($event)">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" href="http://localhost:9001/ui/ui/dms/" aria-expanded="false" aria-controls="accordiongroup-23-7986-panel" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading" ng-disabled="isDisabled" uib-tabindex-toggle=""><span uib-accordion-header="" ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw fa-angle-right" ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                        <!----><span ng-if="!mainItem.url">Construction</span><!---->
+                                        <!---->
+                </span></a>
+                                </h4>
+                            </div>
+                                <div id="accordiongroup-23-7986-panel" aria-labelledby="accordiongroup-23-7986-tab" aria-hidden="true" role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body" ng-transclude="">
+                                        <div uib-accordion-heading="" ng-class="{ &#39;active&#39;: mainItem.isActive }"></div>
+
+                                        <ul class="list-unstyled">
+                                            <!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/dsm" href="http://localhost:9001/ui/ui/dsm"> Digital Damage Management</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/dpm" href="http://localhost:9001/ui/ui/dpm"> Digital Protocol Management</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/efv" href="http://localhost:9001/ui/ui/efv"> External Files Viewer</a>
+                                        </li><!----><!---->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!----><div uib-accordion-group="" class="panel-default panel" is-open="mainItem.open" ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive" ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}"><div role="tab" id="accordiongroup-25-9912-tab" aria-selected="false" class="panel-heading" ng-keypress="toggleOpen($event)">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" href="http://localhost:9001/ui/ui/dms/" aria-expanded="false" aria-controls="accordiongroup-25-9912-panel" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading" ng-disabled="isDisabled" uib-tabindex-toggle=""><span uib-accordion-header="" ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw fa-angle-right" ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                        <!----><span ng-if="!mainItem.url">Analysis</span><!---->
+                                        <!---->
+                </span></a>
+                                </h4>
+                            </div>
+                                <div id="accordiongroup-25-9912-panel" aria-labelledby="accordiongroup-25-9912-tab" aria-hidden="true" role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body" ng-transclude="">
+                                        <div uib-accordion-heading="" ng-class="{ &#39;active&#39;: mainItem.isActive }"></div>
+
+                                        <ul class="list-unstyled">
+                                            <!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/reporting" href="http://localhost:9001/ui/ui/reporting"> Reports</a>
+                                        </li><!----><!---->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!----><div uib-accordion-group="" class="panel-default panel" is-open="mainItem.open" ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive" ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}"><div role="tab" id="accordiongroup-27-7659-tab" aria-selected="false" class="panel-heading" ng-keypress="toggleOpen($event)">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" href="http://localhost:9001/ui/ui/dms/" aria-expanded="false" aria-controls="accordiongroup-27-7659-panel" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading" ng-disabled="isDisabled" uib-tabindex-toggle=""><span uib-accordion-header="" ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw" ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                        <!---->
+                                        <!----><a ng-if="mainItem.url" ng-click="$event.stopPropagation()" ng-href="/ui/ui/administration" href="http://localhost:9001/ui/ui/administration"> Administration</a><!---->
+                </span></a>
+                                </h4>
+                            </div>
+                                <div id="accordiongroup-27-7659-panel" aria-labelledby="accordiongroup-27-7659-tab" aria-hidden="true" role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body" ng-transclude="">
+                                        <div uib-accordion-heading="" ng-class="{ &#39;active&#39;: mainItem.isActive }"></div>
+
+                                        <ul class="list-unstyled">
+                                            <!---->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!----><div uib-accordion-group="" class="panel-default panel" is-open="mainItem.open" ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive" ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}"><div role="tab" id="accordiongroup-29-6675-tab" aria-selected="false" class="panel-heading" ng-keypress="toggleOpen($event)">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" href="http://localhost:9001/ui/ui/dms/" aria-expanded="false" aria-controls="accordiongroup-29-6675-panel" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading" ng-disabled="isDisabled" uib-tabindex-toggle=""><span uib-accordion-header="" ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw fa-angle-right" ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                        <!----><span ng-if="!mainItem.url">Configuration</span><!---->
+                                        <!---->
+                </span></a>
+                                </h4>
+                            </div>
+                                <div id="accordiongroup-29-6675-panel" aria-labelledby="accordiongroup-29-6675-tab" aria-hidden="true" role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body" ng-transclude="">
+                                        <div uib-accordion-heading="" ng-class="{ &#39;active&#39;: mainItem.isActive }"></div>
+
+                                        <ul class="list-unstyled">
+                                            <!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/dashboards-configuration" href="http://localhost:9001/ui/ui/dashboards-configuration"> Dashboards</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/reports-configuration" href="http://localhost:9001/ui/ui/reports-configuration"> Reports</a>
+                                        </li><!----><!----><!----><li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;" ng-if="item.enabled" ng-class="{ &#39;active&#39;: item.isActive }">
+                                            <a ng-href="/ui/ui/configuration" href="http://localhost:9001/ui/ui/configuration"> System</a>
+                                        </li><!----><!---->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!---->
+                            </div></uib-accordion>
+                        </div></div>
+
+                    <a class="navbar-brand" href="http://localhost:9001/ui/ui/dpm" title="Homepage">
+                        <img src="./IRIS Document Management System_files/logo2.png" height="58px" alt="IRIS">
+                    </a>
+                    <div class="navbar-ttl">
+                        Document
+                    </div>
+                </div>
+
+                <div class="global-menu-header">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-link global-menu-toggler" uib-tooltip="label.HideGlobalMenu" ng-click="isGlobalMenuOpen = false">
+                                <i class="fa fa-angle-up"></i>
+                            </button>
+                        </span>
+
+                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" autofocus="" placeholder="Search for..." ng-model-options="{updateOn: &#39;default blur&#39;, debounce: {&#39;default&#39;: 100, &#39;blur&#39;: 0 }}" ng-model="globalMenuFilter">
+
+                        <span class="input-group-btn">
+                            <button class="btn btn-link global-menu-filter ng-hide" type="button" ng-show="globalMenuFilter" ng-click="globalMenuFilter = &#39;&#39;">
+                                <span class="fa fa-times"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right nav-menu-profile">
+                        <li uib-dropdown="" class="dropdown">
+
+                            <a href="javascript:void(0)" uib-dropdown-toggle="" style="padding-right:0;" id="user_icon" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span class="user" iris-user="" for-current-user="true" show-company="true">
+    <span class="iris-user-avatar" uib-tooltip="Admin User ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar" ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Admin User
+        </span>
+                <!----><span ng-if="showCompany" class="iris-user-company">
+            ITC
+        </span><!---->
+    </span><!---->
+</span>
+                            </a>
+
+                            <ul uib-dropdown-menu="" class="with-icon dropdown-menu">
+                                <li>
+                                    <a ng-href="/ui/ui/profile" id="profile" href="http://localhost:9001/ui/ui/profile">
+                                        <span class="fa fa-fw fa-user"></span>
+                                        My Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a ng-href="/ui/ui/user-notifications" href="http://localhost:9001/ui/ui/user-notifications">
+                                        <span class="fa fa-fw fa-envelope-o"></span>
+                                        My notifications
+                                    </a>
+                                </li>
+                                <li>
+                                    <a ng-href="/ui/ui/help" href="http://localhost:9001/ui/ui/help">
+                                        <span class="fa fa-fw fa-info"></span>
+                                        Help
+                                    </a>
+                                </li>
+                                <li>
+                                    <a ng-href="https://iris-4.com/itc/ui/ui/support" href="https://iris-4.com/itc/ui/ui/support">
+                                        <span class="fa fa-fw fa-bug"></span>
+                                        Report an error
+                                    </a>
+                                </li>
+                                <li>
+                                    <a ng-href="/logoff" id="logout" href="http://localhost:9001/logoff">
+                                        <span class="fa fa-fw fa-sign-out"></span>
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <form class="nav navbar-form navbar-right ng-pristine ng-valid dropdown" ng-init="searchDMS.isOpen = false" uib-dropdown="" is-open="searchDMS.isOpen" auto-close="outsideClick">
+                        <div class="input-group dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-class="{focus: searchDMS.isOpen}" ng-model="searchDMS.name" ng-model-options="{ updateOn: &#39;default blur&#39;, debounce: { &#39;default&#39;: 800, &#39;blur&#39;: 0 } }" ng-change="searchDMS.isOpen = true" placeholder="Search">
+
+                            <span class="input-group-btn">
+            <button type="submit" class="btn btn-link">
+                <span class="fa fa-search"></span>
+            </button>
+        </span>
+                        </div>
+
+                        <div uib-dropdown-menu="" class="iris-dropdown-menu dropdown-menu" iris-search-menu="" is-open="searchDMS.isOpen" file-name="searchDMS.name">    <!---->
+
+                            <!---->
+                        </div>
+                    </form>
+
+
+
+                    <ul class="nav navbar-nav navbar-notifications navbar-right">
+                        <li uib-dropdown="" auto-close="outsideClick" class="dropdown">
+                            <a href="http://localhost:9001/ui/ui/dms/#" class="clock dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+                                09:34
+                            </a>
+
+                            <div uib-dropdown-menu="" class="iris-dropdown-menu flex-col-6 stick dropdown-menu">
+
+                                <ul class="items-container tasks-list">
+                                    <li class="item-group-header">
+                                        <h5>Assigned to me tasks</h5>
+                                    </li>
+
+                                    <!----><li class="item" ng-if="!tasks.length">
+                                    <div class="item-content">
+                                        <div class="content-body">
+                                            There are no assigned to you tasks
+                                        </div>
+                                    </div>
+                                </li><!---->
+
+                                    <!---->
+
+                                    <li class="new-task">
+                                        <div class="btn-group pull-right">
+                                            <button class="btn btn-default" ng-click="requestTasks()" uib-tooltip="Refresh list">
+                                                <i class="fa fa-refresh fa-fw"></i>
+                                            </button>
+                                            <a ng-href="/ui/ui/taskmanagement/tasks/add" class="btn btn-default" href="http://localhost:9001/ui/ui/taskmanagement/tasks/add">
+                                                <i class="fa fa-plus fa-fw"></i>
+                                                Add a task
+                                            </a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li uib-dropdown="" auto-close="outsideClick" class="icon-menu dropdown" notifications-limit="10">
+                            <a href="http://localhost:9001/ui/ui/dms/#" uib-dropdown-toggle="" ng-class="{&#39;has-notifications&#39;: ((notificationList | filter: { read: false }).length)}" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-bell fa-lg fa-fw"></span>
+                            </a>
+
+                            <div uib-dropdown-menu="" class="iris-dropdown-menu flex-col-5 stick dropdown-menu">
+                                <ul class="items-container">
+                                    <!---->
+
+                                    <!----><li class="item item-status-success" ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                    <div class="item-left-sidebar">
+                                        <span class="fa fa-info-circle icon-sm"></span>
+                                    </div>
+
+                                    <div class="item-content" ng-controller="NotificationMessageCtrl" ng-click="setRead(notification)">
+                                        <div class="content-header">
+                                            <!---->
+
+                                            <h3 class="title">
+                                                Task assigned
+                                            </h3>
+
+                                            <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="02.06.2017 09:11:54">
+                                32 day(s) ago
+                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="content-body" compile="notification.message"><p>The Task <a class="btn-link" href="http://localhost:9001/ui/ui/taskmanagement#/tasks/28/view">1-17 test task history 30 05 2017 17 10 11</a>&nbsp;assigned&nbsp;to mikhail oshkalo by mikhail oshkalo</p></div>
+
+                                        <!--
+                                <div class="content-footer">
+                                    <a href="javascript:void(0)" class="icon">
+                                        <span class="fa fa-download"></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="text">
+                                        Click here to download
+                                    </a>
+                                </div>
+                    -->
+                                    </div>
+                                </li><!---->
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-comments fa-lg fa-fw"></span>
+                                    </a>
+                                </li>
+                                    <li class="item item-status-success" ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                    <div class="item-left-sidebar">
+                                        <span class="fa fa-info-circle icon-sm"></span>
+                                    </div>
+
+                                    <div class="item-content" ng-controller="NotificationMessageCtrl" ng-click="setRead(notification)">
+                                        <div class="content-header">
+                                            <!---->
+
+                                            <h3 class="title">
+                                                Task updated
+                                            </h3>
+
+                                            <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="11.05.2017 13:53:14">
+                                54 day(s) ago
+                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="content-body" compile="notification.message">Task updated</div>
+
+                                        <!--
+                                <div class="content-footer">
+                                    <a href="javascript:void(0)" class="icon">
+                                        <span class="fa fa-download"></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="text">
+                                        Click here to download
+                                    </a>
+                                </div>
+                    -->
+                                    </div>
+                                </li><!----><li class="item item-status-success" ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                    <div class="item-left-sidebar">
+                                        <span class="fa fa-info-circle icon-sm"></span>
+                                    </div>
+
+                                    <div class="item-content" ng-controller="NotificationMessageCtrl" ng-click="setRead(notification)">
+                                        <div class="content-header">
+                                            <!---->
+
+                                            <h3 class="title">
+                                                Task updated
+                                            </h3>
+
+                                            <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="11.05.2017 13:51:26">
+                                54 day(s) ago
+                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="content-body" compile="notification.message">Task updated</div>
+
+                                        <!--
+                                <div class="content-footer">
+                                    <a href="javascript:void(0)" class="icon">
+                                        <span class="fa fa-download"></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="text">
+                                        Click here to download
+                                    </a>
+                                </div>
+                    -->
+                                    </div>
+                                </li><!----><li class="item item-status-success" ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                    <div class="item-left-sidebar">
+                                        <span class="fa fa-info-circle icon-sm"></span>
+                                    </div>
+
+                                    <div class="item-content" ng-controller="NotificationMessageCtrl" ng-click="setRead(notification)">
+                                        <div class="content-header">
+                                            <!---->
+
+                                            <h3 class="title">
+                                                Task updated
+                                            </h3>
+
+                                            <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="11.05.2017 11:36:46">
+                                54 day(s) ago
+                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="content-body" compile="notification.message">Task updated</div>
+
+                                        <!--
+                                <div class="content-footer">
+                                    <a href="javascript:void(0)" class="icon">
+                                        <span class="fa fa-download"></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="text">
+                                        Click here to download
+                                    </a>
+                                </div>
+                    -->
+                                    </div>
+                                </li><!----><li class="item item-status-success" ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                    <div class="item-left-sidebar">
+                                        <span class="fa fa-info-circle icon-sm"></span>
+                                    </div>
+
+                                    <div class="item-content" ng-controller="NotificationMessageCtrl" ng-click="setRead(notification)">
+                                        <div class="content-header">
+                                            <!---->
+
+                                            <h3 class="title">
+                                                Task updated
+                                            </h3>
+
+                                            <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="11.05.2017 11:33:22">
+                                54 day(s) ago
+                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="content-body" compile="notification.message">Task updated</div>
+
+                                        <!--
+                                <div class="content-footer">
+                                    <a href="javascript:void(0)" class="icon">
+                                        <span class="fa fa-download"></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="text">
+                                        Click here to download
+                                    </a>
+                                </div>
+                    -->
+                                    </div>
+                                </li><!----><li class="item item-status-success" ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                    <div class="item-left-sidebar">
+                                        <span class="fa fa-info-circle icon-sm"></span>
+                                    </div>
+
+                                    <div class="item-content" ng-controller="NotificationMessageCtrl" ng-click="setRead(notification)">
+                                        <div class="content-header">
+                                            <!---->
+
+                                            <h3 class="title">
+                                                Task updated
+                                            </h3>
+
+                                            <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="11.05.2017 11:30:43">
+                                54 day(s) ago
+                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="content-body" compile="notification.message">Task updated</div>
+
+                                        <!--
+                                <div class="content-footer">
+                                    <a href="javascript:void(0)" class="icon">
+                                        <span class="fa fa-download"></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="text">
+                                        Click here to download
+                                    </a>
+                                </div>
+                    -->
+                                    </div>
+                                </li><!----><li class="item item-status-success" ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                    <div class="item-left-sidebar">
+                                        <span class="fa fa-info-circle icon-sm"></span>
+                                    </div>
+
+                                    <div class="item-content" ng-controller="NotificationMessageCtrl" ng-click="setRead(notification)">
+                                        <div class="content-header">
+                                            <!---->
+
+                                            <h3 class="title">
+                                                Task updated
+                                            </h3>
+
+                                            <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="11.05.2017 11:26:23">
+                                54 day(s) ago
+                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="content-body" compile="notification.message">Task updated</div>
+
+                                        <!--
+                                <div class="content-footer">
+                                    <a href="javascript:void(0)" class="icon">
+                                        <span class="fa fa-download"></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="text">
+                                        Click here to download
+                                    </a>
+                                </div>
+                    -->
+                                    </div>
+                                </li><!----><li class="item item-status-success" ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                    <div class="item-left-sidebar">
+                                        <span class="fa fa-info-circle icon-sm"></span>
+                                    </div>
+
+                                    <div class="item-content" ng-controller="NotificationMessageCtrl" ng-click="setRead(notification)">
+                                        <div class="content-header">
+                                            <!---->
+
+                                            <h3 class="title">
+                                                Task updated
+                                            </h3>
+
+                                            <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="11.05.2017 11:25:24">
+                                54 day(s) ago
+                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="content-body" compile="notification.message">Task updated</div>
+
+                                        <!--
+                                <div class="content-footer">
+                                    <a href="javascript:void(0)" class="icon">
+                                        <span class="fa fa-download"></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="text">
+                                        Click here to download
+                                    </a>
+                                </div>
+                    -->
+                                    </div>
+                                </li><!----><li class="item item-status-success" ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                    <div class="item-left-sidebar">
+                                        <span class="fa fa-info-circle icon-sm"></span>
+                                    </div>
+
+                                    <div class="item-content" ng-controller="NotificationMessageCtrl" ng-click="setRead(notification)">
+                                        <div class="content-header">
+                                            <!---->
+
+                                            <h3 class="title">
+                                                Task updated
+                                            </h3>
+
+                                            <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="11.05.2017 11:24:38">
+                                54 day(s) ago
+                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="content-body" compile="notification.message">Task updated</div>
+
+                                        <!--
+                                <div class="content-footer">
+                                    <a href="javascript:void(0)" class="icon">
+                                        <span class="fa fa-download"></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="text">
+                                        Click here to download
+                                    </a>
+                                </div>
+                    -->
+                                    </div>
+                                </li><!----><li class="item item-status-success" ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                    <div class="item-left-sidebar">
+                                        <span class="fa fa-info-circle icon-sm"></span>
+                                    </div>
+
+                                    <div class="item-content" ng-controller="NotificationMessageCtrl" ng-click="setRead(notification)">
+                                        <div class="content-header">
+                                            <!---->
+
+                                            <h3 class="title">
+                                                Task updated
+                                            </h3>
+
+                                            <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="11.05.2017 11:24:07">
+                                54 day(s) ago
+                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="content-body" compile="notification.message">Task updated</div>
+
+                                        <!--
+                                <div class="content-footer">
+                                    <a href="javascript:void(0)" class="icon">
+                                        <span class="fa fa-download"></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="text">
+                                        Click here to download
+                                    </a>
+                                </div>
+                    -->
+                                    </div>
+                                </li><!---->
+                                </ul>
+
+                                <div class="show-more-container">
+                                    <a ng-href="/ui/ui/user-notifications" target="_blank" href="http://localhost:9001/ui/ui/user-notifications">
+                                        Show all notifications
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icon-menu">
+                            <a href="#" class="chat-icon">
+                                <span class="fa fa-comments fa-lg fa-fw"></span>
+                                <div class="new-mess"></div>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <ul class="nav navbar-nav nav-menu navbar-right">
+                        <li uib-dropdown="" auto-close="outsideClick" class="dropdown">
+                            <a href="javascript:void(0)" uib-dropdown-toggle="" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                                Dashboard <span class="fa fa-th fa-lg fa-fw"></span>
+                            </a>
+
+                            <div iris-dashboards-menu="" uib-dropdown-menu="" class="iris-dropdown-menu flex-col-4 stick dropdown-menu"><div class="input-group search-bar-container">
+                                <input type="text" ng-model="searchDashboard.name" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Search for...">
+
+                                <span class="input-group-btn">
+        <button class="btn btn-link" type="button">
+            <span class="fa fa-search"></span>
+        </button>
+    </span>
+                            </div>
+                                <ul class="items-container">
+                                    <!---->
+                                    <!----><li class="item" ng-class="{&#39;item-favorite&#39;: dashboard.id == me.profile.dashboardId}" ng-repeat="dashboard in dashboards | filter:searchDashboard | orderBy:[&#39;name&#39;] | limitTo:3">
+                                    <div class="item-left-sidebar">
+                                        <span class="fa fa-info-circle icon-sm"></span>
+                                    </div>
+
+                                    <div class="item-content">
+                                        <div class="content-header">
+                                            <a ng-href="/ui/ui/dashboard/root" class="btn-link" href="http://localhost:9001/ui/ui/dashboard/root">
+                                                <h2 class="title">
+                                                    My dashboard
+                                                </h2>
+                                            </a>
+                                        </div>
+
+                                        <!---->
+                                    </div>
+                                </li><!---->
+                                </ul>
+                                <div class="show-more-container">
+                                    <a ng-href="/ui/ui/dashboards" href="http://localhost:9001/ui/ui/dashboards">
+                                        Show all dashboards
+                                    </a>
+                                </div></div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- .collapse.navbar-collapse -->
+            </div>
+            <!-- .container-fluid -->
+        </nav>
+        <!-- .navbar.navbar-custom -->
+
+    </div>
+    <!-- .app-header -->
+
+
+    <!----><div class="app-body-container" ui-view="">
+
+
+    <div class="app-wrap">
+        <div class="app-sidebar-left left open">
+            <div class="sidebar-menu">
+                <div class="sidebar-menu-body" tm-modules-list="taskmanagement">
+                    <ul>
+                        <li>
+                            <a ng-href="/ui/ui/process-management" ng-class="{active: module == 'process-management'}" href="http://localhost:9001/ui/ui/process-management">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" tooltip="Project processes">
+                                    <i class="fa fa-code-fork"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-href="/ui/ui/workgroups" ng-class="{active: module == 'workgroups'}" href="http://localhost:9001/ui/ui/workgroups">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" tooltip="Workgroups">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-href="/ui/ui/taskmanagement" ng-class="{active: module == 'taskmanagement'}" href="http://localhost:9001/ui/ui/taskmanagement" class="active">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" tooltip="Task management">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:9001/ui/ui/kanban" ng-class="{active: module == 'kanban'}">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" tooltip="Kanban board">
+                                    <i class="fa fa-th-large"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-href="/ui/ui/taskcalendar" ng-class="{active: module == 'taskcalendar'}" href="http://localhost:9001/ui/ui/taskcalendar">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" tooltip="Calendar">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li ng-if="hasConfigRights('PROCESS_MGMT')">
+                            <a ng-href="/ui/ui/process-management/process-templates" ng-class="{active: module == 'process-templates'}" href="http://localhost:9001/ui/ui/process-management/process-templates">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" tooltip="Process templates">
+                                    <i class="fa fa-cog"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-href="/ui/ui/dashboard" ng-class="{active: module == 'dashboard'}" href="http://localhost:9001/ui/ui/dashboard">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" tooltip="My dashboard">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--.app-sidebar-left-->
+
+
+        <div class="app-body-content">
+           <div class="chat">
+               <div class="chat__left">
+                   <div class="chat__tb1"></div>
+                   <div class="chat__tb2">
+                       <div class="chat__filter">
+                           <div class="chat__search">
+                               <div class="input-group stick toolbar-search-wrapper">
+
+                                   <input type="text" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" class="form-control toolbar-search ng-pristine ng-untouched ng-valid ng-empty" placeholder="Search" ng-model="filter.text">
+                                   <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                               </div>
+                           </div>
+                           <div class="chat__sort">
+                               <label class="chat__sort-label">Sort by</label>
+                               <select class="form-control input-sm chat__sort-select">
+                                   <option>Conversation with lates message</option>
+                                   <option>Conversation with lates message</option>
+                                   <option>Conversation with lates message</option>
+                               </select>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="chat__list">
+                       <div class="scrollable">
+                           <div class="chat__last">
+                               <div class="chat__unread">
+
+                               </div>
+                               <div class="chat__avatar">
+                                   <a href="#" class="chat__avatar-img" style="background-image: url('https://i.pinimg.com/originals/05/17/4a/05174a03d7aa00497c12cd3d313b2deb.jpg')"></a>
+                               </div>
+                               <div class="chat__last-mess">
+                                   <div class="last-mess">
+                                       <div class="last-mess__date">
+                                           12.12.2017 18:23
+                                       </div>
+                                       <div class="last-mess__name">
+                                           <a href="#">Alex Sailer</a>
+                                       </div>
+                                       <div class="last-mess__text">
+                                           The faded out image background makes it feel really warm and inviting.
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!--end .chat__last-->
+                           <div class="chat__last">
+                               <div class="chat__unread">
+                                   <div class="unread"></div>
+                               </div>
+                               <div class="chat__avatar">
+                                   <a href="#" class="chat__avatar-img" style="background-image: url('https://facesofbellingham.files.wordpress.com/2010/10/3801.jpg')"></a>
+                               </div>
+                               <div class="chat__last-mess">
+                                   <div class="last-mess">
+                                       <div class="last-mess__date">
+                                           12.12.2017 18:23
+                                       </div>
+                                       <div class="last-mess__name">
+                                           <a href="#">Alex Sailer</a>
+                                       </div>
+                                       <div class="last-mess__text">
+                                           The faded out image background makes it feel really warm and inviting.
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!--end .chat__last-->
+                           <div class="chat__last selected">
+                               <div class="chat__unread">
+                                   <div class="unread"></div>
+                               </div>
+                               <div class="chat__avatar">
+                                   <i class="fa fa-users" aria-hidden="true"></i>
+                               </div>
+                               <div class="chat__last-mess">
+                                   <div class="last-mess">
+                                       <div class="last-mess__date">
+                                           12.12.2017 18:23
+                                       </div>
+                                       <div class="last-mess__name">
+                                           <a href="#">Alex Sailer</a>, <a href="#">Petr Sailer</a>, <a href="#">Pavel Sailer</a>
+                                       </div>
+                                       <div class="last-mess__text">
+                                           The faded out image background makes it feel really warm and inviting.
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!--end .chat__last-->
+                           <div class="chat__last">
+                               <div class="chat__unread">
+
+                               </div>
+                               <div class="chat__avatar">
+                                   <a href="#" class="chat__avatar-img" style="background-image: url('https://i.pinimg.com/originals/c1/7b/d9/c17bd9ebcfaf1b7a7eecabd52293b3e8.jpg')"></a>
+                               </div>
+                               <div class="chat__last-mess">
+                                   <div class="last-mess">
+                                       <div class="last-mess__date">
+                                           12.12.2017 18:23
+                                       </div>
+                                       <div class="last-mess__name">
+                                           <a href="#">Alex Sailer</a>
+                                       </div>
+                                       <div class="last-mess__text">
+                                           The faded out image background makes it feel really warm and inviting.
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!--end .chat__last-->
+                           <div class="chat__last">
+                               <div class="chat__unread">
+                                   <div class="unread"></div>
+                               </div>
+                               <div class="chat__avatar">
+                                   <a href="#" class="chat__avatar-img" style="background-image: url('https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg')"></a>
+                               </div>
+                               <div class="chat__last-mess">
+                                   <div class="last-mess">
+                                       <div class="last-mess__date">
+                                           12.12.2017 18:23
+                                       </div>
+                                       <div class="last-mess__name">
+                                           <a href="#">Alex Sailer</a>
+                                       </div>
+                                       <div class="last-mess__text">
+                                           The faded out image background makes it feel really warm and inviting.
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!--end .chat__last-->
+                           <div class="chat__last">
+                               <div class="chat__unread">
+                                   <div class="unread"></div>
+                               </div>
+                               <div class="chat__avatar">
+                                   <a href="#" class="chat__avatar-img" style="background-image: url('https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg')"></a>
+                               </div>
+                               <div class="chat__last-mess">
+                                   <div class="last-mess">
+                                       <div class="last-mess__date">
+                                           12.12.2017 18:23
+                                       </div>
+                                       <div class="last-mess__name">
+                                           <a href="#">Alex Sailer</a>
+                                       </div>
+                                       <div class="last-mess__text">
+                                           The faded out image background makes it feel really warm and inviting.
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!--end .chat__last-->
+                           <div class="chat__last">
+                               <div class="chat__unread">
+                                   <div class="unread"></div>
+                               </div>
+                               <div class="chat__avatar">
+                                   <a href="#" class="chat__avatar-img" style="background-image: url('https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg')"></a>
+                               </div>
+                               <div class="chat__last-mess">
+                                   <div class="last-mess">
+                                       <div class="last-mess__date">
+                                           12.12.2017 18:23
+                                       </div>
+                                       <div class="last-mess__name">
+                                           <a href="#">Alex Sailer</a>
+                                       </div>
+                                       <div class="last-mess__text">
+                                           The faded out image background makes it feel really warm and inviting.
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!--end .chat__last-->
+                           <div class="chat__last">
+                               <div class="chat__unread">
+                                   <div class="unread"></div>
+                               </div>
+                               <div class="chat__avatar">
+                                   <a href="#" class="chat__avatar-img" style="background-image: url('https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg')"></a>
+                               </div>
+                               <div class="chat__last-mess">
+                                   <div class="last-mess">
+                                       <div class="last-mess__date">
+                                           12.12.2017 18:23
+                                       </div>
+                                       <div class="last-mess__name">
+                                           <a href="#">Alex Sailer</a>
+                                       </div>
+                                       <div class="last-mess__text">
+                                           The faded out image background makes it feel really warm and inviting.
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!--end .chat__last-->
+                       </div>
+                       <!--end .chat__list-->
+                   </div>
+               </div>
+               <!--end .chat__left-->
+               <div class="chat__right">
+                   <div class="chat__tb1">
+                        <div class="discuss-ttl">
+                            Discussion about the new planned IRIS.messenger
+                        </div>
+                   </div>
+                   <div class="chat__tb2">
+                        <div class="members-list">
+                            <a href="#" class="members-list__item" style="background-image: url('https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg')"></a>
+                            <a href="#" class="members-list__item" style="background-image: url('https://i.pinimg.com/originals/c1/7b/d9/c17bd9ebcfaf1b7a7eecabd52293b3e8.jpg')"></a>
+                            <a href="#" class="members-list__item" style="background-image: url('https://i.pinimg.com/originals/05/17/4a/05174a03d7aa00497c12cd3d313b2deb.jpg')"></a>
+                            <a href="#" class="members-list__item" style="background-image: url('https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg')"></a>
+                            <a href="#" class="members-list__button">
+                                <button class="btn btn-xs btn-default">Add</button>
+                            </a>
+                        </div>
+                   </div>
+                   <div class="chat-mess">
+                        <div class="scrollable">
+                            <div class="chat-mess__list">
+                                <div class="chat-mess__item">
+                                    <a href="#" class="chat-mess__avatar" style="background-image: url('https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg')">
+
+                                    </a>
+                                    <div class="chat-mess__mess">
+                                        <div class="chat-mess__ttl">
+                                            <a href="#" class="chat-mess__name">Ivanov Ivan</a>
+                                            <span class="chat-mess__date">12.12.2015</span>
+                                        </div>
+                                        <div class="chat-mess__text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lectus sem, ultricies nec condimentum ut, ullamcorper in arcu. Nam ultrices ex a quam vulputate commodo. Suspendisse vitae elementum erat, quis eleifend elit.
+                                        </div>
+                                        <div class="chat-mess__reply">
+                                            <div class="btn btn-link btn-reply">
+                                                <i class="fa fa-reply" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--chat-mess__item-->
+                                <div class="chat-mess__item">
+                                    <a href="#" class="chat-mess__avatar" style="background-image: url('https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg')">
+
+                                    </a>
+                                    <div class="chat-mess__mess">
+                                        <div class="chat-mess__ttl">
+                                            <a href="#" class="chat-mess__name">Ivanov Ivan</a>
+                                            <span class="chat-mess__date">12.12.2015</span>
+                                        </div>
+                                        <div class="chat-mess__text">
+                                            <a href="#"><i class="fa fa-reply" aria-hidden="true"></i> @ Petr Prov 12.12.2015</a><br>
+                                            Curabitur nec sapien a libero feugiat aliquet vitae non diam. Donec finibus nulla in felis elementum, nec semper ante faucibus.
+                                        </div>
+                                        <div class="chat-mess__reply">
+                                            <div class="btn btn-link btn-reply">
+                                                <i class="fa fa-reply" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--chat-mess__item-->
+                                <div class="chat-mess__item chat-mess__item_revert">
+                                    <a href="#" class="chat-mess__avatar" style="background-image: url('https://i.pinimg.com/originals/c1/7b/d9/c17bd9ebcfaf1b7a7eecabd52293b3e8.jpg')">
+
+                                    </a>
+                                    <div class="chat-mess__mess">
+                                        <div class="chat-mess__ttl">
+                                            <a href="#" class="chat-mess__name">Ivanov Ivan</a>
+                                            <span class="chat-mess__date">12.12.2015</span>
+                                        </div>
+                                        <div class="chat-mess__text">
+                                            <a href="#"><i class="fa fa-reply" aria-hidden="true"></i> @ Petr Prov 12.12.2015</a><br>
+                                            Curabitur nec sapien a libero feugiat aliquet vitae non diam. Donec finibus nulla in felis elementum, nec semper ante faucibus.
+                                        </div>
+                                        <div class="chat-mess__reply">
+                                            <div class="btn btn-link btn-reply">
+                                                <i class="fa fa-reply" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--chat-mess__item-->
+                                <div class="chat-mess__item">
+                                    <a href="#" class="chat-mess__avatar" style="background-image: url('https://i.pinimg.com/originals/05/17/4a/05174a03d7aa00497c12cd3d313b2deb.jpg')">
+
+                                    </a>
+                                    <div class="chat-mess__mess">
+                                        <div class="chat-mess__ttl">
+                                            <a href="#" class="chat-mess__name">Ivanov Ivan</a>
+                                            <span class="chat-mess__date">12.12.2015</span>
+                                        </div>
+                                        <div class="chat-mess__text">
+                                            Curabitur elit metus, sodales vel massa quis, consequat pulvinar risus.
+                                        </div>
+                                        <div class="chat-mess__reply">
+                                            <div class="btn btn-link btn-reply">
+                                                <i class="fa fa-reply" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--chat-mess__item-->
+                                <div class="chat-mess__item">
+                                    <a href="#" class="chat-mess__avatar" style="background-image: url('https://i.pinimg.com/originals/05/17/4a/05174a03d7aa00497c12cd3d313b2deb.jpg')">
+
+                                    </a>
+                                    <div class="chat-mess__mess">
+                                        <div class="chat-mess__ttl">
+                                            <a href="#" class="chat-mess__name">Ivanov Ivan</a>
+                                            <span class="chat-mess__date">12.12.2015</span>
+                                        </div>
+                                        <div class="chat-mess__text">
+                                            Curabitur elit metus, sodales vel massa quis, consequat pulvinar risus. Curabitur elit metus, sodales vel massa quis, consequat pulvinar risus. Curabitur elit metus, sodales vel massa quis, consequat pulvinar risus. Curabitur elit metus, sodales vel massa quis, consequat pulvinar risus.
+                                        </div>
+                                        <div class="chat-mess__reply">
+                                            <div class="btn btn-link btn-reply">
+                                                <i class="fa fa-reply" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--chat-mess__item-->
+                            </div>
+                            <!--chat-mess__list-->
+                        </div>
+                   </div>
+                   <!--chat-mess-->
+                   <div class="add-mess">
+                        <div class="add-mess__attach">
+                            <div class="add-mess__attach-file">
+                                <button class="btn btn-transparent">
+                                    <i class="fa fa-paperclip"></i>
+                                </button>
+                            </div>
+                            <div add-mess__attach-img>
+                                <button class="btn btn-transparent">
+                                    <i class="fa fa-picture-o"></i>
+                                </button>
+                            </div>
+                        </div>
+                       <div class="add-mess__mess">
+                           <textarea class="add-mess__textarea" placeholder="your mess"></textarea>
+                       </div>
+                       <div class="add-mess__send">
+                            <button class="btn btn-transparent send-mess">
+                                <i class="fa fa-play-circle-o"></i>
+                            </button>
+                       </div>
+                   </div>
+               </div>
+               <!--chat__right-->
+           </div>
+        </div>
+        <!--.app-body-content-->
+    </div>
+    <!--.app-wrap-->
+</div>
+    <!-- .app-body-container -->
+
+</div>
+<!-- .app-container -->
+
+<!-- page generated in 560 ms-->
+
+<div class="selectize-dropdown single iris-selectize ng-pristine ng-untouched ng-valid" style="display: none;"><div class="selectize-dropdown-content"></div></div><mentio-menu mentio-search="bridgeSearch(term)" mentio-select="bridgeSelect(item)" mentio-items="items" mentio-template-url="/people-mentions.tpl" mentio-trigger-char="&#39;@&#39;" mentio-parent-scope="parentScope" style="display: none;">
+    <ul class="list-group iris-mentio-menu">
+        <!---->
+    </ul>
+</mentio-menu><mentio-menu mentio-search="bridgeSearch(term)" mentio-select="bridgeSelect(item)" mentio-items="items" mentio-template-url="/people-mentions.tpl" mentio-trigger-char="&#39;@&#39;" mentio-parent-scope="parentScope" style="display: none;">
+    <ul class="list-group iris-mentio-menu">
+        <!---->
+    </ul>
+</mentio-menu><div class="selectize-dropdown single iris-selectize ng-pristine ng-untouched ng-valid" style="display: none; width: 100px; top: 12px; left: 0px;"><div class="selectize-dropdown-content"><div data-value="all" data-selectable="" class="option selected">All user groups</div><div data-value="1" data-selectable="" class="option">ARGE KAT2</div><div data-value="3" data-selectable="" class="option">ITC</div><div data-value="none" data-selectable="" class="option">No company</div><div data-value="2" data-selectable="" class="option">ÖBA</div></div></div></body></html>
