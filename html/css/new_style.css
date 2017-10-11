@@ -699,7 +699,7 @@ a.sm-comments__name{
     border: 1px solid #80A30B;
     font-size: 11px;
     line-height: 15px;
-    font-family: 'Open Sans Semibold';
+    font-weight: 600;
     padding: 0 5px;
     border-radius: 3px;
 }
@@ -709,7 +709,6 @@ a.sm-comments__name{
 .chat__group-date{
 	color: #999;
     font-size: 11px;
-    font-family: 'Open Sans';
     padding: 0px 15px 10px;
 }
 
@@ -764,7 +763,7 @@ a.sm-comments__name{
     top: 2px;
     right: 0;
     color: #80A30B;
-    font-family: "Open Sans Semibold";
+    font-weight: 600;
     font-size: 12px;
 }
 .last-mess__date{
@@ -776,16 +775,14 @@ a.sm-comments__name{
 .last-mess__name a{
 	color: #333333;
 	font-size: 13px;
-	font-weight: bold;
 	line-height: 19px;
-    font-family: "Open Sans Semibold";
+    font-weight: 600;
 }
 .last-mess__text{
 	height: 19px;
 	overflow: hidden;
     color: #777777;
     font-size: 12px;
-    font-family: 'Open Sans';
 }
 .last-mess__text span{
     color: #80A30B;
@@ -1016,8 +1013,7 @@ a.sm-comments__name{
 .chat-mess__name{
 	color: #80A30B;
 	font-size: 13px;
-	font-weight: bold;
-    font-family: 'Open Sans Semibold';
+	font-weight: 600;
 }
 .chat-mess__date{
 	color: #898989;
