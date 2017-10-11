@@ -917,30 +917,44 @@ a.sm-comments__name{
 .add-mess__innr{
     width: 635px;
     margin: 0 auto;
+	height: 100%;
+}
+.add-mess__ttl{
+
+	margin-left: 40px;
+	font-size: 13px;
+	line-height: 25px;
+	margin-top: 20px;
+	color: #777777;
 }
 .add-mess__attach{
     margin-left: 40px;
+	display: flex;
+	border-top: 1px solid #DEDEDE;
+	height: 100%;
 }
 .add-mess__mess{
-    border-bottom: 1px solid #DEDEDE;
-    margin-left: 40px;
+	flex: 1 0 auto;
+	height: 100%;
+	margin-right: 10px;
 }
 .add-mess__textarea{
 	width: 100%;
-	height: 25px;
-    margin-top: 20px;
 	border: 0;
-	padding: 0;
+	padding: 5px 0 0;
 	font-size: 13px;
 	line-height: 16px;
 	resize: none;
-    overflow: hidden;
+	height: 100%;
+	margin-top: 1px;
+    /*overflow: hidden;*/
 }
 .add-mess__textarea:focus{
 	outline: none;
 }
 .add-mess__send{
     margin-top: 7px;
+	flex: 0 0 auto;
 }
 .add-mess__send span{
     color: #999;
