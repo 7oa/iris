@@ -1,0 +1,124 @@
+.folders-tree .fa {
+    font-size: 12px;
+}
+.project-search-wrapper .selectize-input{
+    background-color: #F5F5F5;
+}
+.folder-bl{
+    margin-bottom: 20px;
+}
+.folder-bl__ttl{
+    color: #444444;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    margin-bottom: 9px;
+    position: relative;
+}
+.folder-bl__up{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #757B82;
+}
+.folder-bl__plus{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    color: #757B82;
+}
+.folder-bl__list > ul{
+    padding-left: 0 !important;
+}
+.folder-bl__more{
+    text-align: center;
+}
+.folder-bl__more a{
+    color: #444444;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    opacity: .8;
+}
+.folder-bl__btns{
+    position: absolute;
+    right: 30px;
+    top: 0;
+    display: flex;
+    color: #333333;
+}
+.folder-bl__btns button{
+    margin: 0 2px;
+}
+.folder-bl__drag{
+    height: 20px;
+    width: 282px;
+    border: 1px dashed #D7D9DB;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+    color: #757B82;
+    background-color: #eee;
+}
+.tags-row{
+    display: flex;
+}
+.tags-row li{
+    font-size: 16px;
+    margin: 0 2px;
+}
+.tags-row li .fa,
+.tags-col li .fa{
+    font-size: 16px;
+}
+.tags-col a span{
+    color: #2B333C;
+    font-size: 12px;
+    line-height: 17px;
+    padding-left: 3px;
+}
+.tags-col a span .fa{
+    font-size: 12px;
+}
+.tags-col a:hover{
+    text-decoration: none;
+}
+.with-sub-folders {
+    padding-left: 37px!important;
+}
+.tree-node>.btn{
+    left: 0;
+}
+.ui-grid-selection-row-header-buttons{
+    height: 12px;
+    width: 12px;
+    border: 0.5px solid #888E94;
+    opacity: 0.8;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    position: relative;
+}
+.ui-grid-selection-row-header-buttons:before{
+    content: none;
+}
+.ui-grid-selection-row-header-buttons .fa{
+    position: absolute;
+    top: 0;
+    left: -1px;
+}
+.ui-grid-selall{
+    height: 18px;
+    width: 32px;
+    border: 0.5px solid #888E94;
+    margin-left: -5px;
+    padding-left: 5px;
+    position: relative;
+}
+.ui-grid-selall .fa{
+    position: absolute;
+    top: 2px;
+    right: 3px;
+}
+.ui-grid-cell-contents{
+    line-height: 18px;
+}
