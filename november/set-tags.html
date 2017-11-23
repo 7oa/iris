@@ -1,0 +1,2838 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://iris-4.com/ez-alpha/ui/ui/taskmanagement/tasks/961/view -->
+<html ng-app="irisApp" class="" lang="en" data-livestyle-extension="available">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IRIS Task management</title>
+    <link rel="shortcut icon" href="https://iris-4.com/ez-alpha/layouts/ui/img/favicon.ico">
+    <link href="./IRIS Documents_files/css" rel="stylesheet">
+
+    <link href="./IRIS Documents_files/ui.min.css" rel="stylesheet">
+    <link href="./IRIS Documents_files/taskmanagement.min.css" rel="stylesheet">
+    <link href="font-awesome.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+
+    <!--<base href="/ez-alpha/ui/ui/taskmanagement/">-->
+    <base href=".">
+    <style type="text/css">[responsive-image] > img, [data-responsive-image] {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    [responsive-image] > img, [data-responsive-image] > img {
+        width: 100%;
+    }</style>
+</head>
+<body class="uib-dropdown-open" style="">
+
+<div class="app-container" id="content" ng-click="hideGlobalMenu($event)">
+
+
+    <div class="app-header new">
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <div class="global-menu-container dropdown" uib-dropdown="" dropdown-append-to-body=""
+                         auto-close="disabled" is-open="isGlobalMenuOpen" on-toggle="toggleGlobalMenu(open)">
+                        <button type="button" class="btn btn-link global-menu-toggler dropdown-toggle"
+                                uib-dropdown-toggle="" tooltip-placement="right" uib-tooltip="Show menu"
+                                id="showSystemMenu" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-reorder"></i>
+                        </button>
+
+
+                        <div uib-dropdown-menu="" class="global-menu dropdown-menu" role="menu"
+                             style="top: 65px; display: none; left: 22px; right: auto;">
+                            <uib-accordion close-others="false">
+                                <div role="tablist" class="panel-group" ng-transclude="">
+                                    <!---->
+                                    <div uib-accordion-group="" class="panel-default panel panel-open"
+                                         is-open="mainItem.open"
+                                         ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive"
+                                         ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}">
+                                        <div role="tab" id="accordiongroup-30-2020-tab" aria-selected="true"
+                                             class="panel-heading" ng-keypress="toggleOpen($event)">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse"
+                                                   href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/"
+                                                   aria-expanded="true" aria-controls="accordiongroup-30-2020-panel"
+                                                   class="accordion-toggle" ng-click="toggleOpen()"
+                                                   uib-accordion-transclude="heading" ng-disabled="isDisabled"
+                                                   uib-tabindex-toggle=""><span uib-accordion-header=""
+                                                                                ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw fa-angle-down"
+                      ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                                    <!----><span ng-if="!mainItem.url">Project</span><!---->
+                                                    <!---->
+                </span></a>
+                                            </h4>
+                                        </div>
+                                        <div id="accordiongroup-30-2020-panel"
+                                             aria-labelledby="accordiongroup-30-2020-tab" aria-hidden="false"
+                                             role="tabpanel" class="panel-collapse collapse in" uib-collapse="!isOpen"
+                                             aria-expanded="true">
+                                            <div class="panel-body" ng-transclude="">
+                                                <div uib-accordion-heading=""
+                                                     ng-class="{ &#39;active&#39;: mainItem.isActive }"
+                                                     class="active"></div>
+
+                                                <ul class="list-unstyled">
+                                                    <!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/dashboard"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/dashboard">
+                                                            Dashboard</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/dms"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/dms"> Documents</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/maps"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/maps"> IRIS Maps</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/process-management"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/process-management">
+                                                            Process Management</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/projects-list"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/projects-list">
+                                                            Projects list</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/support"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/support"> Support</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }" class="active">
+                                                        <a ng-href="/ez-alpha/ui/ui/taskmanagement"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement"> Task
+                                                            management</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/workgroups"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/workgroups">
+                                                            Workgroups</a>
+                                                    </li><!----><!---->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!---->
+                                    <div uib-accordion-group="" class="panel-default panel" is-open="mainItem.open"
+                                         ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive"
+                                         ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}">
+                                        <div role="tab" id="accordiongroup-32-960-tab" aria-selected="false"
+                                             class="panel-heading" ng-keypress="toggleOpen($event)">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse"
+                                                   href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/"
+                                                   aria-expanded="false" aria-controls="accordiongroup-32-960-panel"
+                                                   class="accordion-toggle" ng-click="toggleOpen()"
+                                                   uib-accordion-transclude="heading" ng-disabled="isDisabled"
+                                                   uib-tabindex-toggle=""><span uib-accordion-header=""
+                                                                                ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw fa-angle-right"
+                      ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                                    <!----><span ng-if="!mainItem.url">Construction</span><!---->
+                                                    <!---->
+                </span></a>
+                                            </h4>
+                                        </div>
+                                        <div id="accordiongroup-32-960-panel"
+                                             aria-labelledby="accordiongroup-32-960-tab" aria-hidden="true"
+                                             role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen"
+                                             aria-expanded="false" style="height: 0px;">
+                                            <div class="panel-body" ng-transclude="">
+                                                <div uib-accordion-heading=""
+                                                     ng-class="{ &#39;active&#39;: mainItem.isActive }"></div>
+
+                                                <ul class="list-unstyled">
+                                                    <!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/bimm"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/bimm"> BIM</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/dsm"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/dsm"> Damages
+                                                            management</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/dpm"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/dpm"> Digital
+                                                            Protocols</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/segments-mgmt"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/segments-mgmt">
+                                                            Segment Management</a>
+                                                    </li><!----><!---->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!---->
+                                    <div uib-accordion-group="" class="panel-default panel" is-open="mainItem.open"
+                                         ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive"
+                                         ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}">
+                                        <div role="tab" id="accordiongroup-34-4609-tab" aria-selected="false"
+                                             class="panel-heading" ng-keypress="toggleOpen($event)">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse"
+                                                   href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/"
+                                                   aria-expanded="false" aria-controls="accordiongroup-34-4609-panel"
+                                                   class="accordion-toggle" ng-click="toggleOpen()"
+                                                   uib-accordion-transclude="heading" ng-disabled="isDisabled"
+                                                   uib-tabindex-toggle=""><span uib-accordion-header=""
+                                                                                ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw fa-angle-right"
+                      ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                                    <!----><span ng-if="!mainItem.url">Analysis</span><!---->
+                                                    <!---->
+                </span></a>
+                                            </h4>
+                                        </div>
+                                        <div id="accordiongroup-34-4609-panel"
+                                             aria-labelledby="accordiongroup-34-4609-tab" aria-hidden="true"
+                                             role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen"
+                                             aria-expanded="false" style="height: 0px;">
+                                            <div class="panel-body" ng-transclude="">
+                                                <div uib-accordion-heading=""
+                                                     ng-class="{ &#39;active&#39;: mainItem.isActive }"></div>
+
+                                                <ul class="list-unstyled">
+                                                    <!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/charts"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/charts"> Charts</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/sensorboards"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/sensorboards">
+                                                            Sensorboards</a>
+                                                    </li><!----><!---->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!---->
+                                    <div uib-accordion-group="" class="panel-default panel" is-open="mainItem.open"
+                                         ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive"
+                                         ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}">
+                                        <div role="tab" id="accordiongroup-36-7313-tab" aria-selected="false"
+                                             class="panel-heading" ng-keypress="toggleOpen($event)">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse"
+                                                   href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/"
+                                                   aria-expanded="false" aria-controls="accordiongroup-36-7313-panel"
+                                                   class="accordion-toggle" ng-click="toggleOpen()"
+                                                   uib-accordion-transclude="heading" ng-disabled="isDisabled"
+                                                   uib-tabindex-toggle=""><span uib-accordion-header=""
+                                                                                ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw"
+                      ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                                    <!---->
+                                                    <!----><a ng-if="mainItem.url" ng-click="$event.stopPropagation()"
+                                                              ng-href="/ez-alpha/ui/ui/administration"
+                                                              href="https://iris-4.com/ez-alpha/ui/ui/administration"> Administration</a>
+                                                    <!---->
+                </span></a>
+                                            </h4>
+                                        </div>
+                                        <div id="accordiongroup-36-7313-panel"
+                                             aria-labelledby="accordiongroup-36-7313-tab" aria-hidden="true"
+                                             role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen"
+                                             aria-expanded="false" style="height: 0px;">
+                                            <div class="panel-body" ng-transclude="">
+                                                <div uib-accordion-heading=""
+                                                     ng-class="{ &#39;active&#39;: mainItem.isActive }"></div>
+
+                                                <ul class="list-unstyled">
+                                                    <!---->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!---->
+                                    <div uib-accordion-group="" class="panel-default panel" is-open="mainItem.open"
+                                         ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive"
+                                         ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}">
+                                        <div role="tab" id="accordiongroup-38-5205-tab" aria-selected="false"
+                                             class="panel-heading" ng-keypress="toggleOpen($event)">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse"
+                                                   href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/"
+                                                   aria-expanded="false" aria-controls="accordiongroup-38-5205-panel"
+                                                   class="accordion-toggle" ng-click="toggleOpen()"
+                                                   uib-accordion-transclude="heading" ng-disabled="isDisabled"
+                                                   uib-tabindex-toggle=""><span uib-accordion-header=""
+                                                                                ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw fa-angle-right"
+                      ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                                    <!----><span ng-if="!mainItem.url">Configuration</span><!---->
+                                                    <!---->
+                </span></a>
+                                            </h4>
+                                        </div>
+                                        <div id="accordiongroup-38-5205-panel"
+                                             aria-labelledby="accordiongroup-38-5205-tab" aria-hidden="true"
+                                             role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen"
+                                             aria-expanded="false" style="height: 0px;">
+                                            <div class="panel-body" ng-transclude="">
+                                                <div uib-accordion-heading=""
+                                                     ng-class="{ &#39;active&#39;: mainItem.isActive }"></div>
+
+                                                <ul class="list-unstyled">
+                                                    <!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/sensorboard-cfg"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/sensorboard-cfg">
+                                                            Sensorboards</a>
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <a ng-href="/ez-alpha/ui/ui/configuration"
+                                                           href="https://iris-4.com/ez-alpha/ui/ui/configuration">
+                                                            System</a>
+                                                    </li><!----><!---->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!---->
+                                </div>
+                            </uib-accordion>
+                        </div>
+                    </div>
+
+                    <a class="navbar-brand" href="https://iris-4.com/ez-alpha/ui/ui/dms" title="Homepage">
+                        <img src="./IRIS Documents_files/logo2.png" height="58px" alt="IRIS">
+                    </a>
+
+                    <div class="navbar-ttl">
+                        Task management
+                    </div>
+                </div>
+
+                <div class="global-menu-header">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-link global-menu-toggler"
+                                    uib-tooltip="label.HideGlobalMenu" ng-click="isGlobalMenuOpen = false"
+                                    id="HideMenu">
+                                <i class="fa fa-angle-up"></i>
+                            </button>
+                        </span>
+
+                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" autofocus=""
+                               placeholder="Search for..."
+                               ng-model-options="{updateOn: &#39;default blur&#39;, debounce: {&#39;default&#39;: 100, &#39;blur&#39;: 0 }}"
+                               ng-model="globalMenuFilter">
+
+                        <span class="input-group-btn">
+                            <button class="btn btn-link global-menu-filter ng-hide" type="button"
+                                    ng-show="globalMenuFilter" ng-click="globalMenuFilter = &#39;&#39;">
+                                <span class="fa fa-times"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right nav-menu-profile">
+                        <li uib-dropdown="" class="dropdown">
+
+                            <a href="javascript:void(0)" uib-dropdown-toggle="" style="padding-right:0;" id="user_icon"
+                               class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span class="user" iris-user="" for-current-user="true" show-company="true">
+    <span class="iris-user-avatar" uib-tooltip="Test Natlex ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Test Natlex 
+        </span>
+                <!----><span ng-if="showCompany" class="iris-user-company">
+            ITC-Engineering
+        </span><!---->
+    </span><!---->
+</span>
+                            </a>
+
+                            <ul uib-dropdown-menu="" class="with-icon dropdown-menu">
+                                <li>
+                                    <a ng-href="/ez-alpha/ui/ui/profile" id="profile"
+                                       href="https://iris-4.com/ez-alpha/ui/ui/profile">
+                                        <span class="fa fa-fw fa-user"></span>
+                                        My Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a ng-href="/ez-alpha/ui/ui/user-notifications"
+                                       href="https://iris-4.com/ez-alpha/ui/ui/user-notifications">
+                                        <span class="fa fa-fw fa-envelope-o"></span>
+                                        My notifications
+                                    </a>
+                                </li>
+                                <li>
+                                    <a ng-href="/ez-alpha/ui/ui/help" href="https://iris-4.com/ez-alpha/ui/ui/help">
+                                        <span class="fa fa-fw fa-info"></span>
+                                        Help
+                                    </a>
+                                </li>
+                                <li iris-report-an-error="">
+                                    <a ng-click="openReportAnErrorModal()" href="javascript:void(0)">
+                                        <span class="fa fa-fw fa-bug"></span>
+                                        Report an error
+                                    </a>
+                                </li>
+                                <li>
+                                    <a ng-href="/ez-alpha/logoff" id="logout" href="https://iris-4.com/ez-alpha/logoff">
+                                        <span class="fa fa-fw fa-sign-out"></span>
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <form class="nav navbar-form navbar-right ng-pristine ng-valid dropdown"
+                          ng-init="searchDMS.isOpen = false" uib-dropdown="" is-open="searchDMS.isOpen"
+                          auto-close="outsideClick">
+                        <div class="input-group dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true"
+                             aria-expanded="false">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty"
+                                   ng-class="{focus: searchDMS.isOpen}" ng-model="searchDMS.name"
+                                   ng-model-options="{ updateOn: &#39;default blur&#39;, debounce: { &#39;default&#39;: 800, &#39;blur&#39;: 0 } }"
+                                   ng-change="searchDMS.isOpen = true" placeholder="Search">
+
+                            <span class="input-group-btn">
+            <button type="submit" class="btn btn-link">
+                <span class="fa fa-search"></span>
+            </button>
+        </span>
+                        </div>
+
+                        <div uib-dropdown-menu="" class="iris-dropdown-menu dropdown-menu" iris-search-menu=""
+                             is-open="searchDMS.isOpen" file-name="searchDMS.name">    <!---->
+
+                            <!---->
+                        </div>
+                    </form>
+
+
+                    <ul class="nav navbar-nav navbar-notifications navbar-right">
+                        <li uib-dropdown="" auto-close="outsideClick" class="dropdown">
+                            <a href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/#" class="clock dropdown-toggle"
+                               uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+                                21:45
+                            </a>
+
+                            <div uib-dropdown-menu="" class="iris-dropdown-menu flex-col-6 stick dropdown-menu">
+
+                                <ul class="items-container tasks-list">
+                                    <li class="item-group-header">
+                                        <h5>Assigned to me tasks</h5>
+                                    </li>
+
+                                    <!---->
+                                    <li class="item" ng-if="!tasks.length">
+                                        <div class="item-content">
+                                            <div class="content-body">
+                                                No task assigned to you with today`s due date
+                                            </div>
+                                        </div>
+                                    </li><!---->
+
+                                    <!---->
+
+                                    <li class="new-task">
+                                        <div class="btn-group pull-right">
+                                            <button class="btn btn-default" ng-click="requestTasks()"
+                                                    uib-tooltip="Refresh list">
+                                                <i class="fa fa-refresh fa-fw"></i>
+                                            </button>
+                                            <a ng-href="/ez-alpha/ui/ui/taskmanagement/tasks/add"
+                                               class="btn btn-default"
+                                               href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/tasks/add">
+                                                <i class="fa fa-plus fa-fw"></i>
+                                                Add a task
+                                            </a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
+
+
+                        <li uib-dropdown="" auto-close="outsideClick" class="icon-menu dropdown"
+                            notifications-limit="10">
+
+                            <a href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/#" uib-dropdown-toggle=""
+                               ng-class="{&#39;has-notifications&#39;: ((notificationList | filter: { read: false }).length)}"
+                               class="dropdown-toggle has-notifications" aria-haspopup="true" aria-expanded="false"
+                               style="">
+                                <span class="fa fa-bell fa-lg fa-fw"></span>
+                            </a>
+
+                            <div uib-dropdown-menu="" class="iris-dropdown-menu flex-col-6 stick dropdown-menu">
+                                <ul class="items-container">
+                                    <!---->
+                                    <!---->
+                                    <li class="item item-status-success"
+                                        ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;"
+                                        style="">
+                                        <div class="item-left-sidebar">
+                                            <span class="fa fa-info-circle icon-sm"></span>
+                                        </div>
+                                        <div class="item-content" ng-click="setRead(notification)">
+                                            <div class="content-header">
+                                                <!----><span class="badge badge-success"
+                                                             ng-if="!notification.read">New</span><!---->
+
+                                                <h3 class="title">
+                                                    File link access
+                                                </h3>
+
+                                                <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="20.11.2017 14:37:52">
+                                3 day(s) ago
+                            </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="content-body" compile="notification.message"><p>Dear Test Natlex
+                                                <br>Somebody has clicked on the <a class="btn-link"
+                                                                                   href="https://iris-4.com/ez-alpha_back/restful/dms/links/3b563cdff117e74a8a12646f965f75ae00bd4ef9/download">link</a>
+                                                to access the file
+                                                comments_to_Test_Hoerth.xls_2017-11-20T14_37_34_xuTL3nkX.pdf</p></div>
+                                        </div>
+                                    </li><!---->
+                                    <li class="item item-status-success"
+                                        ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                        <div class="item-left-sidebar">
+                                            <span class="fa fa-info-circle icon-sm"></span>
+                                        </div>
+                                        <div class="item-content" ng-click="setRead(notification)">
+                                            <div class="content-header">
+                                                <!----><span class="badge badge-success"
+                                                             ng-if="!notification.read">New</span><!---->
+
+                                                <h3 class="title">
+                                                    File link access
+                                                </h3>
+
+                                                <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="20.11.2017 14:36:25">
+                                3 day(s) ago
+                            </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="content-body" compile="notification.message"><p>Dear Test Natlex
+                                                <br>Somebody has clicked on the <a class="btn-link"
+                                                                                   href="https://iris-4.com/ez-alpha_back/restful/dms/links/1e276ce2c215e973bed64ead3f6525d00f40160a/download">link</a>
+                                                to access the file
+                                                comments_to_Test_Hoerth.xls_2017-11-20T14_36_14_cmAoG3AX.pdf</p></div>
+                                        </div>
+                                    </li><!---->
+                                    <li class="item item-status-success"
+                                        ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                        <div class="item-left-sidebar">
+                                            <span class="fa fa-info-circle icon-sm"></span>
+                                        </div>
+                                        <div class="item-content" ng-click="setRead(notification)">
+                                            <div class="content-header">
+                                                <!----><span class="badge badge-success"
+                                                             ng-if="!notification.read">New</span><!---->
+
+                                                <h3 class="title">
+                                                    Export finished
+                                                </h3>
+
+                                                <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="20.11.2017 14:36:21">
+                                3 day(s) ago
+                            </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="content-body" compile="notification.message">Your export to DMS
+                                                has finished. Click <a style="color: blue; text-decoration: underline"
+                                                                       href="https://iris-4.com/ez-alpha_back/restful/dms/links/1e276ce2c215e973bed64ead3f6525d00f40160a/download?token=fa7d90efe95fa6693408c98ba698b926f5b3d44f">here</a>
+                                                to download the file.
+                                            </div>
+                                        </div>
+                                    </li><!---->
+                                    <li class="item item-status-success"
+                                        ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                        <div class="item-left-sidebar">
+                                            <span class="fa fa-info-circle icon-sm"></span>
+                                        </div>
+                                        <div class="item-content" ng-click="setRead(notification)">
+                                            <div class="content-header">
+                                                <!----><span class="badge badge-success"
+                                                             ng-if="!notification.read">New</span><!---->
+
+                                                <h3 class="title">
+                                                    File link access
+                                                </h3>
+
+                                                <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="09.11.2017 08:18:44">
+                                14 day(s) ago
+                            </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="content-body" compile="notification.message"><p>Dear Test Natlex
+                                                <br>Somebody has clicked on the <a class="btn-link"
+                                                                                   href="https://iris-4.com/ez-alpha_back/restful/dms/links/99e5a3ea39cabee17833f2ba7639b6b7c6bfad02/download">link</a>
+                                                to access the file
+                                                comments_to_Testfile223ddd.docx_2017-11-09T08_18_19_C1NjWlvN.pdf</p>
+                                            </div>
+                                        </div>
+                                    </li><!---->
+                                    <li class="item item-status-success"
+                                        ng-repeat="notification in notificationList | orderBy: &#39;-notification.eventDate&#39;">
+                                        <div class="item-left-sidebar">
+                                            <span class="fa fa-info-circle icon-sm"></span>
+                                        </div>
+                                        <div class="item-content" ng-click="setRead(notification)">
+                                            <div class="content-header">
+                                                <!----><span class="badge badge-success"
+                                                             ng-if="!notification.read">New</span><!---->
+
+                                                <h3 class="title">
+                                                    File link access
+                                                </h3>
+
+                                                <div class="btn-toolbar">
+                            <span class="notif-date-label" uib-tooltip="09.11.2017 08:17:29">
+                                14 day(s) ago
+                            </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="content-body" compile="notification.message"><p>Dear Test Natlex
+                                                <br>Somebody has clicked on the <a class="btn-link"
+                                                                                   href="https://iris-4.com/ez-alpha_back/restful/dms/links/5b8e6b41e340c964c00a81ceb5f00dd02eb34a46/download">link</a>
+                                                to access the file
+                                                comments_to_ElasticDiagrams.pptx_2017-11-09T08_17_12_7jqQokhc.pdf</p>
+                                            </div>
+                                        </div>
+                                    </li><!---->
+                                </ul>
+
+                                <div class="notifications-buttons">
+                                    <a class="show-all btn btn-link" ng-href="/ez-alpha/ui/ui/user-notifications"
+                                       target="_blank" href="https://iris-4.com/ez-alpha/ui/ui/user-notifications">
+                                        Show all notifications
+                                    </a>
+                                    <button class="mark-all-as-read btn btn-default"
+                                            ng-show="checkUnreadNotifications()" ng-click="markAllAsRead()" style="">
+                                        Mark all as read
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li uib-dropdown="" auto-close="outsideClick" class="icon-menu dropdown" discussions-limit="20">
+
+                            <a href="javascript:void(0)" uib-dropdown-toggle=""
+                               ng-class="{&#39;has-notifications&#39;: hasNewMessages}" class="dropdown-toggle"
+                               aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-comments fa-lg fa-fw"></span>
+                            </a>
+
+                            <div uib-dropdown-menu="" class="iris-dropdown-menu flex-col-6 stick dropdown-menu">
+                                <ul class="items-container dialogs-list chat__list">
+                                    <!---->
+                                    <li ng-if="!hasNewMessages" class="item">
+                                        <div class="item-content">
+                                            <div class="content-header">
+                                                <h2 class="title">
+                                                    No new messages
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </li><!---->
+
+                                    <!---->
+                                </ul>
+
+                                <div class="notifications-buttons">
+                                    <a class="show-all btn btn-link" ng-href="/ez-alpha/ui/ui/discussions"
+                                       target="_blank" href="https://iris-4.com/ez-alpha/ui/ui/discussions">
+                                        Show all discussions
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+
+                    <ul class="nav navbar-nav nav-menu navbar-right">
+                        <li uib-dropdown="" auto-close="outsideClick" class="dropdown">
+                            <a href="javascript:void(0)" uib-dropdown-toggle="" class="dropdown-toggle"
+                               aria-haspopup="true" aria-expanded="false">
+                                Dashboard <span class="fa fa-th fa-lg fa-fw"></span>
+                            </a>
+
+                            <div iris-dashboards-menu="" uib-dropdown-menu=""
+                                 class="iris-dropdown-menu flex-col-4 stick dropdown-menu">
+                                <div class="input-group search-bar-container">
+                                    <input type="text" ng-model="searchDashboard.name"
+                                           class="form-control ng-pristine ng-untouched ng-valid ng-empty"
+                                           placeholder="Search for...">
+
+                                    <span class="input-group-btn">
+        <button class="btn btn-link" type="button">
+            <span class="fa fa-search"></span>
+        </button>
+    </span>
+                                </div>
+                                <ul class="items-container">
+                                    <!---->
+                                    <!---->
+                                    <li class="item"
+                                        ng-class="{&#39;item-favorite&#39;: dashboard.id == me.profile.dashboardId}"
+                                        ng-repeat="dashboard in dashboards | filter:searchDashboard | orderBy:[&#39;name&#39;] | limitTo:3"
+                                        ng-click="goToDashboard(dashboard.href)">
+                                        <div class="item-left-sidebar">
+                                            <span class="fa fa-info-circle icon-sm"></span>
+                                        </div>
+
+                                        <div class="item-content">
+                                            <div class="content-header">
+                                                <a class="btn-link">
+                                                    <h2 class="title">My dashboard</h2>
+                                                </a>
+                                            </div>
+
+                                            <!---->
+                                        </div>
+                                    </li><!---->
+                                </ul>
+                                <div class="show-more-container">
+                                    <a ng-href="/ez-alpha/ui/ui/dashboard"
+                                       href="https://iris-4.com/ez-alpha/ui/ui/dashboard">
+                                        Show all dashboards
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- .collapse.navbar-collapse -->
+            </div>
+            <!-- .container-fluid -->
+        </nav>
+        <!-- .navbar.navbar-custom -->
+
+    </div>
+    <!-- .app-header -->
+
+
+    <!---->
+    <div class="app-body-container" ui-view="" style=""><!---->
+        <div class="app-body-container" ui-view="">
+            <div class="app-toolbar">
+                <div class="container-fluid">
+                    <ol class="breadcrumb pull-left">
+                        <li>
+                            <a ui-sref="tm.tasks-list" href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/tasks">
+                                Task management
+                            </a>
+                        </li>
+                        <!---->
+                        <li>SPT-801</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="app-body flex-grid task-management">
+                <div class="app-sidebar left flex-col-3 minimize wide">
+                    <div class="all-tasks-menu">
+                        <div class="all-tasks-menu-top">
+                            <a ui-sref="tm.tasks-add" uib-tooltip="New task" tooltip-placement="right"
+                               class="btn btn-success btn-newtask"
+                               href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/tasks/add">
+                                <i class="fa fa-plus"></i>
+                            </a>
+
+                            <!---->
+                            <button uib-tooltip="Link" tooltip-placement="right" uib-dropdown=""
+                                    dropdown-append-to-body="" uib-dropdown-toggle=""
+                                    class="btn btn-default btn-left-sidebar dropdown dropdown-toggle"
+                                    ng-if="meCanChangeTask(task)" ng-disabled="!canChangeState(task)"
+                                    aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-link"></i>
+
+
+                                <ul uib-dropdown-menu="" role="menu" class="dropdown-menu"
+                                    style="top: 192px; display: none; left: 15px; right: auto;">
+                                    <!---->
+                                    <li ng-if="!task.parentId">
+                                        <a href="javascript:void(0)" ng-click="linkTask(&#39;parent&#39;)">
+                                            Parent for
+                                        </a>
+                                    </li><!---->
+                                    <!---->
+                                    <li ng-if="!task.subTasks.length &amp;&amp; !isProcessTask(task)">
+                                        <a href="javascript:void(0)" ng-click="linkTask(&#39;subtask&#39;)">
+                                            Sub task of
+                                        </a>
+                                    </li><!---->
+                                </ul>
+                            </button><!---->
+
+                            <!---->
+                        </div>
+                        <div class="sidebar-menu-body" tm-modules-list="taskmanagement">
+                            <ul class="iris-modules-list">
+                                <!---->
+                                <li ng-if="hasAccessRights(&#39;PROJECT_HIERARCHY&#39;, true)" class="" style="">
+                                    <a ng-href="/ez-alpha/ui/ui/projects-list"
+                                       ng-class="{active: module == &#39;projects-list&#39;}"
+                                       href="https://iris-4.com/ez-alpha/ui/ui/projects-list">
+                                        <div class="sidebar-menu-icn" tooltip-placement="right"
+                                             uib-tooltip="Projects list">
+                                            <i class="fa fa-fw fa-briefcase"></i>
+                                        </div>
+                                    </a>
+                                    <span class="iris-sidebar-icon-caption"
+                                          ng-class="{active: module == &#39;projects-list&#39;}">Projects</span>
+                                </li><!---->
+                                <!---->
+                                <li ng-if="hasAccessRights(&#39;TASK_MGMT&#39;, true)" class="">
+                                    <a ng-href="/ez-alpha/ui/ui/workgroups"
+                                       ng-class="{active: module == &#39;workgroups&#39;}"
+                                       href="https://iris-4.com/ez-alpha/ui/ui/workgroups">
+                                        <div class="sidebar-menu-icn" tooltip-placement="right"
+                                             uib-tooltip="Workgroups">
+                                            <i class="fa fa-fw fa-users"></i>
+                                        </div>
+                                    </a>
+                                    <span class="iris-sidebar-icon-caption"
+                                          ng-class="{active: module == &#39;workgroups&#39;}">Teams</span>
+                                </li><!---->
+                                <!---->
+                                <li ng-if="hasConfigRights(&#39;PROCESS_MGMT&#39;, true)" class="">
+                                    <a ng-href="/ez-alpha/ui/ui/process-management/process-templates"
+                                       ng-class="{active: module == &#39;process-templates&#39;}"
+                                       href="https://iris-4.com/ez-alpha/ui/ui/process-management/process-templates">
+                                        <div class="sidebar-menu-icn" tooltip-placement="right"
+                                             uib-tooltip="Process templates">
+                                            <i class="fa fa-fw fa-file-text"></i>
+                                        </div>
+                                    </a>
+                                    <span class="iris-sidebar-icon-caption"
+                                          ng-class="{active: module == &#39;process-templates&#39;}">Templates</span>
+                                </li><!---->
+                                <!---->
+                                <li ng-if="hasAccessRights(&#39;PROCESS_MGMT&#39;, true)" class="">
+                                    <a ng-href="/ez-alpha/ui/ui/process-management"
+                                       ng-class="{active: module == &#39;process-management&#39;}"
+                                       href="https://iris-4.com/ez-alpha/ui/ui/process-management">
+                                        <div class="sidebar-menu-icn" tooltip-placement="right"
+                                             uib-tooltip="Process Management">
+                                            <i class="fa fa-fw fa-sitemap"></i>
+                                        </div>
+                                    </a>
+                                    <span class="iris-sidebar-icon-caption"
+                                          ng-class="{active: module == &#39;process-management&#39;}">Processes</span>
+                                </li><!---->
+                                <!---->
+                                <li ng-if="hasAccessRights(&#39;TASK_MGMT&#39;, true)" class="">
+                                    <a ng-href="/ez-alpha/ui/ui/taskmanagement"
+                                       ng-class="{active: module == &#39;taskmanagement&#39;}"
+                                       href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement" class="active">
+                                        <div class="sidebar-menu-icn" tooltip-placement="right"
+                                             uib-tooltip="Task management">
+                                            <i class="fa fa-fw fa-check-square-o"></i>
+                                        </div>
+                                    </a>
+                                    <span class="iris-sidebar-icon-caption active"
+                                          ng-class="{active: module == &#39;taskmanagement&#39;}">Tasks</span>
+                                </li><!---->
+                                <!---->
+                                <li ng-if="hasAccessRights(&#39;TASK_MGMT&#39;, true)" class="">
+                                    <a ng-href="/ez-alpha/ui/ui/taskcalendar"
+                                       ng-class="{active: module == &#39;taskcalendar&#39;}"
+                                       href="https://iris-4.com/ez-alpha/ui/ui/taskcalendar">
+                                        <div class="sidebar-menu-icn" tooltip-placement="right" uib-tooltip="Calendar">
+                                            <i class="fa fa-fw fa-calendar"></i>
+                                        </div>
+                                    </a>
+                                    <span class="iris-sidebar-icon-caption"
+                                          ng-class="{active: module == &#39;taskcalendar&#39;}">Calendar</span>
+                                </li><!---->
+                                <!---->
+                                <li ng-if="hasAccessRights(&#39;TASK_MGMT&#39;, true)" class="">
+                                    <a href="https://iris-4.com/ez-alpha/ui/ui/kanban"
+                                       ng-class="{active: module == &#39;kanban&#39;}">
+                                        <div class="sidebar-menu-icn" tooltip-placement="right"
+                                             uib-tooltip="Kanban table">
+                                            <i class="fa fa-fw fa-trello"></i>
+                                        </div>
+                                    </a>
+                                    <span class="iris-sidebar-icon-caption"
+                                          ng-class="{active: module == &#39;kanban&#39;}">Kanban</span>
+                                </li><!---->
+                                <!---->
+                                <li ng-if="hasAccessRights(&#39;TASK_MGMT&#39;, true) || hasAccessRights(&#39;PROCESS_MGMT&#39;, true)"
+                                    class="">
+                                    <a href="https://iris-4.com/ez-alpha/ui/ui/process-gantt"
+                                       ng-class="{active: module == &#39;gantt&#39;}">
+                                        <div class="sidebar-menu-icn" tooltip-placement="right"
+                                             uib-tooltip="Process Gantt Chart">
+                                            <i class="fa fa-tasks"></i>
+                                        </div>
+                                    </a>
+                                    <span class="iris-sidebar-icon-caption"
+                                          ng-class="{active: module == &#39;gantt&#39;}">Gantt</span>
+                                </li><!---->
+                                <!---->
+                                <li ng-if="hasAccessRights(&#39;DMS&#39;, true)" class="">
+                                    <a ng-href="/ez-alpha/ui/ui/dms"
+                                       ng-class="{active: module == &#39;dms&#39; &amp;&amp; $state.includes(&#39;dms&#39;)}"
+                                       href="https://iris-4.com/ez-alpha/ui/ui/dms">
+                                        <div class="sidebar-menu-icn" tooltip-placement="right" uib-tooltip="Documents">
+                                            <i class="fa fa-fw fa-folder-open"></i>
+                                        </div>
+                                    </a>
+                                    <span class="iris-sidebar-icon-caption"
+                                          ng-class="{active: module == &#39;dms&#39; &amp;&amp; $state.includes(&#39;dms&#39;)}">Documents</span>
+                                </li><!---->
+                                <!---->
+                                <!---->
+                                <li ng-if="hasAccessRights(&#39;BIM&#39;, true)" class="">
+                                    <a ng-href="/ez-alpha/ui/ui/bimm" ng-class="{active: module == &#39;bim&#39;}"
+                                       href="https://iris-4.com/ez-alpha/ui/ui/bimm">
+                                        <div class="sidebar-menu-icn" tooltip-placement="right" uib-tooltip="BIM">
+                                            <i class="fa fa-fw fa-cube"></i>
+                                        </div>
+                                    </a>
+                                    <span class="iris-sidebar-icon-caption"
+                                          ng-class="{active: module == &#39;bim&#39;}">BIM</span>
+                                </li><!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                            </ul>
+                        </div>
+
+                        <div class="left-menu-minimize" tooltip-placement="right" uib-tooltip="Back to list"
+                             ng-click="goToList()">
+                            <div class="tasks-menu-icn"><i class="fa fa-reply cntr"></i></div>
+                            <div class="full-minimizer"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="app-content-container flex-col-auto fix-title-width ng-pristine ng-valid"
+                     ng-form="TaskForm">
+                    <div class="app-content flex-col-auto fix-title-width">
+                        <div class="b-window one-task-b-window fix-title-width task-view">
+                            <div class="b-header one-task-view-header">
+                                <div class="btn-toolbar pull-right"
+                                     ng-style="{&#39;margin-right&#39;: task.assignee.id != me.id ? 60 : 0}"
+                                     style="margin-right: 60px;">
+                                    <!---->
+                                    <button type="button" ng-if="!task.parentId &amp;&amp; meCanChangeTask(task)"
+                                            ng-click="addSubTask()" class="btn btn-default">
+                                        <i class="fa fa-plus"></i>
+                                        Add subtask
+                                    </button><!---->
+
+                                    <!----><a ui-sref="tm.tasks-add({copyId: task.id})"
+                                              ng-if="task.parentId || meCanChangeTask(task)" class="btn btn-default"
+                                              href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/tasks/add?copyId=961">
+                                    <i class="fa fa-copy"></i>
+                                    Copy task
+                                </a><!---->
+
+                                    <!---->
+                                    <button type="button" ng-if="isEditable &amp;&amp; !isProcessTask(task)"
+                                            ng-click="removeTask()" class="btn btn-default">
+                                        <i class="fa fa-trash-o"></i>
+                                        Remove
+                                    </button><!---->
+                                </div>
+
+
+                                <div class="one-task-view-topinfo">
+                                    Created by Test Natlex 22.11.2017 09:08:44
+                                </div>
+                                <div class="one-task-first-container fix-title">
+                                    <!---->
+                                    <div ng-if="task.assignee.id != me.id" class="star">
+                                        <a href="javascript:void(0)" uib-tooltip="Click to cancel observing"
+                                           ng-click="toggleFavoriteTask(task)"
+                                           ng-class="{&#39;active fa-star&#39;: task.isFavorite, &#39;fa-star-o&#39;: !task.isFavorite}"
+                                           class="fa active fa-star">
+                                        </a>
+                                    </div><!---->
+
+                                    <!---->
+                                    <div class="one-task-view-title fix-title-width btn-link btn"
+                                         ng-if="!options.isEditTitle"
+                                         ng-click="isEditable &amp;&amp; (options.isEditTitle = isProcessTask(task) ? false : !options.isEditTitle)">
+                                        <h3>
+                                            <span uib-tooltip="Click to edit Test task for tags">Test task for tags</span>
+                                        </h3>
+                                    </div><!---->
+                                    <!---->
+                                </div>
+                            </div>
+
+                            <div class="b-content one-task-view-content">
+                                <div class="scrollable">
+                                    <!-- Task description -->
+                                    <div class="one-task-first-container">
+                                        <div class="container-fluid">
+                                            <div class="row" style="position: relative;">
+                                                <div class="col-xs-9">
+                                                    <!---->
+                                                    <!---->
+                                                    <div class="one-task-view-text"
+                                                         ng-if="!options.isEditDescription &amp;&amp; !task.description"
+                                                         uib-tooltip="Click to edit"
+                                                         ng-click="isEditable &amp;&amp; (options.isEditDescription = !options.isEditDescription)">
+                                                        <p class="alert alert-warning">No description</p>
+                                                    </div><!---->
+                                                    <!---->
+                                                </div>
+                                                <!---->
+                                                <div ng-if="isCheckListAvailable" class="col-xs-3 task-check-list">
+                                                    <h5>Check list</h5>
+                                                    <div class="progress" style="height: 5px" uib-tooltip="0%">
+                                                        <div class="progress-bar progress-bar-success"
+                                                             role="progressbar"
+                                                             ng-style="{ &#39;width&#39;: calculateChecklistProgressbar(task.checkList) + &#39;%&#39; }"
+                                                             style="width: 0%;"></div>
+                                                    </div>
+                                                    <hr>
+                                                    <fieldset
+                                                            class="check-list-content ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty"
+                                                            ui-sortable="sortableOptions" ng-model="task.checkList">
+                                                        <!---->
+                                                    </fieldset>
+                                                    <!----><p class="alert alert-warning" style="margin-top: 10px"
+                                                              ng-if="!task.checkList.length">
+                                                    No items created
+                                                </p><!---->
+                                                    <!---->
+                                                    <form ng-if="isEditable" id="NewCheckForm" name="NewCheckForm"
+                                                          class="form-horizontal ng-pristine ng-valid">
+                                                        <div class="input-group flex-col-auto">
+                                                            <span class="input-group-addon"><i
+                                                                    class="fa fa-arrow-right"></i></span>
+                                                            <input type="text"
+                                                                   class="form-control ng-pristine ng-untouched ng-valid ng-empty"
+                                                                   placeholder="Enter new item"
+                                                                   ng-model="newCheck.title">
+                                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" ng-disabled="!newCheck.title"
+                                                        form="NewCheckForm" type="submit"
+                                                        ng-click="addCheck(newCheck.title)" disabled="disabled">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </span>
+                                                        </div>
+                                                    </form><!---->
+                                                </div><!---->
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+
+                                        <div class="one-task-view-files">
+                                            <!---->
+                                        </div>
+
+                                        <div class="flex-grid upload-files">
+                                            <div class="flex-col-1 label font12">Upload</div>
+                                            <!---->
+                                            <div class="wrapper-upload-form flex-col-6" nv-file-drop=""
+                                                 uploader="uploader" ng-if="isEditable">
+                                                <div class="dropeZone">
+                                                    <div class="well my-drop-zone one-task-drop-zone" nv-file-over=""
+                                                         uploader="uploader">
+                                                        <div>
+                                                            <span translate="">Drop files here or</span>
+                                                            <label class="add-entry">
+                                                                <i class="fa fa-upload"></i>
+                                                                Click to upload file
+                                                                <input type="file" nv-file-select="" uploader="uploader"
+                                                                       multiple="">
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!---->
+                                            <!---->
+                                            <div class="flex-col-1 label font12"
+                                                 ng-if="hasPermission(&#39;DMS&#39;, &#39;Module&#39;, &#39;access&#39;) &amp;&amp; isEditable &amp;&amp; task.type != &#39;RFI&#39; &amp;&amp; task.type != &#39;RFP&#39;">
+                                                OR
+                                            </div><!---->
+                                            <!---->
+                                            <button type="button" class="btn btn-default flex-col-3 button"
+                                                    style="height: 57px" uib-tooltip="Attach file from DMS"
+                                                    ng-click="addAttachment(task)"
+                                                    ng-if="hasPermission(&#39;DMS&#39;, &#39;Module&#39;, &#39;access&#39;) &amp;&amp; isEditable &amp;&amp; task.type != &#39;RFI&#39; &amp;&amp; task.type != &#39;RFP&#39;">
+                                                Attach file from DMS
+                                            </button><!---->
+                                        </div>
+
+                                    </div>
+                                    <!-- end Task description -->
+
+                                    <!-- Deadline | Reminder | Repeat -->
+                                    <!---->
+                                    <div class="one-task-block one-task-block-deadline" id="deadline"
+                                         ng-if="canChangeState(task)">
+                                        <div class="btn-group btn-expand-all">
+                                            <!---->
+                                            <button type="button" ng-click="toggleExpandAll(true)"
+                                                    ng-if="!areAllExpanded()" class="btn btn-default">
+                                                Expand all
+                                            </button><!---->
+                                            <!---->
+                                            <button type="button" ng-click="toggleExpandAll(false)"
+                                                    ng-if="!areAllCollapsed()" class="btn btn-default" style="">
+                                                Collapse all
+                                            </button><!---->
+                                        </div>
+                                        <div class="one-task-block-ttl"
+                                             ng-click="sidebar.isDeadlineOpen = !sidebar.isDeadlineOpen">
+                                            <button type="button" class="btn btn-link open">
+                                                <i class="fa fa-fw fa-angle-right"
+                                                   ng-class="{&#39;fa-angle-down&#39; : sidebar.isDeadlineOpen, &#39;fa-angle-right&#39;: !sidebar.isDeadlineOpen}"></i>
+                                            </button>
+                                            <i class="fa fa-calendar"></i>
+                                            <span>
+                                    Deadline | Reminders
+                                </span>
+                                        </div>
+                                        <!---->
+                                    </div><!---->
+                                    <!-- end Deadline | Reminder | Repeat -->
+
+                                    <!---->
+                                    <div class="one-task-block" id="resources" ng-if="canChangeState(task)">
+                                        <div class="one-task-block-ttl"
+                                             ng-click="sidebar.isResourcesOpen = !sidebar.isResourcesOpen">
+                                            <button type="button" class="btn btn-link open">
+                                                <i class="fa fa-fw fa-angle-right"
+                                                   ng-class="{&#39;fa-angle-down&#39; : sidebar.isResourcesOpen, &#39;fa-angle-right&#39;: !sidebar.isResourcesOpen}"></i>
+                                            </button>
+                                            <i class="fa fa-clock-o"></i>
+                                            <span>Resources</span>
+                                        </div>
+                                        <!---->
+                                    </div><!---->
+
+                                    <!-- Public Tags | Private Tags -->
+                                    <div class="one-task-block one-task-block-tags" id="tags">
+                                        <div class="one-task-block-ttl"
+                                             ng-click="sidebar.isTagsOpen = !sidebar.isTagsOpen">
+                                            <button type="button" class="btn btn-link open">
+                                                <i class="fa fa-fw fa-angle-down"
+                                                   ng-class="{&#39;fa-angle-down&#39; : sidebar.isTagsOpen, &#39;fa-angle-right&#39;: !sidebar.isTagsOpen}"
+                                                   style=""></i>
+                                            </button>
+                                            <i class="fa fa-tags"></i>
+                                            <span>Public Tags | Private Tags</span>
+                                        </div>
+                                        <!---->
+                                        <div class="one-task-block-grey" ng-if="sidebar.isTagsOpen" style="">
+                                            <div class="one-task-block-grey-p">
+                                                <div class="one-task-block-grey-title">Public Tags</div>
+                                                <div class="one-task-block-grey-content">
+                                                    <!---->
+                                                    <!---->
+                                                    <div ng-if="isEditable" uib-tooltip="Add public tag"
+                                                         class="rigth-add-button">
+                                                        <!---->
+                                                        <div style="display: inline;" ng-if="!publicTags.length"
+                                                             class="">Not set
+                                                        </div><!---->
+                                                        <span uib-dropdown="" auto-close="outsideClick" keyboard-nav=""
+                                                              class="dropup dropdown" dropdown-append-to-body=""
+                                                              is-open="popover.isOpen" on-select="addTag(tag)">
+<button type="button" uib-dropdown-toggle="" class="btn btn-link btn-edit-person dropdown-toggle" aria-haspopup="true"
+        aria-expanded="true">
+    <i class="fa fa-plus"></i>
+</button>
+
+</span>
+                                                    </div><!---->
+                                                    <!---->
+                                                </div>
+                                            </div>
+
+                                            <div class="one-task-block-grey-p">
+                                                <div class="one-task-block-grey-title">Private Tags</div>
+                                                <div class="one-task-block-grey-content">
+                                                    <!---->
+                                                    <!---->
+                                                    <div ng-if="isEditable" uib-tooltip="Add private tag"
+                                                         class="rigth-add-button">
+                                                        <!---->
+                                                        <div style="display: inline" ng-if="!privateTags.length">Not
+                                                            set
+                                                        </div><!---->
+                                                        <span uib-dropdown="" auto-close="outsideClick" keyboard-nav=""
+                                                              class="dropup dropdown" dropdown-append-to-body=""
+                                                              is-open="popover.isOpen" on-select="addTag(tag)"
+                                                              is-private="true">
+<button type="button" uib-dropdown-toggle="" class="btn btn-link btn-edit-person dropdown-toggle" aria-haspopup="true"
+        aria-expanded="false">
+    <i class="fa fa-plus"></i>
+</button>
+
+<ul uib-dropdown-menu="" class="iris-tag-selector dropup dropdown-menu" role="menu"
+    style="top: 652px; display: none; left: 154px; right: auto;">
+    <li>
+        <div iris-field="" iris-field-label="" iris-field-offset="0" inline=""
+             ng-model-options="{ updateOn: &#39;default blur&#39;, debounce: { &#39;default&#39;: 500, &#39;blur&#39;: 0 } }"
+             focus-me="true" type="text" ng-change="requestTags()" placeholder="label.Search" ng-model="filter.name"
+             class="ng-pristine ng-untouched ng-valid form-group has-feedback iris-field-inline ng-empty"
+             style=""><input type="text" id="filter.name"
+                             class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-required"
+                             placeholder="Search" ng-model="ngModel" name="filter.name"
+                             ng-keyup="rollback($event, &#39;filter.name&#39;)" ng-required="options.required"
+                             ng-disabled="options.disabled"
+                             ng-model-options="{ updateOn: &#39;default blur&#39;, debounce: { &#39;default&#39;: 500, &#39;blur&#39;: 0 } }"
+                             ng-change="exec(ngChange)" style=""><span class="fa form-control-feedback"
+                                                                       ng-class="{&#39;fa-check&#39; : valid &amp;&amp; dirty, &#39;fa-warning&#39; : !valid}"
+                                                                       aria-hidden="true"></span>
+                <ng-messages for="innerNgModel.$error" ng-show="innerNgModel.$touched" class="ng-inactive ng-hide"
+                             style="">
+                    <!----><!----><!---->
+                </ng-messages></div>
+    </li>
+    <!---->
+    <!---->
+    <!---->
+</ul></span>
+                                                    </div><!---->
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div><!---->
+                                    </div>
+                                    <!-- end Public Tags | Private Tags -->
+
+                                    <!-- Project | Workgroup -->
+                                    <div class="one-task-block one-task-block-workgroup" id="project">
+                                        <div class="one-task-block-ttl"
+                                             ng-click="sidebar.isProjectOpen = !sidebar.isProjectOpen">
+                                            <button type="button" class="btn btn-link open">
+                                                <i class="fa fa-fw fa-angle-right"
+                                                   ng-class="{&#39;fa-angle-down&#39; : sidebar.isProjectOpen, &#39;fa-angle-right&#39;: !sidebar.isProjectOpen}"></i>
+                                            </button>
+                                            <i class="fa fa-briefcase"></i>
+                                            <span>Project | Workgroup</span>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <!-- end Project | Workgroup -->
+
+                                    <!-- Creator | Assignee | Observer | Members -->
+                                    <div class="one-task-block one-task-block-creator" id="people">
+                                        <div class="one-task-block-ttl"
+                                             ng-click="sidebar.isAssigneeOpen = !sidebar.isAssigneeOpen">
+                                            <button type="button" class="btn btn-link open">
+                                                <i class="fa fa-fw fa-angle-right"
+                                                   ng-class="{&#39;fa-angle-down&#39; : sidebar.isAssigneeOpen, &#39;fa-angle-right&#39;: !sidebar.isAssigneeOpen}"></i>
+                                            </button>
+                                            <i class="fa fa-users"></i>
+                                            <span>Creator | Assignee | Observers | Members</span>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <!-- end Creator | Assignee | Observer | Members -->
+
+                                    <!---->
+                                    <div class="one-task-block one-task-block-activities" id="subtasks"
+                                         ng-if="!task.parentId">
+                                        <div class="one-task-block-ttl"
+                                             ng-click="sidebar.isSubtasksOpen = !sidebar.isSubtasksOpen">
+                                            <button type="button" class="btn btn-link open">
+                                                <i class="fa fa-fw fa-angle-right"
+                                                   ng-class="{&#39;fa-angle-down&#39; : sidebar.isSubtasksOpen, &#39;fa-angle-right&#39;: !sidebar.isSubtasksOpen}"></i>
+                                            </button>
+                                            <i class="fa fa-list-ul"></i>
+                                            <span>Related tasks</span>
+                                        </div>
+                                        <!---->
+                                    </div><!---->
+
+                                    <div class="one-task-block one-task-block-activities" id="activities">
+                                        <div class="one-task-block-ttl"
+                                             ng-click="sidebar.isActivityOpen = !sidebar.isActivityOpen">
+                                            <button type="button" class="btn btn-link open">
+                                                <i class="fa fa-fw fa-angle-right"
+                                                   ng-class="{&#39;fa-angle-down&#39; : sidebar.isActivityOpen, &#39;fa-angle-right&#39;: !sidebar.isActivityOpen}"></i>
+                                            </button>
+                                            <i class="fa fa-comments-o"></i>
+                                            <span>Activities</span>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="app-sidebar one-task-app-sidebar right flex-col-1 minimize"
+                             ng-class="{&#39;flex-col-1 minimize&#39;:!sidebar.isOpen, &#39;flex-col-5&#39;:sidebar.isOpen}"
+                             style="">
+                            <div class="b-window preview-document">
+                                <div class="b-header" ng-click="sidebar.isOpen = !sidebar.isOpen">
+                                    <div class="right-sidebar-ttl">
+                                        <i class="fa fa-info" aria-hidden="true"></i>
+                                        Task details
+                                    </div>
+                                    <button type="button" class="btn btn-link preview-toggler">
+                                        <i class="fa fa-caret-right"></i>
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="preview-text">Task details</div>
+                                </div>
+                                <div class="b-content">
+                                    <div class="scrollable">
+                                        <div>
+                                            <ul class="nav nav-tabs"
+                                                ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}"
+                                                ng-transclude="">
+                                                <li ng-class="[{active: active, disabled: disabled}, classes]"
+                                                    class="uib-tab nav-item active" heading="Key info">
+                                                    <a href="https://iris-4.com/ez-alpha/ui/ui/taskmanagement/"
+                                                       ng-click="select($event)" class="nav-link"
+                                                       uib-tab-heading-transclude="">Key info</a>
+                                                </li>
+
+                                                <!---->
+                                            </ul>
+                                            <div class="tab-content">
+                                                <!---->
+                                                <div class="tab-pane active" ng-repeat="tab in tabset.tabs"
+                                                     ng-class="{active: tabset.active === tab.index}"
+                                                     uib-tab-content-transclude="tab">
+
+                                                    <div class="edit-tab-content-block">
+                                                        <div class="tab-content-ttl tab-content-ttl-min">
+                                                            Assignee
+                                                        </div>
+                                                        <div class="task-wg-person">
+                                            <span user-id="task.assignee.id" no-user-label="label.tm.Unassigned">
+    <span class="iris-user-avatar" uib-tooltip="Unassigned">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar-red"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                                                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Unassigned
+        </span>
+                                                <!---->
+    </span><!---->
+</span>
+                                                            <!---->
+                                                            <!----><span uib-dropdown="" auto-close="outsideClick"
+                                                                         keyboard-nav=""
+                                                                         dropdown-append-to="appendToElement"
+                                                                         on-toggle="clearFilter()"
+                                                                         is-open="popover.isOpen"
+                                                                         ng-if="!task.assignee.id &amp;&amp; isEditable"
+                                                                         on-select="setAssignee(user, task)"
+                                                                         only-usergroup="task.workGroupId"
+                                                                         class="dropdown">
+
+<button type="button" uib-dropdown-toggle="" class="btn btn-link btn-edit-person" aria-haspopup="true"
+        aria-expanded="false">
+    <i class="fa fa-pencil" ng-class="icon" uib-tooltip="" style=""></i>
+</button>
+
+<ul uib-dropdown-menu="" class="iris-user-selector dropup dropdown-menu" role="menu">
+    <li>
+        <div class="input-group flex-col-auto" style="margin-left: 4px;">
+            <input type="text" class="form-control iris-user-selector-input ng-pristine ng-untouched ng-valid ng-empty"
+                   placeholder="Search" ng-model="filter.fullName" style="">
+            <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="clearFilter()" uib-tooltip="Reset Filter">
+                    <i class="fa fa-times"></i>
+                </button>
+            </span>
+        </div>
+    </li>
+    <!----><li ng-if="!filter.fullName &amp;&amp; checkUserInExcludeItemsArray(me)" class="" style="">
+        <!----><a ng-if="!hideMe" href="javascript:void(0)" ng-click="selectUser(me)">
+            <span user-id="me.id">
+    <span class="iris-user-avatar" uib-tooltip="Test Natlex ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Test Natlex 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a><!---->
+        <div class="clearfix"></div>
+    </li><!---->
+    <!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Admin User ">
+        <!----><span ng-if="hasAvatar()">
+            <img ng-src="https://iris-4.de/ez-alpha_back/restful/dms/files/fd67d50e-0415-43d8-ae97-d74242561ea7/content?download=false&amp;token=7358c40ffcf03e6d65e90f9280f6a7c2c81bab5c"
+                 src="./IRIS Documents_files/content">
+        </span><!---->
+        <!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Admin User 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Andreas Ratzke ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Andreas Ratzke 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Armin Huber ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Armin Huber 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Beate Gohres ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Beate Gohres 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Bettina Rieg ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Bettina Rieg 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Björn Balzer ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Björn Balzer 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Devorie Maurer ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Devorie Maurer 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Dieter Wilken ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Dieter Wilken 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="  DuelbergJanine">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+              DuelbergJanine
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Fabian Seidel ">
+        <!----><span ng-if="hasAvatar()">
+            <img ng-src="https://iris-4.de/ez-alpha_back/restful/dms/files/aef9b1a3-3b45-4cae-8874-a720c94a5b49/content?download=false&amp;token=7358c40ffcf03e6d65e90f9280f6a7c2c81bab5c"
+                 src="./IRIS Documents_files/content(1)">
+        </span><!---->
+        <!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Fabian Seidel 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Florian Buhl ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Florian Buhl 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Gast10 Zugang ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Gast10 Zugang 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Gast11 Zugang ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Gast11 Zugang 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Gast12 Zugang ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Gast12 Zugang 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Gast13 Zugang ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Gast13 Zugang 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Gast14 Zugang ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Gast14 Zugang 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Gast15 Zugang ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Gast15 Zugang 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Gast16 Zugang ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Gast16 Zugang 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Gast17 Zugang ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Gast17 Zugang 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Gast18 Zugang ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Gast18 Zugang 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Gast19 Zugang ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Gast19 Zugang 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Georgios Topsidis ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Georgios Topsidis 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Gerold Borho ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Gerold Borho 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Glenda Nann ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Glenda Nann 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Harald Kratochwil ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Harald Kratochwil 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Hueseyin Guerbuez ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Hueseyin Guerbuez 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Ian Quirke ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Ian Quirke 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Janine Dülberg ">
+        <!----><span ng-if="hasAvatar()">
+            <img ng-src="https://iris-4.de/ez-alpha_back/restful/dms/files/73ffc52c-6de1-42a3-92fc-1b87a5859124/content?download=false&amp;token=7358c40ffcf03e6d65e90f9280f6a7c2c81bab5c"
+                 src="./IRIS Documents_files/content(2)">
+        </span><!---->
+        <!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Janine Dülberg 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Janine_Köln Dülberg ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Janine_Köln Dülberg 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Jannne Dülberg ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Jannne Dülberg 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Kerstin Brkic ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Kerstin Brkic 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="  KharanenLeo">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+              KharanenLeo
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Leo Kharanen ">
+        <!----><span ng-if="hasAvatar()">
+            <img ng-src="https://iris-4.de/ez-alpha_back/restful/dms/files/f7b1eff5-bd29-4f1f-ad53-562d208fc489/content?download=false&amp;token=7358c40ffcf03e6d65e90f9280f6a7c2c81bab5c"
+                 src="./IRIS Documents_files/content(3)">
+        </span><!---->
+        <!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Leo Kharanen 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Liza Iganus ">
+        <!----><span ng-if="hasAvatar()">
+            <img ng-src="https://iris-4.de/ez-alpha_back/restful/dms/files/f8c405ed-63fb-4234-95af-afa468e22916/content?download=false&amp;token=7358c40ffcf03e6d65e90f9280f6a7c2c81bab5c"
+                 src="./IRIS Documents_files/content(4)">
+        </span><!---->
+        <!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Liza Iganus 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="M. Behrens ">
+        <!----><span ng-if="hasAvatar()">
+            <img ng-src="https://iris-4.de/ez-alpha_back/restful/dms/files/a40f3178-6403-4331-9ac7-1ecc0987f57a/content?download=false&amp;token=7358c40ffcf03e6d65e90f9280f6a7c2c81bab5c"
+                 src="./IRIS Documents_files/content(5)">
+        </span><!---->
+        <!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            M. Behrens 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Maria Kogler ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Maria Kogler 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Marion Behrens ">
+        <!----><span ng-if="hasAvatar()">
+            <img ng-src="https://iris-4.de/ez-alpha_back/restful/dms/files/da1d8429-d51c-4813-86c7-8a5959d58502/content?download=false&amp;token=7358c40ffcf03e6d65e90f9280f6a7c2c81bab5c"
+                 src="./IRIS Documents_files/content(6)">
+        </span><!---->
+        <!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Marion Behrens 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Marion Behrens-Hochstetter ">
+        <!----><span ng-if="hasAvatar()">
+            <img ng-src="https://iris-4.de/ez-alpha_back/restful/dms/files/411797ac-dd36-4150-aefe-c1cf18fc5deb/content?download=false&amp;token=7358c40ffcf03e6d65e90f9280f6a7c2c81bab5c"
+                 src="./IRIS Documents_files/content(7)">
+        </span><!---->
+        <!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Marion Behrens-Hochstetter 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Marion Hochstetter ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Marion Hochstetter 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Mia Pizzalieferant ">
+        <!----><span ng-if="hasAvatar()">
+            <img ng-src="https://iris-4.de/ez-alpha_back/restful/dms/files/e30de158-765a-4ab6-9b69-214448b86126/content?download=false&amp;token=7358c40ffcf03e6d65e90f9280f6a7c2c81bab5c"
+                 src="./IRIS Documents_files/content(8)">
+        </span><!---->
+        <!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Mia Pizzalieferant 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Nadine Offele ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Nadine Offele 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Natlex Test ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Natlex Test 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Nikolai Eg. ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Nikolai Eg. 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Patrick Mink ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Patrick Mink 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Paul Pizza ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Paul Pizza 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Peter Michael ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Peter Michael 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Peter-Michael Mayer ">
+        <!----><span ng-if="hasAvatar()">
+            <img ng-src="https://iris-4.de/ez-alpha_back/restful/dms/files/89ba638f-ca9c-460f-ac6b-9588d40d678d/content?download=false&amp;token=7358c40ffcf03e6d65e90f9280f6a7c2c81bab5c"
+                 src="./IRIS Documents_files/content(9)">
+        </span><!---->
+        <!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Peter-Michael Mayer 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Rainer Bareiß ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Rainer Bareiß 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Rainer Barth ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Rainer Barth 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Ramona Bauer ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Ramona Bauer 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Sigrid El-Aassal ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Sigrid El-Aassal 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="SPT-Anwender Hartkorn ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            SPT-Anwender Hartkorn 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Tobias Hoerth ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Tobias Hoerth 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Tobias Hoerth (DMS admin) ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Tobias Hoerth (DMS admin) 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="Tobias Hoerth (DMS user) ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Tobias Hoerth (DMS user) 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!----><li ng-repeat="u in filteredUsers(users) | filter:filter | orderBy:[&#39;fullName&#39;]" class="">
+        <a href="javascript:void(0)" ng-click="selectUser(u)">
+            <span user-id="u.id">
+    <span class="iris-user-avatar" uib-tooltip="usha mruthika ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            usha mruthika 
+        </span>
+                <!---->
+    </span><!---->
+</span>
+        </a>
+        <div class="clearfix"></div>
+    </li><!---->
+    
+</ul>
+</span><!---->
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="edit-tab-content-block">
+                                                        <div class="tab-content-ttl">
+                                                            Workflow
+                                                        </div>
+                                                        <div class="one-task-view-title">
+                                                            <a href="javascript:void(0)" class="btn-link btn btn-xs">
+                                                                Testworkflow
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="edit-tab-content-block">
+                                                        <div class="tab-content-ttl">
+                                                            State
+                                                        </div>
+                                                        <!---->
+                                                        <div class="one-task-view-title" ng-if="!options.isEditState">
+                                                            <a href="javascript:void(0)" uib-tooltip="Click to edit"
+                                                               ng-click="canChangeState(task) &amp;&amp; (options.isEditState = !options.isEditState)"
+                                                               class="btn-link btn btn-xs">
+                                                                <i class="fa fa-fw fa-circle"
+                                                                   ng-style="{color: task.workflowStateColor}"
+                                                                   style="color: rgb(128, 255, 255);"></i>
+                                                                Backlog
+                                                            </a>
+                                                        </div><!---->
+                                                        <!---->
+                                                    </div>
+
+                                                    <div class="edit-tab-content-block">
+                                                        <div class="tab-content-ttl">
+                                                            Priority
+                                                        </div>
+                                                        <!---->
+                                                        <div class="one-task-view-title"
+                                                             ng-if="!options.isEditPriority">
+                                                            <a href="javascript:void(0)" uib-tooltip="Click to edit"
+                                                               ng-click="isEditable &amp;&amp; (options.isEditPriority = !options.isEditPriority)"
+                                                               class="btn-link btn btn-xs">
+                                                                <i class="fa fa-fw text-success fa-arrow-right"
+                                                                   ng-class="{&#39;text-danger fa-arrow-up&#39;: task.priority == &#39;HIGH&#39;,
+                                                              &#39;text-success fa-arrow-right&#39;: task.priority == &#39;NORMAL&#39;,
+                                                              &#39;text-muted fa-arrow-down&#39;: task.priority == &#39;LOW&#39;}"></i>
+                                                                NORMAL
+                                                            </a>
+                                                        </div><!---->
+                                                        <!---->
+                                                    </div>
+
+                                                    <div class="edit-tab-content-block">
+                                                        <div class="tab-content-ttl">
+                                                            Workgroup
+                                                        </div>
+                                                        <!---->
+                                                        <div class="one-task-view-title"
+                                                             ng-if="!options.isEditWorkgroup">
+                                                            <a href="javascript:void(0)" uib-tooltip="Click to edit"
+                                                               ng-click="isEditable &amp;&amp; (options.isEditWorkgroup = isProcessTask(task) ? false : !options.isEditWorkgroup)"
+                                                               class="btn-link btn btn-xs">
+                                                                Not set
+                                                            </a>
+                                                        </div><!---->
+                                                        <!---->
+                                                    </div>
+
+                                                    <div class="edit-tab-content-block">
+                                                        <div class="tab-content-ttl">
+                                                            Project
+                                                        </div>
+                                                        <div class="one-task-view-title">
+                                                            <a href="javascript:void(0)" class="btn-link btn btn-xs">
+                                                                <i class="fa fa-fw fa-briefcase"
+                                                                   ng-style="{color:(task.projectId | IrisFilterField:[projects,&#39;settings.color&#39;])}"
+                                                                   style="color: rgb(255, 128, 64);"></i>
+                                                                Spezialtiefbau
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="edit-tab-content-block">
+                                                        <div class="tab-content-ttl">
+                                                            Task type
+                                                        </div>
+                                                        <div class="one-task-view-title">
+                                                            <a href="javascript:void(0)" class="btn-link btn btn-xs">
+                                                                Task
+                                                            </a>
+                                                        </div>
+                                                        <!--<div iris-field-->
+                                                        <!--inline-->
+                                                        <!--ng-if="options.isEditTaskType"-->
+                                                        <!--ng-change="saveTask(task)"-->
+                                                        <!--ng-blur="setEditModeFalse()"-->
+                                                        <!--on-rollback="setEditModeFalse()"-->
+                                                        <!--iris-field-label=""-->
+                                                        <!--iris-field-offset="0"-->
+                                                        <!--type="selectize"-->
+                                                        <!--class="w225"-->
+                                                        <!--required-->
+                                                        <!--iris-select-null="label.NotSet"-->
+                                                        <!--iris-select-directory="taskTypes"-->
+                                                        <!--ng-model="task.type"></div>-->
+                                                    </div>
+
+                                                    <!---->
+
+                                                    <!---->
+
+                                                    <div class="edit-tab-content-block">
+                                                        <div class="tab-content-ttl">
+                                                            Deadline
+                                                        </div>
+                                                        <!---->
+                                                        <div class="one-task-view-title" ng-if="!options.isEditDateEnd">
+                                                            <a href="javascript:void(0)" uib-tooltip="Click to edit"
+                                                               ng-click="isEditable &amp;&amp; (options.isEditDateEnd = !options.isEditDateEnd)"
+                                                               class="btn-link btn btn-xs">
+                                                                <i class="fa fa-fw fa-calendar"
+                                                                   ng-class="{&#39;text-danger&#39;: task.dateEnd &amp;&amp; task.dateEnd &lt; options.curDate, &#39;text-success&#39;: task.dateEnd &amp;&amp; task.dateEnd &gt; options.curDate}"></i>
+                                                                Not set
+                                                            </a>
+                                                        </div><!---->
+                                                        <!---->
+                                                    </div>
+
+                                                    <div class="edit-tab-content-block">
+                                                        <div class="tab-content-ttl">
+                                                            Resources
+                                                        </div>
+
+                                                        <!---->
+                                                        <div class="one-task-view-title"
+                                                             ng-if="!options.isEditResources">
+                                                            <!----><span class="font12 selected-date"
+                                                                         uib-tooltip="Click to edit"
+                                                                         ng-click="isEditable &amp;&amp; (options.isEditResources = !options.isEditResources)"
+                                                                         ng-if="!options.isEditResources">
+                                                <span>Not set</span>
+                                                <span></span>
+                                            </span><!---->
+                                                        </div><!---->
+                                                        <div style="margin-bottom: 55px">
+                                                            <!---->
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+
+                                                    <!---->
+
+                                                    <!---->
+
+                                                    <!---->
+
+                                                    <!---->
+                                                </div><!---->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .app-body-container -->
+
+
+</div>
+<!-- .app-container -->
+
+
+<!-- page generated in 259 ms-->
+
+
+<div id="i-l-app">
+    <div id="i-l-app-mouse-text" style="display: none"></div>
+    <div id="i-l-app-color-picker">
+        <div class="colors">
+            <div class="color-0" data-color="0"></div>
+            <div class="color-1" data-color="1"></div>
+            <div class="color-2" data-color="2"></div>
+            <div class="color-3" data-color="3"></div>
+            <div class="color-4" data-color="4"></div>
+            <div class="color-5" data-color="5"></div>
+            <div class="color-6" data-color="6"></div>
+            <div class="color-7" data-color="7"></div>
+        </div>
+        <div id="_l_i-color-active" class="color-3"></div>
+    </div>
+    <div id="i-l-app-h-rule" data-type="h"></div>
+    <div id="i-l-app-v-rule" data-type="v"></div>
+    <div id="i-l-app-lines" class="color-3"></div>
+</div>
+<div></div>
+<ul uib-dropdown-menu="" class="iris-tag-selector dropup dropdown-menu" role="menu"
+    style="top: 399px; display: block; left: 154px; right: auto;">
+    <div class="dropdown-menu__search">
+            <div iris-field="" iris-field-label="" iris-field-offset="0" inline=""
+                 ng-model-options="{ updateOn: &#39;default blur&#39;, debounce: { &#39;default&#39;: 500, &#39;blur&#39;: 0 } }"
+                 focus-me="true" type="text" ng-change="requestTags()" placeholder="label.Search" ng-model="filter.name"
+                 class="ng-pristine ng-untouched ng-valid form-group has-feedback iris-field-inline ng-empty" style="">
+                <input type="text" id="filter.name"
+                       class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-required"
+                       placeholder="Search" ng-model="ngModel" name="filter.name"
+                       ng-keyup="rollback($event, &#39;filter.name&#39;)" ng-required="options.required"
+                       ng-disabled="options.disabled"
+                       ng-model-options="{ updateOn: &#39;default blur&#39;, debounce: { &#39;default&#39;: 500, &#39;blur&#39;: 0 } }"
+                       ng-change="exec(ngChange)" style=""><span class="fa form-control-feedback"
+                                                                 ng-class="{&#39;fa-check&#39; : valid &amp;&amp; dirty, &#39;fa-warning&#39; : !valid}"
+                                                                 aria-hidden="true"></span>
+                <button type="submit" class="dropdown-menu__search-btn">
+                <i class="fa fa-search"></i>
+                </button>
+                <ng-messages for="innerNgModel.$error" ng-show="innerNgModel.$touched" class="ng-inactive ng-hide" style="">
+                    <!----><!----><!---->
+                </ng-messages>
+            </div>
+    </div>
+
+    <div class="dropdown-menu__items">
+        <ul>
+            <li ng-repeat="t in tags | filter:filter | orderBy:[&#39;name&#39;]" ng-if="exclude(t)" class="" style="">
+                <a href="javascript:void(0)" ng-click="selectTag(t)">
+                    <div class="i-checkbox selected"></div>
+                    Email
+                </a>
+            </li><!----><!----><!---->
+            <li ng-repeat="t in tags | filter:filter | orderBy:[&#39;name&#39;]" ng-if="exclude(t)" class="">
+                <a href="javascript:void(0)" ng-click="selectTag(t)">
+                    <div class="i-checkbox selected"></div>
+                    Immerdasgleiche
+                </a>
+            </li><!----><!----><!---->
+            <li ng-repeat="t in tags | filter:filter | orderBy:[&#39;name&#39;]" ng-if="exclude(t)" class="">
+                <a href="javascript:void(0)" ng-click="selectTag(t)">
+                    <div class="i-checkbox"></div>
+                    Testen
+                </a>
+            </li><!----><!----><!---->
+            <li ng-repeat="t in tags | filter:filter | orderBy:[&#39;name&#39;]" ng-if="exclude(t)" class="">
+                <a href="javascript:void(0)" ng-click="selectTag(t)">
+                    <div class="i-checkbox"></div>
+                    Upload
+                </a>
+            </li><!----><!---->
+            <li ng-repeat="t in tags | filter:filter | orderBy:[&#39;name&#39;]" ng-if="exclude(t)" class="" style="">
+                <a href="javascript:void(0)" ng-click="selectTag(t)">
+                    <div class="i-checkbox"></div>
+                    Email
+                </a>
+            </li><!----><!----><!---->
+            <li ng-repeat="t in tags | filter:filter | orderBy:[&#39;name&#39;]" ng-if="exclude(t)" class="">
+                <a href="javascript:void(0)" ng-click="selectTag(t)">
+                    <div class="i-checkbox"></div>
+                    Immerdasgleiche
+                </a>
+            </li><!----><!----><!---->
+            <li ng-repeat="t in tags | filter:filter | orderBy:[&#39;name&#39;]" ng-if="exclude(t)" class="">
+                <a href="javascript:void(0)" ng-click="selectTag(t)">
+                    <div class="i-checkbox"></div>
+                    Testen
+                </a>
+            </li><!----><!----><!---->
+            <li ng-repeat="t in tags | filter:filter | orderBy:[&#39;name&#39;]" ng-if="exclude(t)" class="">
+                <a href="javascript:void(0)" ng-click="selectTag(t)">
+                    <div class="i-checkbox"></div>
+                    Upload
+                </a>
+            </li><!----><!---->
+        </ul>
+    </div>
+    <a href="#" class="dropdown-menu__new">
+        <i class="fa fa-plus"></i> Create new tag
+    </a>
+
+</ul>
+</body>
+</html>

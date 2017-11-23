@@ -122,3 +122,119 @@
 .ui-grid-cell-contents{
     line-height: 18px;
 }
+.dropdown-menu{
+    padding: 0;
+    border-radius: 0;
+}
+.dropdown-menu__search{
+    border-bottom: 1px solid #ccc;
+}
+.dropdown-menu__search div[iris-field][inline]{
+    margin: 0;
+}
+.dropdown-menu__search .form-control{
+    border-radius: 0;
+    border: 0;
+    width: 80%;
+}
+.dropdown-menu__items{
+    overflow: auto;
+    max-height: 180px;
+}
+.dropdown-menu__items ul{
+    list-style: none;
+    padding: 5px 10px;
+}
+.dropdown-menu__new{
+    border-top: 1px solid #ccc;
+    text-align: center;
+    color: #333333;
+    font-size: 12px;
+    line-height: 30px;
+    display: block;
+}
+.dropdown-menu__search-btn{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    background-color: transparent;
+    border: 0;
+    height: 100%;
+    color: rgba(51,51,51,0.7);
+    font-size: 14px;
+}
+.dropdown-menu__items li{
+    padding: 5px 0;
+}
+.dropdown-menu__items li a{
+    color: #2B333C;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+
+}
+.i-checkbox{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    position: relative;
+}
+.i-checkbox.selected:before{
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    color: #81D15D;
+    font-size: 12px;
+    line-height: 12px;
+}
+.tools-bar{
+    display: flex;
+    height: 100%;
+}
+.tools-bar__item{
+    border-left: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+}
+.app-toolbar{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.app-toolbar .container-fluid{
+    padding: 0;
+}
+.tools-bar__btn{
+    font-size: 20px;
+    color: #ccc;
+}
+.tools-bar__tack{
+    padding: 0;
+}
+.btn-border,
+.btn-border:hover{
+    border: 1px solid #ccc;
+}
+.tools-bar__item2{
+    padding-left: 20px;
+}
+.tools-bar__info{
+    font-size: 14px;
+}
+.tools-bar__filtr{
+    margin-right: 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.tools-bar__filtr:hover{
+    text-decoration: none;
+}
+.tools-bar__filtr:after{
+    content: "\f0d7";
+    font-family: 'FontAwesome';
+    text-decoration: none;
+}
