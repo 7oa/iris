@@ -180,6 +180,7 @@
     border: 1px solid #ccc;
     margin-right: 5px;
     position: relative;
+    background-color: white;
 }
 .i-checkbox.selected:before{
     content: "\f00c";
@@ -208,6 +209,10 @@
 .app-toolbar .container-fluid{
     padding: 0;
 }
+.tools-bar{
+    position: relative;
+}
+
 .tools-bar__btn{
     font-size: 20px;
     color: #ccc;
@@ -230,6 +235,9 @@
     font-size: 14px;
     text-decoration: none;
 }
+.tools-bar__filtr.active{
+    background-color: #ccc;
+}
 .tools-bar__filtr:hover{
     text-decoration: none;
 }
@@ -237,4 +245,312 @@
     content: "\f0d7";
     font-family: 'FontAwesome';
     text-decoration: none;
+}
+.tools_dropdown{
+    display: none;
+    position: absolute;
+    right: -10px;
+    top: 43px;
+    background-color: white;
+    z-index: 2;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    width: 230px;
+}
+.tools_dropdown.open{
+    display: block;
+
+}
+.filtr-dd__bl-ttl{
+    color: #2C333C;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    margin-bottom: 5px;
+    padding: 0 8px;
+}
+.filtr-dd__body{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.filtr-dd__bl-cnt ul {
+    list-style: none;
+    padding: 0;
+}
+.filtr-dd__bl-cnt ul li{
+    padding: 5px 40px 5px 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    transition: .5s;
+}
+.filtr-dd__btns{
+    position: absolute;
+    right: 10px;
+    top:0;
+}
+.filtr-dd__bl-cnt ul li:hover{
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+.filtr-dd__search{
+    border-bottom: 1px solid #ccc;
+}
+.filtr-dd__search form{
+    display: flex;
+}
+.filtr-dd__search-i{
+    padding: 5px 8px;
+    font-size: 12px;
+    border: none;
+    width: 200px;
+}
+.filtr-dd__search-i:focus{
+    outline: none;
+}
+.filtr-dd__search-s{
+    background-color: white;
+    border: none;
+    width: 30px;
+    font-size: 14px;
+}
+.filtr-dd__search-s:focus{
+    outline: none;
+}
+.filtr-dd__btns{
+}
+.filtr-dd__btn{
+    padding: 5px 2px;
+    color: #ccc;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.filtr-dd__bl-cnt ul li:hover .filtr-dd__btn{
+    visibility: visible;
+    opacity: 1;
+}
+.filtr-dd__fix{
+    visibility: visible;
+    opacity: 1;
+    color: #333;
+}
+.filtr-dd__bl-cnt .i-checkbox{
+    flex: 0 0 auto;
+}
+
+.fltr-tags{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    min-height: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.fltr-tags__cnt{
+    display: flex;
+    /*padding: 2px 5px;*/
+    flex-wrap: wrap;
+    padding: 4px 0;
+}
+.fltr-tags__item{
+    border-radius: 8px;
+    background-color: #aaa;
+    padding: 1px 10px;
+    margin: 1px 5px;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+.fltr-tags__item .remove{
+    color: white;
+    padding: 0;
+    font-size: 14px;
+}
+.fltr-tags__item span{
+    padding-right: 10px;
+}
+.fltr-tags__item .remove:hover{
+    text-decoration: none;
+}
+.fltr-tags__btn-clear{
+    height: 100%;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    border-left: 1px solid #ccc;
+    border-radius: 0;
+}
+.fltr-tags__btn-clear:hover{
+    text-decoration: none;
+    background-color: #f5f5f5;
+    border-left: 1px solid #ccc;
+}
+.filtr-radio-w{
+    display: flex;
+}
+.filtr-radio-i{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.filtr-radio-i input{
+    margin: 0;
+    margin-right: 5px;
+}
+.filtr-radio-i label{
+    margin: 0;
+}
+.dd-filter .form-group{
+    margin-bottom: 20px !important;
+}
+.dd-filter .selectize-input{
+    border-radius: 0;
+    border: none;
+}
+.dd-filter .selectize-dropdown{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+}
+.btn-toolbar{
+    position: relative;
+}
+.dd-filter{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f5f5f5;
+    z-index: 2;
+    width: 390px;
+    box-sizing: border-box;
+}
+.dd-filter label{
+    font-weight: normal;
+}
+.dd-filter__ttl{
+    font-size: 18px;
+    padding: 30px 30px 10px;
+    margin-bottom: 20px;
+}
+.dd-filter__scroll{
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 400px;
+}
+.dd-filter__fltr{
+    padding: 0 30px;
+}
+.dd-filter__bottom{
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+.dd-filter__bottom .btn{
+    padding: 4px 10px;
+}
+.dd-filter__bottom .btn-success{
+    border-color: #93be3d;
+}
+.dd-filter__bottom .btn-basic{
+    color: white;
+    background-color: #aaa;
+}
+.dd-filter .selectize-input .item{
+    background-color: #aaa !important;
+    color: white !important;
+    border-radius: 6px !important;
+    padding: 1px 20px 1px 5px !important;
+}
+.dd-filter .selectize-dropdown-content .option{
+    display: flex;
+    align-items: center;
+}
+.selectize-dropdown-search{
+    border-bottom: 1px solid #ccc;
+}
+.selectize-dropdown-search-i {
+    padding: 5px 8px;
+    font-size: 12px;
+    border: none;
+    width: 275px;
+}
+.selectize-dropdown-search-s {
+    background-color: white;
+    border: none;
+    width: 30px;
+    font-size: 14px;
+}
+.selectize-dropdown-search-s:focus,
+.selectize-dropdown-search-i:focus{
+    outline: none;
+}
+.dd-filter .selectize-input .item.item_clean{
+    background-color: transparent !important;
+    color: #333 !important;
+}
+.selectize-input__btns{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    background: transparent !important;
+}
+.selectize-input__btns button{
+    background-color: white;
+    padding: 0;
+    border: none;
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 5px;
+}
+.selectize-input__btns button:focus{
+    outline: none;
+}
+.selectize-input__btns button:disabled{
+    color: #aaa;
+}
+.selectize-date{
+    border:1px solid #ccc;
+    width: 100px;
+    padding: 5px 10px;
+}
+.selectize-date:focus{
+    outline: none;
+}
+.date-from-to{
+    display: flex;
+    align-items: center;
+}
+.date-from-to__d{
+    position: relative;
+}
+.date-from-to__d button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: transparent;
+    border: none;
+}
+.date-from-to__d button:focus{
+    outline: none;
+}
+.date-from-to span{
+    margin: 0 5px;
+    color: #aaa;
+}
+.selectize-checkbox-group{
+    display: flex;
+}
+.selectize-checkbox-group__option{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
