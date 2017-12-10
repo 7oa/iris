@@ -234,6 +234,8 @@
     margin-right: 10px;
     font-size: 14px;
     text-decoration: none;
+    border-radius: 3px;
+    padding: 0 10px;
 }
 .tools-bar__filtr.active{
     background-color: #ccc;
@@ -241,10 +243,13 @@
 .tools-bar__filtr:hover{
     text-decoration: none;
 }
-.tools-bar__filtr:after{
-    content: "\f0d7";
-    font-family: 'FontAwesome';
-    text-decoration: none;
+.tools-bar__filtr1{
+    margin-right: 5px;
+}
+.tools-bar__filtr1,
+.tools-bar__filtr2{
+    padding-right: 0;
+    padding-left: 0;
 }
 .tools_dropdown{
     display: none;
@@ -423,7 +428,7 @@
 }
 .dd-filter{
     position: absolute;
-    top: 0;
+    top: 111px;
     right: 0;
     background-color: #f5f5f5;
     z-index: 2;
