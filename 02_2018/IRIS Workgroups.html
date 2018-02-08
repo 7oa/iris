@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://iris-4.com/ims-alpha/ui/ui/workgroups/workgroups -->
+<html ng-app="irisApp" class="" lang="en" data-livestyle-extension="available">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IRIS Workgroups</title>
+    <link rel="shortcut icon" href="https://iris-4.com/ims-alpha/layouts/ui/img/favicon.ico">
+    <link href="./IRIS Workgroups_files/css" rel="stylesheet">
+
+    <link href="./IRIS Workgroups_files/ui.min.css" rel="stylesheet">
+    <link href="./IRIS Workgroups_files/workgroups.min.css" rel="stylesheet">
+
+    <link href="font-awesome.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body class="">
+
+<div class="app-container" id="content" ng-click="hideGlobalMenu($event)">
+
+
+    <div class="app-header new">
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <div class="global-menu-container dropdown" uib-dropdown="" dropdown-append-to-body=""
+                         auto-close="disabled" is-open="isGlobalMenuOpen" on-toggle="toggleGlobalMenu(open)">
+                        <button type="button" class="btn btn-link global-menu-toggler dropdown-toggle"
+                                uib-dropdown-toggle="" tooltip-placement="right" uib-tooltip="Show menu"
+                                id="showSystemMenu" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-reorder"></i>
+                        </button>
+
+
+                        <div uib-dropdown-menu="" class="global-menu dropdown-menu" role="menu"
+                             style="top: 65px; display: none; left: 20px; right: auto;">
+                            <uib-accordion close-others="false">
+                                <div role="tablist" class="panel-group" ng-transclude="">
+                                    <!---->
+                                    <div uib-accordion-group="" class="panel-default panel panel-open"
+                                         is-open="mainItem.open"
+                                         ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive"
+                                         ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}">
+                                        <div role="tab" id="accordiongroup-38-5811-tab" aria-selected="true"
+                                             class="panel-heading" ng-keypress="toggleOpen($event)">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse"
+                                                   href="https://iris-4.com/ims-alpha/ui/ui/workgroups/"
+                                                   aria-expanded="true" aria-controls="accordiongroup-38-5811-panel"
+                                                   class="accordion-toggle" ng-click="toggleOpen()"
+                                                   uib-accordion-transclude="heading" ng-disabled="isDisabled"
+                                                   uib-tabindex-toggle=""><span uib-accordion-header=""
+                                                                                ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw fa-angle-down"
+                      ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                                    <!----><span ng-if="!mainItem.url">Project</span><!---->
+                                                    <!---->
+                </span></a>
+                                            </h4>
+                                        </div>
+                                        <div id="accordiongroup-38-5811-panel"
+                                             aria-labelledby="accordiongroup-38-5811-tab" aria-hidden="false"
+                                             role="tabpanel" class="panel-collapse collapse in" uib-collapse="!isOpen"
+                                             aria-expanded="true">
+                                            <div class="panel-body" ng-transclude="">
+                                                <div uib-accordion-heading=""
+                                                     ng-class="{ &#39;active&#39;: mainItem.isActive }"
+                                                     class="active"></div>
+
+                                                <ul class="list-unstyled">
+                                                    <!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/dashboard"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/dashboard">
+                                                        Dashboard</a><!---->
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/dashboards"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/dashboards">
+                                                        Dashboards</a><!---->
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/dms"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/dms">
+                                                        Documents</a><!---->
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!----><a ng-if="item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/dynamic-forms/ims_forms"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/dynamic-forms/ims_forms">
+                                                        IMS Forms</a><!---->
+                                                        <!---->
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/ims/landing-page"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/ims/landing-page">
+                                                        Integrated Management</a><!---->
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/process-management"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/process-management">
+                                                        Process Management</a><!---->
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/project-data"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/project-data">
+                                                        Project Data</a><!---->
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/projects-list"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/projects-list">
+                                                        Projects list</a><!---->
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/taskmanagement"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/taskmanagement">
+                                                        Task management</a><!---->
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }" class="active">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/workgroups"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/workgroups">
+                                                        Workgroups</a><!---->
+                                                    </li><!----><!---->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!---->
+                                    <div uib-accordion-group="" class="panel-default panel" is-open="mainItem.open"
+                                         ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive"
+                                         ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}">
+                                        <div role="tab" id="accordiongroup-40-7680-tab" aria-selected="false"
+                                             class="panel-heading" ng-keypress="toggleOpen($event)">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse"
+                                                   href="https://iris-4.com/ims-alpha/ui/ui/workgroups/"
+                                                   aria-expanded="false" aria-controls="accordiongroup-40-7680-panel"
+                                                   class="accordion-toggle" ng-click="toggleOpen()"
+                                                   uib-accordion-transclude="heading" ng-disabled="isDisabled"
+                                                   uib-tabindex-toggle=""><span uib-accordion-header=""
+                                                                                ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw fa-angle-right"
+                      ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                                    <!----><span ng-if="!mainItem.url">Construction</span><!---->
+                                                    <!---->
+                </span></a>
+                                            </h4>
+                                        </div>
+                                        <div id="accordiongroup-40-7680-panel"
+                                             aria-labelledby="accordiongroup-40-7680-tab" aria-hidden="true"
+                                             role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen"
+                                             aria-expanded="false" style="height: 0px;">
+                                            <div class="panel-body" ng-transclude="">
+                                                <div uib-accordion-heading=""
+                                                     ng-class="{ &#39;active&#39;: mainItem.isActive }"></div>
+
+                                                <ul class="list-unstyled">
+                                                    <!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/dsm"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/dsm"> Damages
+                                                        management</a><!---->
+                                                    </li><!----><!---->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!---->
+                                    <div uib-accordion-group="" class="panel-default panel" is-open="mainItem.open"
+                                         ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive"
+                                         ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}">
+                                        <div role="tab" id="accordiongroup-42-2717-tab" aria-selected="false"
+                                             class="panel-heading" ng-keypress="toggleOpen($event)">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse"
+                                                   href="https://iris-4.com/ims-alpha/ui/ui/workgroups/"
+                                                   aria-expanded="false" aria-controls="accordiongroup-42-2717-panel"
+                                                   class="accordion-toggle" ng-click="toggleOpen()"
+                                                   uib-accordion-transclude="heading" ng-disabled="isDisabled"
+                                                   uib-tabindex-toggle=""><span uib-accordion-header=""
+                                                                                ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw"
+                      ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                                    <!---->
+                                                    <!----><a ng-if="mainItem.url" ng-click="$event.stopPropagation()"
+                                                              ng-href="/ims-alpha/ui/ui/administration"
+                                                              href="https://iris-4.com/ims-alpha/ui/ui/administration"> Administration</a>
+                                                    <!---->
+                </span></a>
+                                            </h4>
+                                        </div>
+                                        <div id="accordiongroup-42-2717-panel"
+                                             aria-labelledby="accordiongroup-42-2717-tab" aria-hidden="true"
+                                             role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen"
+                                             aria-expanded="false" style="height: 0px;">
+                                            <div class="panel-body" ng-transclude="">
+                                                <div uib-accordion-heading=""
+                                                     ng-class="{ &#39;active&#39;: mainItem.isActive }"></div>
+
+                                                <ul class="list-unstyled">
+                                                    <!---->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!---->
+                                    <div uib-accordion-group="" class="panel-default panel" is-open="mainItem.open"
+                                         ng-init="mainItem.open = !!globalMenuFilter || mainItem.isActive"
+                                         ng-repeat="mainItem in mainMenu | filter:{enabled:true, visible:true}">
+                                        <div role="tab" id="accordiongroup-44-6423-tab" aria-selected="false"
+                                             class="panel-heading" ng-keypress="toggleOpen($event)">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse"
+                                                   href="https://iris-4.com/ims-alpha/ui/ui/workgroups/"
+                                                   aria-expanded="false" aria-controls="accordiongroup-44-6423-panel"
+                                                   class="accordion-toggle" ng-click="toggleOpen()"
+                                                   uib-accordion-transclude="heading" ng-disabled="isDisabled"
+                                                   uib-tabindex-toggle=""><span uib-accordion-header=""
+                                                                                ng-class="{&#39;text-muted&#39;: isDisabled}">
+                <span class="fa fa-fw fa-angle-right"
+                      ng-class="{&#39;fa-angle-down&#39;: !mainItem.url &amp;&amp; mainItem.open, &#39;fa-angle-right&#39;: !mainItem.url &amp;&amp; !mainItem.open}"></span>
+                                                    <!----><span ng-if="!mainItem.url">Configuration</span><!---->
+                                                    <!---->
+                </span></a>
+                                            </h4>
+                                        </div>
+                                        <div id="accordiongroup-44-6423-panel"
+                                             aria-labelledby="accordiongroup-44-6423-tab" aria-hidden="true"
+                                             role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen"
+                                             aria-expanded="false" style="height: 0px;">
+                                            <div class="panel-body" ng-transclude="">
+                                                <div uib-accordion-heading=""
+                                                     ng-class="{ &#39;active&#39;: mainItem.isActive }"></div>
+
+                                                <ul class="list-unstyled">
+                                                    <!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/dashboards-configuration"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/dashboards-configuration">
+                                                        Dashboards</a><!---->
+                                                    </li><!----><!----><!---->
+                                                    <li ng-repeat="item in mainItem.children | filter:{title:globalMenuFilter} | orderBy:&#39;title&#39;"
+                                                        ng-if="item.enabled"
+                                                        ng-class="{ &#39;active&#39;: item.isActive }">
+                                                        <!---->
+                                                        <!----><a ng-if="!item.translations"
+                                                                  ng-href="/ims-alpha/ui/ui/configuration"
+                                                                  href="https://iris-4.com/ims-alpha/ui/ui/configuration">
+                                                        System</a><!---->
+                                                    </li><!----><!---->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!---->
+                                </div>
+                            </uib-accordion>
+                        </div>
+                    </div>
+
+                    <a class="navbar-brand" href="https://iris-4.com/ims-alpha/ui/ui/ims/landing-page" title="Homepage"
+                       target="_parent">
+                        <img src="./IRIS Workgroups_files/logo2.png" height="58px" alt="IRIS">
+                    </a>
+
+                    <div class="navbar-ttl">
+                        Workgroups
+                    </div>
+                </div>
+
+                <div class="global-menu-header">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-link global-menu-toggler"
+                                    uib-tooltip="label.HideGlobalMenu" ng-click="isGlobalMenuOpen = false"
+                                    id="HideMenu">
+                                <i class="fa fa-angle-up"></i>
+                            </button>
+                        </span>
+
+                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" autofocus=""
+                               placeholder="Search for..."
+                               ng-model-options="{updateOn: &#39;default blur&#39;, debounce: {&#39;default&#39;: 100, &#39;blur&#39;: 0 }}"
+                               ng-model="globalMenuFilter">
+
+                        <span class="input-group-btn">
+                            <button class="btn btn-link global-menu-filter ng-hide" type="button"
+                                    ng-show="globalMenuFilter" ng-click="globalMenuFilter = &#39;&#39;">
+                                <span class="fa fa-times"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right nav-menu-profile">
+                        <li uib-dropdown="" class="dropdown">
+
+                            <a href="javascript:void(0)" uib-dropdown-toggle="" style="padding-right:0;" id="user_icon"
+                               class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span class="user" iris-user="" for-current-user="true" show-company="true">
+    <span class="iris-user-avatar" uib-tooltip="Natlex Test Admin ">
+        <!---->
+        <!----><span ng-if="!hasAvatar()" class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x user-no-avatar"
+               ng-class="userExists() ? &#39;user-no-avatar&#39; : &#39;user-no-avatar-red&#39;"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+        </span><!---->
+    </span>
+                <!----><span class="iris-user" ng-if="!onlyAvatar">
+        <span class="iris-user-name">
+            Natlex Test Admin 
+        </span>
+                <!----><span ng-if="showCompany" class="iris-user-company">
+            ITC-Engineering
+        </span><!---->
+    </span><!---->
+</span>
+                            </a>
+
+                            <ul uib-dropdown-menu="" class="with-icon dropdown-menu">
+                                <li>
+                                    <a ng-href="/ims-alpha/ui/ui/profile" id="profile"
+                                       href="https://iris-4.com/ims-alpha/ui/ui/profile">
+                                        <span class="fa fa-fw fa-user"></span>
+                                        My Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a ng-href="/ims-alpha/ui/ui/user-notifications"
+                                       href="https://iris-4.com/ims-alpha/ui/ui/user-notifications">
+                                        <span class="fa fa-fw fa-envelope-o"></span>
+                                        My notifications
+                                    </a>
+                                </li>
+                                <li>
+                                    <a ng-href="/ims-alpha/ui/ui/help" href="https://iris-4.com/ims-alpha/ui/ui/help">
+                                        <span class="fa fa-fw fa-info"></span>
+                                        Help
+                                    </a>
+                                </li>
+                                <li iris-report-an-error="">
+                                    <a ng-click="openReportAnErrorModal()" href="javascript:void(0)">
+                                        <span class="fa fa-fw fa-bug"></span>
+                                        Report an error
+                                    </a>
+                                </li>
+                                <!---->
+                                <li ng-if="me.isAdmin">
+                                    <a target="_blank"
+                                       ng-href="https://iris-4.de/ims-alpha_back/monitoring?token=68ea70ffbdbef5304917e8c018a9134bf0aac598"
+                                       href="https://iris-4.de/ims-alpha_back/monitoring?token=68ea70ffbdbef5304917e8c018a9134bf0aac598">
+                                        <span class="fa fa-fw fa-dashboard"></span>
+                                        Monitoring
+                                    </a>
+                                </li><!---->
+                                <li>
+                                    <a ng-href="/ims-alpha/logoff" id="logout"
+                                       href="https://iris-4.com/ims-alpha/logoff">
+                                        <span class="fa fa-fw fa-sign-out"></span>
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <form class="nav navbar-form navbar-right dms ng-pristine ng-valid dropdown"
+                          ng-init="search.isOpen = false; search.isLoading = false" uib-dropdown=""
+                          is-open="search.isOpen" auto-close="outsideClick">
+                        <div class="input-group dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true"
+                             aria-expanded="false">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty"
+                                   ng-class="{focus: search.isOpen}" ng-model="search.name"
+                                   ng-model-options="{ updateOn: &#39;default blur&#39;, debounce: { &#39;default&#39;: 800, &#39;blur&#39;: 0 } }"
+                                   ng-change="search.isOpen = true; scope.isLoading = false" placeholder="Search">
+
+                            <span class="input-group-btn">
+            <button type="submit" class="btn btn-link">
+                <span ng-class="{ &#39;fa fa-search&#39;: !search.isLoading, &#39;fa fa-spinner fa-spin&#39;: search.isLoading }"
+                      class="fa fa-search"></span>
+            </button>
+        </span>
+                        </div>
+
+                        <div uib-dropdown-menu="" class="iris-dropdown-menu dropdown-menu" iris-search-menu=""
+                             is-open="search.isOpen" search-name="search.name" is-loading="search.isLoading">
+                            <ul class="items-container">
+                                <!---->
+                                <!---->
+
+                                <!---->
+                                <!---->
+
+                                <!---->
+                                <!---->
+
+                                <!---->
+                                <!---->
+
+                                <!---->
+                                <!---->
+                            </ul>
+                        </div>
+                    </form>
+
+
+                    <ul class="nav navbar-nav navbar-notifications navbar-right">
+                        <li uib-dropdown="" auto-close="outsideClick" class="dropdown">
+                            <a href="https://iris-4.com/ims-alpha/ui/ui/workgroups/#" class="clock dropdown-toggle"
+                               uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+                                10:11
+                            </a>
+
+                            <div uib-dropdown-menu="" class="iris-dropdown-menu flex-col-6 stick dropdown-menu">
+
+                                <ul class="items-container tasks-list">
+                                    <li class="item-group-header">
+                                        <h5>Assigned to me tasks</h5>
+                                    </li>
+
+                                    <!---->
+                                    <li class="item" ng-if="!tasks.length">
+                                        <div class="item-content">
+                                            <div class="content-body">
+                                                No task assigned to you with today`s due date
+                                            </div>
+                                        </div>
+                                    </li><!---->
+
+                                    <!---->
+
+                                    <li class="new-task">
+                                        <div class="btn-group pull-right">
+                                            <button class="btn btn-default" ng-click="requestTasks()"
+                                                    uib-tooltip="Refresh list">
+                                                <i class="fa fa-refresh fa-fw"></i>
+                                            </button>
+                                            <a ng-href="/ims-alpha/ui/ui/taskmanagement/tasks/add"
+                                               class="btn btn-default"
+                                               href="https://iris-4.com/ims-alpha/ui/ui/taskmanagement/tasks/add">
+                                                <i class="fa fa-plus fa-fw"></i>
+                                                Add a task
+                                            </a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
+
+
+                        <li uib-dropdown="" auto-close="outsideClick" class="icon-menu dropdown"
+                            notifications-limit="10">
+
+                            <a href="https://iris-4.com/ims-alpha/ui/ui/workgroups/#" uib-dropdown-toggle=""
+                               ng-class="{&#39;has-notifications&#39;: ((notificationList | filter: { read: false }).length)}"
+                               class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-bell fa-lg fa-fw"></span>
+                            </a>
+
+                            <div uib-dropdown-menu="" class="iris-dropdown-menu flex-col-6 stick dropdown-menu">
+                                <ul class="items-container">
+                                    <!---->
+                                    <li ng-if="!notificationList.length" class="item">
+                                        <div class="item-content">
+                                            <div class="content-header">
+                                                <h2 class="title">
+                                                    There are no new notifications
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </li><!---->
+                                    <!---->
+                                </ul>
+
+                                <div class="notifications-buttons">
+                                    <a class="show-all btn btn-link" ng-href="/ims-alpha/ui/ui/user-notifications"
+                                       target="_blank" href="https://iris-4.com/ims-alpha/ui/ui/user-notifications">
+                                        Show all notifications
+                                    </a>
+                                    <button class="mark-all-as-read btn btn-default ng-hide"
+                                            ng-show="checkUnreadNotifications()" ng-click="markAllAsRead()">
+                                        Mark all as read
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li uib-dropdown="" auto-close="outsideClick" class="icon-menu dropdown" discussions-limit="20">
+
+                            <a href="javascript:void(0)" uib-dropdown-toggle=""
+                               ng-class="{&#39;has-notifications&#39;: hasNewMessages}" id="chats"
+                               class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-comments fa-lg fa-fw"></span>
+                            </a>
+
+                            <div uib-dropdown-menu="" class="iris-dropdown-menu flex-col-6 stick dropdown-menu">
+                                <ul class="items-container dialogs-list chat__list">
+                                    <!---->
+                                    <li ng-if="!hasNewMessages" class="item">
+                                        <div class="item-content">
+                                            <div class="content-header">
+                                                <h2 class="title">
+                                                    No new messages
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </li><!---->
+
+                                    <!---->
+                                </ul>
+
+                                <div class="notifications-buttons">
+                                    <a class="show-all btn btn-link" ng-href="/ims-alpha/ui/ui/discussions"
+                                       target="_blank" href="https://iris-4.com/ims-alpha/ui/ui/discussions">
+                                        Show all discussions
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+
+                    <ul class="nav navbar-nav nav-menu navbar-right">
+                        <li uib-dropdown="" auto-close="outsideClick" class="dropdown">
+                            <a href="javascript:void(0)" uib-dropdown-toggle="" class="dropdown-toggle"
+                               aria-haspopup="true" aria-expanded="false">
+                                Dashboard <span class="fa fa-th fa-lg fa-fw"></span>
+                            </a>
+
+                            <div iris-dashboards-menu="" uib-dropdown-menu=""
+                                 class="iris-dropdown-menu flex-col-4 stick dropdown-menu">
+                                <div class="input-group search-bar-container">
+                                    <input type="text" ng-model="searchDashboard.name"
+                                           class="form-control ng-pristine ng-untouched ng-valid ng-empty"
+                                           placeholder="Search for...">
+
+                                    <span class="input-group-btn">
+        <button class="btn btn-link" type="button">
+            <span class="fa fa-search"></span>
+        </button>
+    </span>
+                                </div>
+                                <ul class="items-container">
+                                    <!---->
+                                    <!---->
+                                    <li class="item"
+                                        ng-class="{&#39;item-favorite&#39;: dashboard.id == me.profile.dashboardId}"
+                                        ng-repeat="dashboard in dashboards | filter: searchDashboard | orderBy: [&#39;favorite&#39;, &#39;name&#39;] | limitTo: 3"
+                                        ng-click="goToDashboard(dashboard.href)">
+                                        <div class="item-left-sidebar">
+                                            <span class="fa fa-info-circle icon-sm"></span>
+                                        </div>
+
+                                        <div class="item-content">
+                                            <div class="content-header">
+                                                <a class="btn-link">
+                                                    <h2 class="title">My dashboard</h2>
+                                                </a>
+                                            </div>
+
+                                            <!---->
+                                        </div>
+                                    </li><!---->
+                                </ul>
+                                <div class="show-more-container">
+                                    <a ng-href="/ims-alpha/ui/ui/dashboard"
+                                       href="https://iris-4.com/ims-alpha/ui/ui/dashboard">
+                                        Show all dashboards
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- .collapse.navbar-collapse -->
+            </div>
+            <!-- .container-fluid -->
+        </nav>
+        <!-- .navbar.navbar-custom -->
+
+    </div>
+    <!-- .app-header -->
+
+
+    <div class="app-body-container">
+        <!---->
+        <div class="app-wrap" ui-view="">
+            <div class="app-sidebar-left left open">
+                <div class="sidebar-menu">
+                    <div class="sidebar-menu-body" tm-modules-list="workgroups">
+                        <ul class="iris-modules-list">
+                            <!----><!---->
+                            <li ng-repeat="m in modules"
+                                ng-if="::hasAccessRights(m.irisModule.code, true) &amp;&amp; showInQuickNavi(m)"
+                                class="" style="">
+                                <!----><a ng-if="::m.menu.url" ng-href="/ims-alpha/ui/ui/dynamic-forms/ims_forms"
+                                          ng-class="::{active: m.menu.isActive}"
+                                          href="https://iris-4.com/ims-alpha/ui/ui/dynamic-forms/ims_forms">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" uib-tooltip="IMS Forms">
+                                    <i class="fa fa-fw fa-files-o"></i>
+                                </div>
+                                <span class="iris-sidebar-icon-caption" ng-class="::{active: m.menu.isActive}">
+                IMS Forms
+            </span>
+                            </a><!---->
+                                <!---->
+                            </li><!----><!----><!----><!----><!---->
+                            <li ng-repeat="m in modules"
+                                ng-if="::hasAccessRights(m.irisModule.code, true) &amp;&amp; showInQuickNavi(m)"
+                                class="">
+                                <!----><a ng-if="::m.menu.url" ng-href="/ims-alpha/ui/ui/workgroups"
+                                          ng-class="::{active: m.menu.isActive}" class="active"
+                                          href="https://iris-4.com/ims-alpha/ui/ui/workgroups">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" uib-tooltip="Workgroups">
+                                    <i class="fa fa-fw fa-users"></i>
+                                </div>
+                                <span class="iris-sidebar-icon-caption active" ng-class="::{active: m.menu.isActive}">
+                Teams
+            </span>
+                            </a><!---->
+                                <!---->
+                            </li><!----><!----><!---->
+                            <li ng-repeat="m in modules"
+                                ng-if="::hasAccessRights(m.irisModule.code, true) &amp;&amp; showInQuickNavi(m)"
+                                class="">
+                                <!----><a ng-if="::m.menu.url" ng-href="/ims-alpha/ui/ui/process-management"
+                                          ng-class="::{active: m.menu.isActive}"
+                                          href="https://iris-4.com/ims-alpha/ui/ui/process-management">
+                                <div class="sidebar-menu-icn" tooltip-placement="right"
+                                     uib-tooltip="Process Management">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                </div>
+                                <span class="iris-sidebar-icon-caption" ng-class="::{active: m.menu.isActive}">
+                Processes
+            </span>
+                            </a><!---->
+                                <!---->
+                            </li><!----><!----><!---->
+                            <li ng-repeat="m in modules"
+                                ng-if="::hasAccessRights(m.irisModule.code, true) &amp;&amp; showInQuickNavi(m)"
+                                class="">
+                                <!----><a ng-if="::m.menu.url"
+                                          ng-href="/ims-alpha/ui/ui/process-management/process-templates"
+                                          ng-class="::{active: m.menu.isActive}"
+                                          href="https://iris-4.com/ims-alpha/ui/ui/process-management/process-templates">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" uib-tooltip="Process templates">
+                                    <i class="fa fa-fw fa-file-text"></i>
+                                </div>
+                                <span class="iris-sidebar-icon-caption" ng-class="::{active: m.menu.isActive}">
+                Templates
+            </span>
+                            </a><!---->
+                                <!---->
+                            </li><!----><!----><!---->
+                            <li ng-repeat="m in modules"
+                                ng-if="::hasAccessRights(m.irisModule.code, true) &amp;&amp; showInQuickNavi(m)"
+                                class="">
+                                <!----><a ng-if="::m.menu.url" ng-href="/ims-alpha/ui/ui/process-gantt"
+                                          ng-class="::{active: m.menu.isActive}"
+                                          href="https://iris-4.com/ims-alpha/ui/ui/process-gantt">
+                                <div class="sidebar-menu-icn" tooltip-placement="right"
+                                     uib-tooltip="Process Gantt Chart">
+                                    <i class="fa fa-fw fa-tasks"></i>
+                                </div>
+                                <span class="iris-sidebar-icon-caption" ng-class="::{active: m.menu.isActive}">
+                Gantt
+            </span>
+                            </a><!---->
+                                <!---->
+                            </li><!----><!----><!---->
+                            <li ng-repeat="m in modules"
+                                ng-if="::hasAccessRights(m.irisModule.code, true) &amp;&amp; showInQuickNavi(m)"
+                                class="">
+                                <!----><a ng-if="::m.menu.url" ng-href="/ims-alpha/ui/ui/taskmanagement"
+                                          ng-class="::{active: m.menu.isActive}"
+                                          href="https://iris-4.com/ims-alpha/ui/ui/taskmanagement">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" uib-tooltip="Task management">
+                                    <i class="fa fa-fw fa-check-square-o"></i>
+                                </div>
+                                <span class="iris-sidebar-icon-caption" ng-class="::{active: m.menu.isActive}">
+                Tasks
+            </span>
+                            </a><!---->
+                                <!---->
+                            </li><!----><!----><!---->
+                            <li ng-repeat="m in modules"
+                                ng-if="::hasAccessRights(m.irisModule.code, true) &amp;&amp; showInQuickNavi(m)"
+                                class="">
+                                <!----><a ng-if="::m.menu.url" ng-href="/ims-alpha/ui/ui/taskcalendar"
+                                          ng-class="::{active: m.menu.isActive}"
+                                          href="https://iris-4.com/ims-alpha/ui/ui/taskcalendar">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" uib-tooltip="Calendar">
+                                    <i class="fa fa-fw fa-calendar"></i>
+                                </div>
+                                <span class="iris-sidebar-icon-caption" ng-class="::{active: m.menu.isActive}">
+                Calendar
+            </span>
+                            </a><!---->
+                                <!---->
+                            </li><!----><!----><!---->
+                            <li ng-repeat="m in modules"
+                                ng-if="::hasAccessRights(m.irisModule.code, true) &amp;&amp; showInQuickNavi(m)"
+                                class="">
+                                <!----><a ng-if="::m.menu.url" ng-href="/ims-alpha/ui/ui/kanban"
+                                          ng-class="::{active: m.menu.isActive}"
+                                          href="https://iris-4.com/ims-alpha/ui/ui/kanban">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" uib-tooltip="Kanban table">
+                                    <i class="fa fa-fw fa-trello"></i>
+                                </div>
+                                <span class="iris-sidebar-icon-caption" ng-class="::{active: m.menu.isActive}">
+                Kanban
+            </span>
+                            </a><!---->
+                                <!---->
+                            </li><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                            <li ng-repeat="m in modules"
+                                ng-if="::hasAccessRights(m.irisModule.code, true) &amp;&amp; showInQuickNavi(m)"
+                                class="">
+                                <!----><a ng-if="::m.menu.url" ng-href="/ims-alpha/ui/ui/dms"
+                                          ng-class="::{active: m.menu.isActive}"
+                                          href="https://iris-4.com/ims-alpha/ui/ui/dms">
+                                <div class="sidebar-menu-icn" tooltip-placement="right" uib-tooltip="Documents">
+                                    <i class="fa fa-fw fa-folder-open"></i>
+                                </div>
+                                <span class="iris-sidebar-icon-caption" ng-class="::{active: m.menu.isActive}">
+                Documents
+            </span>
+                            </a><!---->
+                                <!---->
+                            </li><!----><!----><!----><!----><!----><!---->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="app-body-content">
+                <div class="app-toolbar app-toolbar-with-filter">
+                    <div class="toolbar-with-filter-content">
+                        <div class="breadcrumbs-path">
+                            <div class="breadcrumbs-path-item">
+                                <!---->
+                                <button type="button" uib-tooltip="Create workgroup" tooltip-placement="right"
+                                        ng-click="createItem()" class="btn btn-link main-plus-button"
+                                        ng-if="hasConfigRights(&#39;PROCESS_MGMT&#39;)">
+                                    <i class="fa fa-plus-circle"></i>
+                                </button><!---->
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-default btn-sidebar-info pull-right"
+                            ng-click="rightSidebar.isOpen = !rightSidebar.isOpen">
+                        <i class="fa fa-info-circle"></i>
+                    </button>
+
+                    <div class="btn-toolbar pull-right"
+                         filter-template-url="/ims-alpha/modules/workgroups/templates/partial/workgroups.main.filter.html"
+                         filter-properties-meta="filterMeta" filter="filter" filter-default="filterDefault"
+                         filter-scope="this">
+                        <div class="tools-bar">
+                            <!---->
+                            <!---->
+
+                            <div class="btn-toolbar tools-bar__item tools-bar__item2">
+                                <div class="btn-group">
+                                    <button class="btn btn-default"
+                                            ng-click="toggleFilterVisibility(); $event.stopPropagation();">
+                                        <i class="fa fa-filter"></i>
+                                    </button>
+                                    <button class="btn btn-default" style="padding: 5px;"
+                                            ng-click="toggleMenuVisibility(); $event.stopPropagation();">
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="tools_dropdown open ng-hide" ng-show="menuVisibile" style="">
+                                <!---->
+                                <div class="filtr-dd" ng-if="!recentlyFilters.length &amp;&amp; !userFilters.length"
+                                     style="">
+                                    <div class="mf-empty-filter-list-placeholder">No saved filters</div>
+                                </div><!---->
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fltr-tags" ng-show="tags.length" filter-properties-meta="filterMeta" filter="filter"
+                     filter-scope="this" filter-default="filterDefault">
+                    <div class="fltr-tags__cnt">
+                        <!---->
+                        <div class="fltr-tags__item" ng-repeat="tag in tags" uib-tooltip-html="tag.tooltip"
+                             tooltip-placement="bottom-left" style="">
+                            <span>Active</span>
+                            <a href="javascript:void(0);" class="remove" ng-click="removeTag(tag)">×</a>
+                        </div><!---->
+                    </div>
+                    <div class="fltr-tags__btn">
+                        <button class="btn btn-link fltr-tags__btn-clear" ng-click="resetFilterToDefault()">Reset
+                            filter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="app-body flex-grid">
+                    <div class="app-content-container flex-col-auto">
+                        <div class="app-content flex-col-auto">
+                            <div class="b-window">
+                                <div class="b-content">
+                                    <div class="scrollable">
+                                        <div class="b1">
+
+                                            <div class="workgroups-item">
+                                                <div class="workgroups-item-top">
+                                                    <div  class="workgroups-item-top__col">
+                                                        <div class="workgroups-item-top__name">Produktmanagement</div>
+                                                        <div class="workgroups-item-top__users">3 users</div>
+                                                    </div>
+                                                    <div class="workgroups-item-top__avatar" style="background-image: url('http://www.slbc.lk/ta/images/services/thendral/announcers/default-avatar-rapper-guy.png')"></div>
+                                                </div>
+                                                <div class="workgroups-item-detail">
+                                                    <div class="workgroups-item-detail__avatar"  style="background-image: url('https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg')">
+                                                    </div>
+                                                    <div class="workgroups-item-detail__col">
+                                                        <div class="workgroups-item-detail__ttl">ITC- Engineering</div>
+                                                        <div class="workgroups-item-detail__name">Max Mustermann</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="workgroups-item">
+                                                <div class="workgroups-item-top">
+                                                    <div  class="workgroups-item-top__col">
+                                                        <div class="workgroups-item-top__name">Produktmanagement</div>
+                                                        <div class="workgroups-item-top__users">3 users</div>
+                                                    </div>
+                                                    <div class="workgroups-item-top__avatar" style="background-image: url('https://www.w3schools.com/howto/img_avatar2.png')"></div>
+                                                </div>
+                                                <div class="workgroups-item-detail">
+                                                    <div class="workgroups-item-detail__avatar"  style="background-image: url('http://joyfuljourneyhotsprings.com/wp-content/uploads/2013/08/photodune-4276142-smiling-portraits-xl_031.jpg')">
+                                                    </div>
+                                                    <div class="workgroups-item-detail__col">
+                                                        <div class="workgroups-item-detail__ttl">ITC- Engineering</div>
+                                                        <div class="workgroups-item-detail__name">Erica Bach</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="workgroups-item active">
+                                                <div class="workgroups-item-top">
+                                                    <div  class="workgroups-item-top__col">
+                                                        <div class="workgroups-item-top__name">Buchhaltung</div>
+                                                        <div class="workgroups-item-top__users">21 users</div>
+                                                    </div>
+                                                    <div class="workgroups-item-top__avatar" style="background-image: url('http://edugram.ru/img/work/ava_default.png')"></div>
+                                                </div>
+                                                <div class="workgroups-item-detail">
+                                                    <div class="workgroups-item-detail__avatar"  style="background-image: url('https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg')">
+                                                    </div>
+                                                    <div class="workgroups-item-detail__col">
+                                                        <div class="workgroups-item-detail__ttl">ITC- Engineering Engineering</div>
+                                                        <div class="workgroups-item-detail__name">Maxuster Mustermann</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="workgroups-item">
+                                                <div class="workgroups-item-top">
+                                                    <div  class="workgroups-item-top__col">
+                                                        <div class="workgroups-item-top__name">Produktmanagement</div>
+                                                        <div class="workgroups-item-top__users">3 users</div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="workgroups-item-detail">
+                                                    <div class="workgroups-item-detail__avatar"  style="background-image: url('https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg')">
+                                                    </div>
+                                                    <div class="workgroups-item-detail__col">
+                                                        <div class="workgroups-item-detail__ttl">ITC- Engineering</div>
+                                                        <div class="workgroups-item-detail__name">Max Mustermann</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="workgroups-item">
+                                                <div class="workgroups-item-top">
+                                                    <div  class="workgroups-item-top__col">
+                                                        <div class="workgroups-item-top__name">Produktmanagement</div>
+                                                        <div class="workgroups-item-top__users">3 users</div>
+                                                    </div>
+                                                    <div class="workgroups-item-top__avatar" style="background-image: url('http://www.slbc.lk/ta/images/services/thendral/announcers/default-avatar-rapper-guy.png')"></div>
+                                                </div>
+                                                <div class="workgroups-item-detail">
+                                                    <div class="workgroups-item-detail__avatar"  style="background-image: url('https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg')">
+                                                    </div>
+                                                    <div class="workgroups-item-detail__col">
+                                                        <div class="workgroups-item-detail__ttl">ITC- Engineering</div>
+                                                        <div class="workgroups-item-detail__name">Max Mustermann</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="workgroups-item">
+                                                <div class="workgroups-item-top">
+                                                    <div  class="workgroups-item-top__col">
+                                                        <div class="workgroups-item-top__name">Produktmanagement</div>
+                                                        <div class="workgroups-item-top__users">3 users</div>
+                                                    </div>
+                                                    <div class="workgroups-item-top__avatar" style="background-image: url('http://www.slbc.lk/ta/images/services/thendral/announcers/default-avatar-rapper-guy.png')"></div>
+                                                </div>
+                                                <div class="workgroups-item-detail">
+                                                    <div class="workgroups-item-detail__avatar"  style="background-image: url('https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg')">
+                                                    </div>
+                                                    <div class="workgroups-item-detail__col">
+                                                        <div class="workgroups-item-detail__ttl">ITC- Engineering</div>
+                                                        <div class="workgroups-item-detail__name">Max Mustermann</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="workgroups-item">
+                                                <div class="workgroups-item-top">
+                                                    <div  class="workgroups-item-top__col">
+                                                        <div class="workgroups-item-top__name">Produktmanagement</div>
+                                                        <div class="workgroups-item-top__users">3 users</div>
+                                                    </div>
+                                                    <div class="workgroups-item-top__avatar" style="background-image: url('https://www.w3schools.com/howto/img_avatar2.png')"></div>
+                                                </div>
+                                                <div class="workgroups-item-detail">
+                                                    <div class="workgroups-item-detail__avatar"  style="background-image: url('http://joyfuljourneyhotsprings.com/wp-content/uploads/2013/08/photodune-4276142-smiling-portraits-xl_031.jpg')">
+                                                    </div>
+                                                    <div class="workgroups-item-detail__col">
+                                                        <div class="workgroups-item-detail__ttl">ITC- Engineering</div>
+                                                        <div class="workgroups-item-detail__name">Max Mustermann</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="workgroups-item">
+                                                <div class="workgroups-item-top">
+                                                    <div  class="workgroups-item-top__col">
+                                                        <div class="workgroups-item-top__name">Produktmanagement</div>
+                                                        <div class="workgroups-item-top__users">3 users</div>
+                                                    </div>
+                                                    <div class="workgroups-item-top__avatar" style="background-image: url('http://edugram.ru/img/work/ava_default.png')"></div>
+                                                </div>
+                                                <div class="workgroups-item-detail">
+                                                    <div class="workgroups-item-detail__avatar"  style="background-image: url('https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg')">
+                                                    </div>
+                                                    <div class="workgroups-item-detail__col">
+                                                        <div class="workgroups-item-detail__ttl">ITC- Engineering</div>
+                                                        <div class="workgroups-item-detail__name">Max Mustermann</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="workgroups-item">
+                                                <div class="workgroups-item-top">
+                                                    <div  class="workgroups-item-top__col">
+                                                        <div class="workgroups-item-top__name">Produktmanagement</div>
+                                                        <div class="workgroups-item-top__users">3 users</div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="workgroups-item-detail">
+                                                    <div class="workgroups-item-detail__avatar"  style="background-image: url('https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg')">
+                                                    </div>
+                                                    <div class="workgroups-item-detail__col">
+                                                        <div class="workgroups-item-detail__ttl">ITC- Engineering</div>
+                                                        <div class="workgroups-item-detail__name">Max Mustermann</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="workgroups-item">
+                                                <div class="workgroups-item-top">
+                                                    <div  class="workgroups-item-top__col">
+                                                        <div class="workgroups-item-top__name">Produktmanagement</div>
+                                                        <div class="workgroups-item-top__users">3 users</div>
+                                                    </div>
+                                                    <div class="workgroups-item-top__avatar" style="background-image: url('http://www.slbc.lk/ta/images/services/thendral/announcers/default-avatar-rapper-guy.png')"></div>
+                                                </div>
+                                                <div class="workgroups-item-detail">
+                                                    <div class="workgroups-item-detail__avatar"  style="background-image: url('https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg')">
+                                                    </div>
+                                                    <div class="workgroups-item-detail__col">
+                                                        <div class="workgroups-item-detail__ttl">ITC- Engineering</div>
+                                                        <div class="workgroups-item-detail__name">Max Mustermann</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!---->
+                        <div class="app-sidebar right flex-col-6 ng-hide" ng-show="rightSidebar.isOpen"
+                             ng-include="config.moduleUrl + &#39;/templates/partial/workgroups.main.sidebar.right.html&#39;">
+                            <div class="b-window">
+                                <div class="b-header" ng-click="rightSidebar.isOpen = !rightSidebar.isOpen">
+                                    <!----><h1 ng-if="!selectedItem">
+                                    <i class="fa fa-fw fa-info-circle"></i>
+                                    Info
+                                </h1><!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <button type="button" class="btn btn-link preview-toggler">
+                                        <i class="fa fa-caret-right"></i>
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="preview-text">Info</div>
+                                </div>
+
+                                <div class="b-content">
+                                    <div class="scrollable">
+                                        <!---->
+                                        <div ng-if="!selectedItem" class="tab-content">
+                                            <div class="tab-pane active">
+                                                <p class="alert alert-warning">
+                                                    Please, select element
+                                                </p>
+                                            </div>
+                                        </div><!---->
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                </div>
+
+                                <!---->
+
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- .app-body-container -->
+
+
+</div>
+<!-- .app-container -->
+
+
+<!-- page generated in 249 ms-->
+
+
+<div class="dd-filter sidebar-menu" ng-click="$event.stopPropagation();" style="display: none;">
+    <div class="dd-filter__scroll">
+        <div class="dd-filter__close">
+            <button class="btn btn-link" ng-click="setFilterVisibility(false)">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+        <div class="dd-filter__ttl">Filter</div>
+        <!---->
+        <div class="dd-filter__fltr"
+             ng-include="&#39;/ims-alpha/modules/workgroups/templates/partial/workgroups.main.filter.html&#39;"
+             style="">
+            <div class="form-horizontal">
+                <fieldset>
+                    <div iris-field="" iris-field-label="Name" iris-field-offset="4" type="text"
+                         ng-model="filterDirty.name"
+                         class="ng-pristine ng-untouched ng-valid form-group has-feedback ng-empty"><label
+                            class="col-md-4  control-label" for="filterDirty.name">Name</label>
+                        <div class="col-md-8"><input type="text" id="filterDirty.name"
+                                                     class="form-control ng-pristine ng-untouched ng-empty ng-valid ng-valid-required"
+                                                     placeholder="" ng-model="ngModel" name="filterDirty.name"
+                                                     ng-keyup="rollback($event, &#39;filterDirty.name&#39;)"
+                                                     ng-required="options.required" ng-disabled="options.disabled"><span
+                                class="fa form-control-feedback"
+                                ng-class="{&#39;fa-check&#39; : valid &amp;&amp; dirty, &#39;fa-warning&#39; : !valid}"
+                                aria-hidden="true"></span>
+                            <ng-messages for="innerNgModel.$error" ng-show="innerNgModel.$touched"
+                                         class="ng-inactive ng-hide">
+                                <!----><!----><!---->
+                            </ng-messages>
+                        </div>
+                    </div>
+
+                    <div iris-field="" placeholder="All companies" iris-field-label="Company" iris-field-offset="4"
+                         type="selectize" multiple="true" iris-select-directory="filterScope.companies"
+                         ng-model="filterDirty.companyIds"
+                         class="ng-pristine ng-untouched ng-valid form-group has-feedback ng-empty"><label
+                            class="col-md-4  control-label" for="filterDirty.companyIds">Company</label>
+                        <div class="col-md-8">
+                            <selectize config="options.irisSelectize"
+                                       class="iris-selectize ng-pristine ng-untouched selectized ng-empty ng-valid ng-valid-required"
+                                       ng-model="ngModel" options="options.ngOptionsDirectory"
+                                       ng-required="options.required" placeholder="All companies"
+                                       ng-disabled="options.disabled" tabindex="-1" value=""
+                                       style="display: none;"></selectize>
+                            <div class="selectize-control iris-selectize ng-pristine ng-untouched ng-valid multi plugin-remove_button">
+                                <div class="selectize-input items not-full ng-valid ng-pristine"><input type="text"
+                                                                                                        autocomplete="off"
+                                                                                                        tabindex="0"
+                                                                                                        placeholder="All companies"
+                                                                                                        style="width: 82px;">
+                                </div>
+                            </div>
+                            <!---->
+                            <ng-messages for="innerNgModel.$error" ng-show="innerNgModel.$touched"
+                                         class="ng-inactive ng-hide">
+                                <!----><!----><!---->
+                            </ng-messages>
+                        </div>
+                    </div>
+
+                    <div iris-field="" iris-field-offset="4" iris-field-label="Users" type="selectize" multiple="true"
+                         iris-select-directory="filterScope.users" iris-select-text="fullName"
+                         ng-model="filterDirty.userIds"
+                         class="ng-pristine ng-untouched ng-valid form-group has-feedback ng-empty"><label
+                            class="col-md-4  control-label" for="filterDirty.userIds">Users</label>
+                        <div class="col-md-8">
+                            <selectize config="options.irisSelectize"
+                                       class="iris-selectize ng-pristine ng-untouched selectized ng-empty ng-valid ng-valid-required"
+                                       ng-model="ngModel" options="options.ngOptionsDirectory"
+                                       ng-required="options.required" ng-disabled="options.disabled" tabindex="-1"
+                                       value="" style="display: none;"></selectize>
+                            <div class="selectize-control iris-selectize ng-pristine ng-untouched ng-valid multi plugin-remove_button">
+                                <div class="selectize-input items not-full ng-valid ng-pristine has-options"><input
+                                        type="text" autocomplete="off" tabindex="0" style="width: 4px;"></div>
+                            </div>
+                            <!---->
+                            <ng-messages for="innerNgModel.$error" ng-show="innerNgModel.$touched"
+                                         class="ng-inactive ng-hide">
+                                <!----><!----><!---->
+                            </ng-messages>
+                        </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                        <div class="col-xs-12">
+                            <div class="btn-group pull-right">
+                                <label class="btn btn-default ng-pristine ng-untouched ng-valid ng-empty"
+                                       ng-model="filterDirty.isMy.true" uib-btn-checkbox="">My workgroups</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                        <div class="col-xs-12">
+                            <div class="btn-group pull-right">
+                                <label class="btn btn-default ng-pristine ng-untouched ng-valid ng-empty"
+                                       ng-model="filterDirty.isActive.true" uib-btn-checkbox="">Active</label>
+                                <label class="btn btn-default ng-pristine ng-untouched ng-valid ng-empty"
+                                       ng-model="filterDirty.isActive.false" uib-btn-checkbox="">Inactive</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="dd-filter__bottom">
+        <button class="btn btn-success" ng-click="applyFilter()">
+            Apply filter
+        </button>
+        <button class="btn btn-basic" ng-click="saveFilter()">
+            Save filter
+        </button>
+        <button class="btn btn-default" ng-click="resetFilterToDefault()">
+            Reset filter
+        </button>
+    </div>
+</div>
+<div class="selectize-dropdown multi iris-selectize ng-pristine ng-untouched ng-valid plugin-remove_button"
+     style="display: none;">
+    <div class="selectize-dropdown-content"></div>
+</div>
+<div class="selectize-dropdown multi iris-selectize ng-pristine ng-untouched ng-valid plugin-remove_button"
+     style="display: none;">
+    <div class="selectize-dropdown-content"></div>
+</div>
+<div></div>
+<div id="i-l-app">
+    <div id="i-l-app-mouse-text" style="display: none"></div>
+    <div id="i-l-app-color-picker">
+        <div class="colors">
+            <div class="color-0" data-color="0"></div>
+            <div class="color-1" data-color="1"></div>
+            <div class="color-2" data-color="2"></div>
+            <div class="color-3" data-color="3"></div>
+            <div class="color-4" data-color="4"></div>
+            <div class="color-5" data-color="5"></div>
+            <div class="color-6" data-color="6"></div>
+            <div class="color-7" data-color="7"></div>
+        </div>
+    </div>
+    <div id="i-l-app-h-rule" data-type="h"></div>
+    <div id="i-l-app-v-rule" data-type="v"></div>
+    <div id="i-l-app-lines" class="color-1"></div>
+</div>
+<div style="position: fixed !important; z-index: 2147483647 !important; display: block !important; width: 100% !important; height: 100% !important; top: 10px !important; right: 10px !important; max-height: 182px !important; max-width: 368px !important;">
+
+</div>
+</body>
+</html>

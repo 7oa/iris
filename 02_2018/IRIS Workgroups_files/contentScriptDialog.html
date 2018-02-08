@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/contentScriptDialog.html?dialogID=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/fonts/opensans/opensans.css">
+<link rel="stylesheet" type="text/css" href="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/fonts/fontawesome.min.css">
+<link rel="stylesheet" type="text/css" href="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/newvaultGlobal.css">
+<link rel="stylesheet" type="text/css" href="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/buttons.css">
+<link rel="stylesheet" type="text/css" href="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/dialog.css">
+<link rel="stylesheet" type="text/css" href="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/contentScriptDialog.css">
+</head>
+
+<body class="dialogState">
+
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/topics.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/platform.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/platformOverride.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/vaultStrings.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/tools.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/dialog.js"></script><div id="dialogLoadingOverlay" class="overlay"></div><div id="dialogOverlay" class="overlay"></div>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/dialogFields.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/dialogs.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/vaultDialogs.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/contentScriptDialogs.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/request.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/controller.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/model.js"></script>
+
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/interfaces.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/contentScriptInterface.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/contentScriptDialogInterface.js"></script>
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/initializeContentScriptDialog.js"></script><iframe class="backgroundFrame" src="./backgroundFrame.html"></iframe>
+
+
+
+
+<script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/contentScriptDialog.js"></script><script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/dialogWithGroupInput.js"></script><script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/contentScriptSiteDialog.js"></script><script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/selectDropdown.js"></script><script type="text/javascript" src="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/typeaheadDropdown.js"></script><div class="dialog responsive lmiDialog" role="dialog" aria-labelledby="siteDialogTitle" id="siteDialog" style=""><button class="focusCycler"></button><div class="dialogHeader icon displaynone"><div class="dialogHeaderInner"><span class="dialogHeaderTitle" id="siteDialogTitle"></span></div></div><div class="dialogContent dialogContentFixed"><div class="main">
+  
+  <p class="question siteDialogHeader">Добавить в LastPass?</p>
+  
+  <p class="explanation siteDialogHeader"></p>
+  
+  <div class="siteDialogContent">
+    <div class="tileContainer"><div class="tile">
+    <div class="tileTable">
+      <div class="tileTableCell addSiteFaviconContainer">
+        <div class="addSiteFavicon">
+          <div class="checkmark hoverFadeIn displaynone"></div>
+        <img class="favicon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACj0lEQVRYR8WXT2gTQRTGv7dJaYPZWEMpBf+BgoinIuLBQ8mkVfTsxT/gRbButvEiRQQPAS8iVqGmKfFQvYh68yBVse2m6EE8WC+CCHoQ8WCR0E5qD+nuky2J1NBtdtak2dPu7Jv3/ebNN7xdQp0rZ+m8NoSBG6aQV+vN8/ueNgqsFa/GhlbCuwePFr/5FdkoLhAACPdSCTnYMgAGZ01RSm8CQGwO4N5aoZ+zMpTJwGk6gCuQs/TnAI5XxN4yHMMUSx8yFsJxRHouieXv/wOyoQeqicesLb0aaweNpJxwx8ZfRru5neYA9AB4mkrIk0EhfAGsTZ639C4bmK8VTAmpnMvNoTwpV9A/gnGgFsAu29vTx37/UK2EEkAmA607oRfBiNUKEVgYolRoKoCbfMyK3iXQUMu2oHIylgF0/IVgXE4l5W3V1QfygDsp/2rbLrut/BpMcQBvUkKecMezU/o+CuGIKeQDvzBKHvBKet9CxzJ0tyr/XH5ORkMAvJoWs3PFTC7dDNyM/JbRC4CAgiGkaBkAEybMhDzfdIDsdLRP02h2Uz0wNhM7R+Aux8GzoQH5edSK7GijcJqBQ5pDIxeTi5N+tjCQCXNW7DrA16oCftzuBaMMMG5FTzHoUZByrwehBDA6GY+FI+VfAMK1yVawsjPIt4ESwB2rs7MddnHdctra3tTAwlc/+742RglgtQ/M6BdAyLdkC6qiuUL0IZjOVJ8ZHbop5kuqq/fVjPKWvt8GnSXiPtg0bPQvvlutREEfIUbcAT0xxeKLIOJ1ARrteOVT4NlkgGFTyFtBV+3bhF4ALf8zIvBpQ5QeN78CU1v3IOR8adSRU/ZAxe3TYBx27xn4xI42ONS/8L4Rq3dz/AFc5eUhebk5NAAAAABJRU5ErkJggg=="></div>
+      </div>
+      <div class="tileTableCell tileContent">
+        <div class="summaryView">
+          <div class="tileTable">
+            <div class="tileTableCell">
+              <p class="tilePrimary" dialogfielddisplay="name">iris-4.com</p>
+              <p class="tileSecondary" dialogfielddisplay="unencryptedUsername">testuser@natlex.ru</p>
+              <div class="actionCell">
+                <div class="hoverAction">
+                  <p class="tileSecondary bunk2" dialogfielddisplay="unencryptedUsername">testuser@natlex.ru</p>
+                  <button class="tileDetails viewButton"></button>
+                </div>
+              </div>
+            </div>
+            <div class="tileTableCell tileEditCell">
+              <button class="tileEdit hoverFadeIn">Редактировать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+    <button class="addNewSiteButton link displaynone">Я хочу добавить новый аккаунт</button>
+    <div class="siteDialogButtons">
+      <div class="logo"></div>
+      <button id="close" class="lighterHover">Не сейчас</button>
+      <button id="submit" class="rbtn">Добавить</button>
+    </div>
+  </div>
+  
+  <!-- Templates -->
+  
+  <div class="dialogForm">
+    
+    <div class="dropdownContainer" style="margin: 0px 0px 9px;"><div class="relative"><div class="dropdownHint" style="line-height: 40px; padding-left: 10px; padding-right: 10px; font-weight: 600; left: 1px; right: 1px;"><span></span></div><input aria-label="Username" dialogfield="unencryptedUsername" class="usernameInput dialogInput typeaheadDropdown" type="text" placeholder="Enter your email/username" spellcheck="false" style="margin: 0px;"></div><div class="dropdownMenu selectDropdownList lmiDropdown" style="margin-top: -2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;"><ul><li dropdownvalue="0">0</li><li dropdownvalue="1178">1178</li><li dropdownvalue="50000">50000</li><li dropdownvalue="130783">130783</li><li dropdownvalue="422216">422216</li><li dropdownvalue="467881">467881</li><li dropdownvalue="1205430">1205430</li><li dropdownvalue="2392429">2392429</li><li dropdownvalue="2901221030">2901221030</li><li dropdownvalue="2901243813">2901243813</li><li dropdownvalue="2901256890">2901256890</li><li dropdownvalue="2926010144">2926010144</li><li dropdownvalue="admin">admin</li><li dropdownvalue="cl93513">cl93513</li><li dropdownvalue="horoshow">horoshow</li><li dropdownvalue="arhgvs">arhgvs</li><li dropdownvalue="neojino">neojino</li><li dropdownvalue="fishkaarh">fishkaarh</li><li dropdownvalue="skobkin">skobkin</li><li dropdownvalue="lipsun">lipsun</li><li dropdownvalue="F5studio">F5studio</li><li dropdownvalue="admin123">admin123</li><li dropdownvalue="ivan">ivan</li><li dropdownvalue="tateliz">tateliz</li><li dropdownvalue="workhorse">workhorse</li><li dropdownvalue="ac_107070">ac_107070</li><li dropdownvalue="awardgroup">awardgroup</li><li dropdownvalue="awardgroup_avto">awardgroup_avto</li><li dropdownvalue="aleksey">aleksey</li><li dropdownvalue="gnatyuk">gnatyuk</li><li dropdownvalue="kompas29">kompas29</li><li dropdownvalue="neoinsant">neoinsant</li><li dropdownvalue="cl86738">cl86738</li><li dropdownvalue="misha">misha</li><li dropdownvalue="neoinsant_neoins">neoinsant_neoins</li><li dropdownvalue="primorsky">primorsky</li><li dropdownvalue="admins">admins</li><li dropdownvalue="cl64282">cl64282</li><li dropdownvalue="sportontop">sportontop</li><li dropdownvalue="pomorland_baza">pomorland_baza</li><li dropdownvalue="arcom">arcom</li><li dropdownvalue="verygood">verygood</li><li dropdownvalue="cl64282_ag">cl64282_ag</li><li dropdownvalue="lipnits">lipnits</li><li dropdownvalue="anna_to4ka">anna_to4ka</li><li dropdownvalue="skobkin_meat">skobkin_meat</li><li dropdownvalue="restoran">restoran</li><li dropdownvalue="arhivazhno">arhivazhno</li><li dropdownvalue="vesti29">vesti29</li><li dropdownvalue="moiki">moiki</li><li dropdownvalue="sutochki">sutochki</li><li dropdownvalue="arcom_ark">arcom_ark</li><li dropdownvalue="natalia">natalia</li><li dropdownvalue="anna_new">anna_new</li><li dropdownvalue="tkaniru">tkaniru</li><li dropdownvalue="oaoservice">oaoservice</li><li dropdownvalue="manager">manager</li><li dropdownvalue="boev_avtopravo">boev_avtopravo</li><li dropdownvalue="alxndrboev">alxndrboev</li><li dropdownvalue="alxndr.boev@gmail.com">alxndr.boev@gmail.com</li><li dropdownvalue="pinkylips">pinkylips</li><li dropdownvalue="aotek">aotek</li><li dropdownvalue="arctal">arctal</li><li dropdownvalue="volt220arh">volt220arh</li><li dropdownvalue="natali0806">natali0806</li><li dropdownvalue="c199205">c199205</li><li dropdownvalue="isgevent">isgevent</li><li dropdownvalue="arctal_tb">arctal_tb</li><li dropdownvalue="anna_sital">anna_sital</li><li dropdownvalue="пароль к архиву в облаке">пароль к архиву в облаке</li><li dropdownvalue="akvinvest">akvinvest</li><li dropdownvalue="natali0806_joy">natali0806_joy</li><li dropdownvalue="joy29">joy29</li><li dropdownvalue="sim">sim</li><li dropdownvalue="kuzi4ta_lips">kuzi4ta_lips</li><li dropdownvalue="akvinvest_bitrix">akvinvest_bitrix</li><li dropdownvalue="f5studio">f5studio</li><li dropdownvalue="dimro">dimro</li><li dropdownvalue="veronika">veronika</li><li dropdownvalue="kuzi4ta_stroibat">kuzi4ta_stroibat</li><li dropdownvalue="vsemv">vsemv</li><li dropdownvalue="support@f5-studio.ru">support@f5-studio.ru</li><li dropdownvalue="support">support</li><li dropdownvalue="anna_genstaro">anna_genstaro</li><li dropdownvalue="aotek29">aotek29</li><li dropdownvalue="akvilon-invest">akvilon-invest</li><li dropdownvalue="akviloninvest29">akviloninvest29</li><li dropdownvalue="insant29">insant29</li><li dropdownvalue="vesti29ru">vesti29ru</li><li dropdownvalue="neoinsant@yandex.ru">neoinsant@yandex.ru</li><li dropdownvalue="zaostrovie">zaostrovie</li><li dropdownvalue="zaostrovie_db">zaostrovie_db</li><li dropdownvalue="sevman.arh@yandex.ru">sevman.arh@yandex.ru</li><li dropdownvalue="dima_carwash">dima_carwash</li><li dropdownvalue="style_carwash">style_carwash</li><li dropdownvalue="titanarena">titanarena</li><li dropdownvalue="ekoim">ekoim</li><li dropdownvalue="backup_storage">backup_storage</li><li dropdownvalue="marketolog">marketolog</li><li dropdownvalue="and">and</li><li dropdownvalue="kuzi4ta_ekoim">kuzi4ta_ekoim</li><li dropdownvalue="lipnitsky">lipnitsky</li><li dropdownvalue="kosovlaw">kosovlaw</li><li dropdownvalue="u95224">u95224</li><li dropdownvalue="vh7mouse">vh7mouse</li><li dropdownvalue="webmaster">webmaster</li><li dropdownvalue="kuzi4ta_solovki">kuzi4ta_solovki</li><li dropdownvalue="pogruzhu">pogruzhu</li><li dropdownvalue="termofor">termofor</li><li dropdownvalue="cl69287">cl69287</li><li dropdownvalue="zaorosmet">zaorosmet</li><li dropdownvalue="ekoim_DB">ekoim_DB</li><li dropdownvalue="semfruktov_lp">semfruktov_lp</li><li dropdownvalue="wash_db_ssh">wash_db_ssh</li><li dropdownvalue="karina_25ldk">karina_25ldk</li><li dropdownvalue="akademia-centr">akademia-centr</li><li dropdownvalue="aviaremcomponent">aviaremcomponent</li><li dropdownvalue="semfruktov_kego">semfruktov_kego</li><li dropdownvalue="shipyard29">shipyard29</li><li dropdownvalue="f5">f5</li><li dropdownvalue="opyakin">opyakin</li><li dropdownvalue="opyakin_base">opyakin_base</li><li dropdownvalue="vtorygina">vtorygina</li><li dropdownvalue="gkregion29">gkregion29</li><li dropdownvalue="mrt29">mrt29</li><li dropdownvalue="larisa">larisa</li><li dropdownvalue="malinovka">malinovka</li><li dropdownvalue="vtor29">vtor29</li><li dropdownvalue="centrofin">centrofin</li><li dropdownvalue="spainisimo">spainisimo</li><li dropdownvalue="excelens_3">excelens_3</li><li dropdownvalue="titanarena.news@gmail.com">titanarena.news@gmail.com</li><li dropdownvalue="office@f5-studio.ru">office@f5-studio.ru</li><li dropdownvalue="spainisimo@gmail.com">spainisimo@gmail.com</li><li dropdownvalue="konstant-potapov">konstant-potapov</li><li dropdownvalue="viktor.sementsov">viktor.sementsov</li><li dropdownvalue="sks-admin">sks-admin</li><li dropdownvalue="rkregion42">rkregion42</li><li dropdownvalue="nfable">nfable</li><li dropdownvalue="smarties29">smarties29</li><li dropdownvalue="dev.f5test@gmail.com">dev.f5test@gmail.com</li><li dropdownvalue="f5test">f5test</li><li dropdownvalue="dvinatoday@gmail.com">dvinatoday@gmail.com</li><li dropdownvalue="arhangelsky.tralovyjflot">arhangelsky.tralovyjflot</li><li dropdownvalue="F5holl">F5holl</li><li dropdownvalue="dvina.today">dvina.today</li><li dropdownvalue="admin@dvinatoday.ru">admin@dvinatoday.ru</li><li dropdownvalue="info@dvinatoday.ru">info@dvinatoday.ru</li><li dropdownvalue="sigel@inbox.ru">sigel@inbox.ru</li><li dropdownvalue="job@f5-studio.ru">job@f5-studio.ru</li><li dropdownvalue="support_mibok">support_mibok</li><li dropdownvalue="kat-pashkevich@ya.ru">kat-pashkevich@ya.ru</li><li dropdownvalue="help29ps@gmail.com">help29ps@gmail.com</li><li dropdownvalue="sro29">sro29</li><li dropdownvalue="metodist@uc29.ru">metodist@uc29.ru</li><li dropdownvalue="belhotelru">belhotelru</li><li dropdownvalue="01RU29160527.02162219">01RU29160527.02162219</li><li dropdownvalue="01RU22170417.12170119">01RU22170417.12170119</li><li dropdownvalue="pshostel.analytics@gmail.com">pshostel.analytics@gmail.com</li><li dropdownvalue="ktagroup.analytics@gmail.com">ktagroup.analytics@gmail.com</li><li dropdownvalue="rckinvest@yandex.ru">rckinvest@yandex.ru</li><li dropdownvalue="rk.invest.analytics@gmail.com">rk.invest.analytics@gmail.com</li><li dropdownvalue="!»ÃËÙ[²ô]Äp&gt;ûÂïÜMâÃÓË/¢²W.l">!»ÃËÙ[²ô]Äp&gt;ûÂïÜMâÃÓË/¢²W.l</li><li dropdownvalue="!ÝéMð±5=Ë½C®|;µ³çPLr{à&quot;êÿÆ·ÝëÁV¯é8ðÁ}^m@ÆÑáû÷®&#39;¶ÐÁrtz¼dËÁ-mc">!ÝéMð±5=Ë½C®|;µ³çPLr{à"êÿÆ·ÝëÁV¯é8ðÁ}^m@ÆÑáû÷®'¶ÐÁrtz¼dËÁ-mc</li><li dropdownvalue="!nY q=WìDßâe³ÛrQmÐÌ&quot;gÞãÂ¨ÖzDù´Ô­3yªÐicÇ`JäHÙr¦¨ÍéWn$Zº\Jàcùùd{§=¨HÑ6®únà3ô&;¥ÕÈ_ñfÂj
+R¾®!î³¤q³°Ýn¿k}t">!nY&nbsp;q=WìDßâe³ÛrQmÐÌ"gÞãÂ¨ÖzDù´Ô­3yªÐicÇ`JäHÙr¦¨ÍéWn$Zº\Jàcùùd{§=¨HÑ6®únà3ô ¥ÕÈ_ñfÂj
+R¾®!î³¤q³°Ýn¿k}t</li><li dropdownvalue="f5-support">f5-support</li><li dropdownvalue="manger-gis">manger-gis</li><li dropdownvalue="e.zhilina">e.zhilina</li><li dropdownvalue="mrt-diag">mrt-diag</li><li dropdownvalue="yurisharov">yurisharov</li><li dropdownvalue="adaptive-sport">adaptive-sport</li><li dropdownvalue="pi2">pi2</li><li dropdownvalue="it.onpomor@yandex.ru">it.onpomor@yandex.ru</li><li dropdownvalue="content">content</li><li dropdownvalue="administrator">administrator</li><li dropdownvalue="admin2@infosociety.su">admin2@infosociety.su</li><li dropdownvalue="arhidea@bk.ru">arhidea@bk.ru</li><li dropdownvalue="alexander.tyukin@gmail.com">alexander.tyukin@gmail.com</li><li dropdownvalue="I_Belyakov">I_Belyakov</li><li dropdownvalue="123@mail.ru">123@mail.ru</li><li dropdownvalue="test@gmail.com">test@gmail.com</li><li dropdownvalue="karina">karina</li><li dropdownvalue="Admin 2">Admin 2</li><li dropdownvalue="idfc">idfc</li><li dropdownvalue="admin-f5">admin-f5</li><li dropdownvalue="DemoUser@demo.ru">DemoUser@demo.ru</li><li dropdownvalue="ryabov">ryabov</li><li dropdownvalue="belomorles">belomorles</li><li dropdownvalue="arhgp_admin">arhgp_admin</li><li dropdownvalue="9020000009">9020000009</li><li dropdownvalue="almanac">almanac</li><li dropdownvalue="uff">uff</li><li dropdownvalue="partner1">partner1</li><li dropdownvalue=" "> </li><li dropdownvalue="seregina">seregina</li><li dropdownvalue="avtokresla2015@yandex.ru">avtokresla2015@yandex.ru</li><li dropdownvalue="agnessa">agnessa</li><li dropdownvalue="nikulin">nikulin</li><li dropdownvalue="bestuzhev">bestuzhev</li><li dropdownvalue="rk-admin">rk-admin</li><li dropdownvalue="saharov">saharov</li><li dropdownvalue="Ӹ峑᫭
+7b ">Ӹ峑᫭
+7b </li><li dropdownvalue="irina">irina</li><li dropdownvalue="agvs1">agvs1</li><li dropdownvalue="davydovyury10@gmail.com">davydovyury10@gmail.com</li><li dropdownvalue="vsemv@yandex.ru">vsemv@yandex.ru</li><li dropdownvalue="nord-artek">nord-artek</li><li dropdownvalue="ivanpr0u">ivanpr0u</li><li dropdownvalue="VSemV@yandex.ru">VSemV@yandex.ru</li><li dropdownvalue="elena@f5-studio.ru">elena@f5-studio.ru</li><li dropdownvalue="profmax29_ftp">profmax29_ftp</li><li dropdownvalue="A.Vetrov">A.Vetrov</li><li dropdownvalue="sysadmin">sysadmin</li><li dropdownvalue="adesign">adesign</li><li dropdownvalue="arhpuppet_admin">arhpuppet_admin</li><li dropdownvalue="yulia">yulia</li><li dropdownvalue="агентство F5 ">агентство F5 </li><li dropdownvalue="star_foods">star_foods</li><li dropdownvalue="streamfraht">streamfraht</li><li dropdownvalue="content_manager">content_manager</li><li dropdownvalue="cirulnick.online">cirulnick.online</li><li dropdownvalue="pomorland.travel@gmail.com">pomorland.travel@gmail.com</li><li dropdownvalue="walley">walley</li><li dropdownvalue="f5-admin">f5-admin</li><li dropdownvalue="ya.profmax29">ya.profmax29</li><li dropdownvalue="f5admin">f5admin</li><li dropdownvalue="fbereginya">fbereginya</li><li dropdownvalue="valery.shadrina">valery.shadrina</li><li dropdownvalue="bb-1">bb-1</li><li dropdownvalue="demo">demo</li><li dropdownvalue="valerianna.shadrina@gmail.com">valerianna.shadrina@gmail.com</li><li dropdownvalue="iee1">iee1</li><li dropdownvalue="rpr-admin">rpr-admin</li><li dropdownvalue="gis-admin">gis-admin</li><li dropdownvalue="karina_iski">karina_iski</li><li dropdownvalue="karina_tb">karina_tb</li><li dropdownvalue=" boev_zarulemplus"> boev_zarulemplus</li><li dropdownvalue="karina_szsk">karina_szsk</li><li dropdownvalue="boev_potolokoff">boev_potolokoff</li><li dropdownvalue="boev_arhservice">boev_arhservice</li><li dropdownvalue="neoinsant_fedsem">neoinsant_fedsem</li><li dropdownvalue="arhserwis_bd">arhserwis_bd</li><li dropdownvalue="lipsun_ryabovko">lipsun_ryabovko</li><li dropdownvalue="gks-dev">gks-dev</li><li dropdownvalue="gks">gks</li><li dropdownvalue="boev_sevzapstal">boev_sevzapstal</li><li dropdownvalue="u172199">u172199</li><li dropdownvalue="kuzi4ta_centrfin">kuzi4ta_centrfin</li><li dropdownvalue="cy86267_db">cy86267_db</li><li dropdownvalue="pomorland_mysql">pomorland_mysql</li><li dropdownvalue="mebelnazakaz">mebelnazakaz</li><li dropdownvalue="u43044">u43044</li><li dropdownvalue="belovata">belovata</li><li dropdownvalue="rusfer29">rusfer29</li><li dropdownvalue="boev_zarulemplus">boev_zarulemplus</li><li dropdownvalue="cl180576">cl180576</li><li dropdownvalue="ch54486">ch54486</li><li dropdownvalue="k29su">k29su</li><li dropdownvalue="anna_pi2">anna_pi2</li><li dropdownvalue="autosc29">autosc29</li><li dropdownvalue="cras29ru">cras29ru</li><li dropdownvalue="maglass">maglass</li><li dropdownvalue="arhserwis">arhserwis</li><li dropdownvalue="sevdornet">sevdornet</li><li dropdownvalue="dorogoyarh">dorogoyarh</li><li dropdownvalue="spainis">spainis</li><li dropdownvalue="35085/R01-REG">35085/R01-REG</li><li dropdownvalue="potolki29">potolki29</li><li dropdownvalue="foodmarket">foodmarket</li><li dropdownvalue="arhorc">arhorc</li><li dropdownvalue="modny29">modny29</li><li dropdownvalue="centrofin_manager">centrofin_manager</li><li dropdownvalue="snusite">snusite</li><li dropdownvalue="ryabovko">ryabovko</li><li dropdownvalue="difox">difox</li><li dropdownvalue="iskionl">iskionl</li><li dropdownvalue="gameofmind">gameofmind</li><li dropdownvalue="profenergo">profenergo</li><li dropdownvalue="p12529">p12529</li><li dropdownvalue="kadeksperf">kadeksperf</li><li dropdownvalue="avtokresla">avtokresla</li><li dropdownvalue="avto">avto</li><li dropdownvalue="autokresla">autokresla</li><li dropdownvalue="cl93513_stroy">cl93513_stroy</li><li dropdownvalue="cv07038">cv07038</li><li dropdownvalue="cm49600_bars">cm49600_bars</li><li dropdownvalue="ac_57957">ac_57957</li><li dropdownvalue="elena.k">elena.k</li><li dropdownvalue="u0034074_f5">u0034074_f5</li><li dropdownvalue="barentstr">barentstr</li><li dropdownvalue="faberlic29">faberlic29</li><li dropdownvalue="cf03164">cf03164</li><li dropdownvalue="cl8712_f5">cl8712_f5</li><li dropdownvalue="szskonstr">szskonstr</li><li dropdownvalue="gkslf">gkslf</li><li dropdownvalue="cx77829">cx77829</li><li dropdownvalue="ooopro">ooopro</li><li dropdownvalue="cy86267">cy86267</li><li dropdownvalue="1@1.com">1@1.com</li><li dropdownvalue="carwash846">carwash846</li><li dropdownvalue="cu35852">cu35852</li><li dropdownvalue="region7473">region7473</li><li dropdownvalue="profmax29">profmax29</li><li dropdownvalue="muraveynik">muraveynik</li><li dropdownvalue="fondarh418">fondarh418</li><li dropdownvalue="fondarh">fondarh</li><li dropdownvalue="steepzero">steepzero</li><li dropdownvalue="nordtehnom">nordtehnom</li><li dropdownvalue="pomorland_ftp">pomorland_ftp</li><li dropdownvalue="cu22927">cu22927</li><li dropdownvalue="h25241">h25241</li><li dropdownvalue="akvilnew">akvilnew</li><li dropdownvalue="root">root</li><li dropdownvalue="perekresto">perekresto</li><li dropdownvalue="cr02696">cr02696</li><li dropdownvalue="semfruktov">semfruktov</li><li dropdownvalue="nfable9967">nfable9967</li><li dropdownvalue="prostozhaljuzi">prostozhaljuzi</li><li dropdownvalue="verona4me">verona4me</li><li dropdownvalue="streamf2016">streamf2016</li><li dropdownvalue="streamf">streamf</li><li dropdownvalue="pub29">pub29</li><li dropdownvalue="c361422">c361422</li><li dropdownvalue="paradiz345">paradiz345</li><li dropdownvalue="adesign29">adesign29</li><li dropdownvalue="centrspid29">centrspid29</li><li dropdownvalue="belayallea ">belayallea </li><li dropdownvalue="nordartek">nordartek</li><li dropdownvalue="dtoday">dtoday</li><li dropdownvalue="cb61226">cb61226</li><li dropdownvalue="prelive">prelive</li><li dropdownvalue="arhzem">arhzem</li><li dropdownvalue="arhivagno_ftp">arhivagno_ftp</li><li dropdownvalue="stom65">stom65</li><li dropdownvalue="cv56913">cv56913</li><li dropdownvalue="ivan@f5-studio.ru">ivan@f5-studio.ru</li><li dropdownvalue="cs52326">cs52326</li><li dropdownvalue="polik0303">polik0303</li><li dropdownvalue="u0023835">u0023835</li><li dropdownvalue="cx34334">cx34334</li><li dropdownvalue="nevmyvachenko@vetkom.ru">nevmyvachenko@vetkom.ru</li><li dropdownvalue="pomorfill">pomorfill</li><li dropdownvalue="u0037997">u0037997</li><li dropdownvalue="rkinvest">rkinvest</li><li dropdownvalue="sawmill25">sawmill25</li><li dropdownvalue="vzamen">vzamen</li><li dropdownvalue="cl76244">cl76244</li><li dropdownvalue="starfuds@inbox.ru">starfuds@inbox.ru</li><li dropdownvalue="badam">badam</li><li dropdownvalue="c108919">c108919</li><li dropdownvalue="ci43297">ci43297</li><li dropdownvalue="ci43297441">ci43297441</li><li dropdownvalue="strekinaks@gks-lf.com">strekinaks@gks-lf.com</li><li dropdownvalue="mebel-modny@yandex.ru">mebel-modny@yandex.ru</li><li dropdownvalue="gks-lf-ym">gks-lf-ym</li><li dropdownvalue="f5-studio">f5-studio</li><li dropdownvalue="muraveynik29@yandex.ru">muraveynik29@yandex.ru</li><li dropdownvalue="w_prostozhalyu-rf_dcea6fbd">w_prostozhalyu-rf_dcea6fbd</li><li dropdownvalue="u0236396_f5">u0236396_f5</li><li dropdownvalue="sksgarant@yandex.ru">sksgarant@yandex.ru</li><li dropdownvalue="Killl666@mail.ru">Killl666@mail.ru</li><li dropdownvalue="kassa.onpomor@yandex.ru">kassa.onpomor@yandex.ru</li><li dropdownvalue="arctic.kinofest">arctic.kinofest</li><li dropdownvalue="fondvzamen@gmail.com ">fondvzamen@gmail.com </li><li dropdownvalue="mrt.efremova">mrt.efremova</li><li dropdownvalue="belomor">belomor</li><li dropdownvalue="vesti2930">vesti2930</li><li dropdownvalue="iskionline29">iskionline29</li><li dropdownvalue="gks-lf">gks-lf</li><li dropdownvalue="zaborskij.fond">zaborskij.fond</li><li dropdownvalue="digitalf5">digitalf5</li><li dropdownvalue="arhpuppet">arhpuppet</li><li dropdownvalue="meatcomb">meatcomb</li><li dropdownvalue="akviloninvest-newserver">akviloninvest-newserver</li><li dropdownvalue="cool.vek">cool.vek</li><li dropdownvalue="arh21vek">arh21vek</li><li dropdownvalue="anya.artemjeva2016@yandex.ru">anya.artemjeva2016@yandex.ru</li><li dropdownvalue="f5studioreklama@gmail.com">f5studioreklama@gmail.com</li><li dropdownvalue="f5_support">f5_support</li><li dropdownvalue=" rk-region2016@yandex.ru"> rk-region2016@yandex.ru</li><li dropdownvalue="rkregion20">rkregion20</li><li dropdownvalue="office@fondarh.ru">office@fondarh.ru</li><li dropdownvalue="anya.artemjeva2016">anya.artemjeva2016</li><li dropdownvalue="nizu2002@yandex.ru">nizu2002@yandex.ru</li><li dropdownvalue="ivan.nemanov2013">ivan.nemanov2013</li><li dropdownvalue="fond29">fond29</li><li dropdownvalue="oleg">oleg</li><li dropdownvalue="sps29-metrika@yandex.ru">sps29-metrika@yandex.ru</li><li dropdownvalue="sps29.analytics@gmail.com">sps29.analytics@gmail.com</li><li dropdownvalue="artpaket70">artpaket70</li><li dropdownvalue="artpacket">artpacket</li><li dropdownvalue="presto29">presto29</li></ul></div></div><div class="relative" style="margin: 0px;"><input aria-label="Password" dialogfield="password" class="dialogInput passwordToggle password" type="password" spellcheck="false" style="margin: 0px;"><button class="showPassword textual" title="Show Password">SHOW</button></div>
+    <label for="siteDialogFolder" class="label">Folder</label>
+    
+    <div class="dropdownContainer" style="margin: 0px;"><div class="relative"><div class="dropdownHint" style="line-height: 40px; padding-left: 10px; padding-right: 10px; font-weight: 600; left: 1px; right: 1px;"><span></span></div><input id="siteDialogFolder" dialogfield="group" class="dialogInput typeaheadDropdown clickToggles" type="text" spellcheck="false" style="margin: 0px;"></div><div class="dropdownMenu selectDropdownList lmiDropdown" style="margin-top: -2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;"><ul><li dropdownvalue="Email">Email</li><li dropdownvalue="Shared-Админки сайтов">Shared-Админки сайтов</li><li dropdownvalue="Shared-Админки сайтов\f5-test">Shared-Админки сайтов\f5-test</li><li dropdownvalue="Shared-Базы данных">Shared-Базы данных</li><li dropdownvalue="Shared-Базы данных\f5-test">Shared-Базы данных\f5-test</li><li dropdownvalue="Shared-Другое">Shared-Другое</li><li dropdownvalue="Shared-Техническая поддержка">Shared-Техническая поддержка</li><li dropdownvalue="Shared-Хостинги">Shared-Хостинги</li><li dropdownvalue="Shared-Хостинги\f5-test.ru">Shared-Хостинги\f5-test.ru</li><li dropdownvalue="Shared-Хостинги\starfoods">Shared-Хостинги\starfoods</li></ul></div></div><button class="link neverSave">Я никогда не хочу сохранять этот сайт</button>
+  </div>
+  
+  <div class="template tile">
+    <div class="tileTable">
+      <div class="tileTableCell addSiteFaviconContainer">
+        <div class="addSiteFavicon">
+          <div class="checkmark hoverFadeIn displaynone"></div>
+        <img class="favicon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACj0lEQVRYR8WXT2gTQRTGv7dJaYPZWEMpBf+BgoinIuLBQ8mkVfTsxT/gRbButvEiRQQPAS8iVqGmKfFQvYh68yBVse2m6EE8WC+CCHoQ8WCR0E5qD+nuky2J1NBtdtak2dPu7Jv3/ebNN7xdQp0rZ+m8NoSBG6aQV+vN8/ueNgqsFa/GhlbCuwePFr/5FdkoLhAACPdSCTnYMgAGZ01RSm8CQGwO4N5aoZ+zMpTJwGk6gCuQs/TnAI5XxN4yHMMUSx8yFsJxRHouieXv/wOyoQeqicesLb0aaweNpJxwx8ZfRru5neYA9AB4mkrIk0EhfAGsTZ639C4bmK8VTAmpnMvNoTwpV9A/gnGgFsAu29vTx37/UK2EEkAmA607oRfBiNUKEVgYolRoKoCbfMyK3iXQUMu2oHIylgF0/IVgXE4l5W3V1QfygDsp/2rbLrut/BpMcQBvUkKecMezU/o+CuGIKeQDvzBKHvBKet9CxzJ0tyr/XH5ORkMAvJoWs3PFTC7dDNyM/JbRC4CAgiGkaBkAEybMhDzfdIDsdLRP02h2Uz0wNhM7R+Aux8GzoQH5edSK7GijcJqBQ5pDIxeTi5N+tjCQCXNW7DrA16oCftzuBaMMMG5FTzHoUZByrwehBDA6GY+FI+VfAMK1yVawsjPIt4ESwB2rs7MddnHdctra3tTAwlc/+742RglgtQ/M6BdAyLdkC6qiuUL0IZjOVJ8ZHbop5kuqq/fVjPKWvt8GnSXiPtg0bPQvvlutREEfIUbcAT0xxeKLIOJ1ARrteOVT4NlkgGFTyFtBV+3bhF4ALf8zIvBpQ5QeN78CU1v3IOR8adSRU/ZAxe3TYBx27xn4xI42ONS/8L4Rq3dz/AFc5eUhebk5NAAAAABJRU5ErkJggg=="></div>
+      </div>
+      <div class="tileTableCell tileContent">
+        <div class="summaryView">
+          <div class="tileTable">
+            <div class="tileTableCell">
+              <p class="tilePrimary" dialogfielddisplay="name"></p>
+              <p class="tileSecondary" dialogfielddisplay="unencryptedUsername"></p>
+              <div class="actionCell">
+                <div class="hoverAction">
+                  <p class="tileSecondary bunk2" dialogfielddisplay="unencryptedUsername"></p>
+                  <button class="tileDetails viewButton"></button>
+                </div>
+              </div>
+            </div>
+            <div class="tileTableCell tileEditCell">
+              <button class="tileEdit hoverFadeIn">Редактировать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="template deleteOverlayContainer">
+    <div class="deleteOverlay tileTable">
+      <div class="tileTableCell deleteSummary">
+        <p class="tilePrimary">Удалить повторяющиеся?</p>
+        <p class="tileSecondary">Мы обновим ваше хранилище</p>
+      </div>
+      <div class="tileTableCell cancelDeleteButtonCell">
+        <button class="lighterHover cancelDeleteButton">Keep</button>
+      </div>
+      <div class="tileTableCell deleteButtonCell">
+        <button class="deleteButton">Да, удалить</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="animationContainer">
+    <div>
+      <div>
+      
+      <svg class="inProcessAnimation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <clippath id="inProcessAnimation-logoMask">
+            <circle cx="5" cy="13" r="5"></circle>
+            <circle cx="20" cy="13" r="5"></circle>
+            <circle cx="35" cy="13" r="5"></circle>
+            <path d="M45 5 C 45 0, 50 0, 50 5 v 20 C 50 30, 45 30, 45 25 Z"></path>
+          </clippath>
+        </defs>
+        
+        <g clip-path="url(#inProcessAnimation-logoMask)">
+          <rect fill="#D32D27" height="30" width="50"></rect>
+          <rect fill="#81D6E3" height="30" width="50" x="-25.2053">
+            <animate attributeName="x" from="-50" to="50" dur="0.6s" repeatCount="indefinite" begin="0s"></animate>
+          </rect>
+        </g>
+      </svg>
+      
+      <div class="successAnimation">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path id="successCheckmark" d="M5 10 L 9 14 C 10 15, 10 15, 11 14 L 22 3" stroke="#00CA95" stroke-width="3.5" fill="transparent" stroke-linecap="round"></path>
+        </svg>
+        <p class="successMessage successFadeIn">Готово!</p>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="removeGeneratedConfirmation" class="tileTable">
+  <div class="tileTableCell">
+    <p class="confirmationTitle">Вы уверенны?</p>
+    <p class="confirmationText">Ваш сгенерированный пароль не будет сохранен в хранилище.</p>
+    <div class="siteDialogButtons">
+      <button id="undo" class="gbtn">Да, отменить</button>
+      <button id="closeConfirmation" class="rbtn">Nevermind! Keep in vault</button>
+    </div>
+  </div>
+</div>
+</div><button class="focusCycler"></button></div><link type="text/css" rel="stylesheet" href="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/contentScriptSiteDialog.css"><link type="text/css" rel="stylesheet" href="chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/lmiDialog.css"></body></html>
