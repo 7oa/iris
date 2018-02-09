@@ -214,3 +214,10 @@
 .project-item-detail__name_nd{
     opacity: 0.4;
 }
+
+@media screen and (max-width: 1360px) {
+    .navbar-collapse .dropdown.open + ul.nav,
+    .navbar-collapse .dropdown.open + ul.nav + ul.nav{
+        display: none;
+    }
+}

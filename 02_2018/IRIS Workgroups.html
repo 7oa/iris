@@ -411,12 +411,12 @@
                         </li>
                     </ul>
 
-                    <form class="nav navbar-form navbar-right dms ng-pristine ng-valid dropdown"
+                    <form class="nav navbar-form navbar-right dms ng-pristine ng-valid dropdown open"
                           ng-init="search.isOpen = false; search.isLoading = false" uib-dropdown=""
                           is-open="search.isOpen" auto-close="outsideClick">
                         <div class="input-group dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true"
                              aria-expanded="false">
-                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty"
+                            <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched focus"
                                    ng-class="{focus: search.isOpen}" ng-model="search.name"
                                    ng-model-options="{ updateOn: &#39;default blur&#39;, debounce: { &#39;default&#39;: 800, &#39;blur&#39;: 0 } }"
                                    ng-change="search.isOpen = true; scope.isLoading = false" placeholder="Search">
