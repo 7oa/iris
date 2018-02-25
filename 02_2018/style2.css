@@ -1,0 +1,153 @@
+.widget-favorite-files{
+
+}
+.widget-favorite-files .panel-body.b-content{
+    padding: 0;
+}
+.iris-favorite-files-row{
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    background-color: #FFFFFF;
+    border-left: 4px solid transparent;
+    transition: .5s;
+}
+.iris-favorite-files-row.updated{
+    border-left: 4px solid #93BE3D;
+}
+.iris-favorite-files-row.updated.active,
+.iris-favorite-files-row.active{
+    background-color: rgba(147,190,61,0.2);
+}
+.iris-favorite-files-row:hover{
+    background-color: #F5F5F5;
+}
+.iris-favorite-files-row:nth-child(2n){
+    background-color: #F5F5F5;
+}
+.iris-favorite-files-row__img{
+    padding: 12px 12px;
+    flex: 0 0 auto;
+}
+.iris-favorite-files-row__img-doc{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #e9e9e0;
+    width: 21px;
+    height: 24px;
+}
+.iris-favorite-files-row.active .iris-favorite-files-row__img-doc{
+    background-color: #fff;
+}
+.iris-favorite-files-row__ttl{
+    padding: 7px 0;
+    flex: 1 1 auto;
+}
+.iris-favorite-files-row__name{
+    color: #39434D;
+    font-size: 12px;
+    line-height: 20px;
+}
+.iris-favorite-files-row.updated .iris-favorite-files-row__name{
+    font-weight: bold;
+}
+.iris-favorite-files-row__name a:hover{
+    text-decoration: none;
+}
+.iris-favorite-files-row__path{
+    opacity: 0.5;
+    color: #0E1205;
+    font-size: 8px;
+    line-height: 12px;
+}
+.iris-favorite-files-row__path a:hover{
+    text-decoration: none;
+}
+.iris-favorite-files-row__path:hover i.fa{
+    text-decoration: none;
+    color: #39434D;
+}
+.iris-favorite-files-row__ttl2{
+    padding: 5px 0;
+}
+.iris-favorite-files-row__date{
+    opacity: 0.5;
+    color: #0E1205;
+    font-size: 8px;
+    line-height: 12px;
+    text-align: right;
+}
+.iris-favorite-files-row__date a:hover{
+    text-decoration: none;
+}
+.iris-favorite-files-row__menu{
+    padding: 7px 3px;
+    flex: 0 0 auto;
+}
+.iris-favorite-files-row__menu-btn{
+    color: #969BA0;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+}
+.iris-favorite-files-row.active .iris-favorite-files-row__menu-btn{
+    color: #93BE3D;
+}
+.iris-favorite-files-row__icons .btn{
+    padding: 0 2px;
+    font-size: 16px;
+}
+.iris-favorite-files-menu{
+    position: absolute;
+}
+
+.iris-favorite-files-menu{
+    position: absolute;
+    top: 40px;
+    right: 4px;
+    width: 196px;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 16px 0 rgba(82,97,115,0.18);
+}
+.iris-favorite-files-menu__body,
+.iris-favorite-files-menu__bottom{
+    padding: 4px;
+}
+.iris-favorite-files-menu__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.iris-favorite-files-menu__list a{
+    display: block;
+    padding: 7px 8px;
+    background-color: #fff;
+    transition: .5s;
+    color: #39434D;
+    font-size: 12px;
+    line-height: 16px;
+}
+.iris-favorite-files-menu__list a:hover{
+    background-color: rgba(195,198,200,0.25);
+    text-decoration: none;
+    color: #39434D;
+}
+.iris-favorite-files-menu__list i.fa{
+    margin-right: 8px;
+    font-size: 16px;
+}
+.iris-favorite-files-menu__bottom{
+    border-top: 1px solid #e5e5e5;
+}
+.iris-favorite-files-menu__bottom .fa-trash{
+    color: #CC4433;
+}
