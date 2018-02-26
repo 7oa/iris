@@ -793,7 +793,7 @@
                             </li><!----><!----><!---->
                             <li ng-repeat="m in modules"
                                 ng-if="::hasAccessRights(m.irisModule.code, true) &amp;&amp; showInQuickNavi(m)"
-                                class="parent">
+                                class="parent open">
                                 <!----><a ng-if="::m.menu.url" ng-href="/ez-alpha/ui/ui/workgroups"
                                           ng-class="::{active: m.menu.isActive}"
                                           href="https://iris-4.com/ez-alpha/ui/ui/workgroups">
@@ -1141,7 +1141,7 @@
                 <div class="iris-favorite-files-container">
                     <div class="iris-favorite-files scrollable"
                          style="overflow-x: hidden">
-                        <div class="iris-favorite-files-row updated">
+                        <div class="iris-favorite-files-row updated active">
                             <div class="iris-favorite-files-row__img">
                                 <div class="iris-favorite-files-row__img-doc"></div>
                             </div>
@@ -1150,7 +1150,7 @@
                                     <a href="#">Conference - November 2017.mp3</a>
                                 </div>
                                 <div class="iris-favorite-files-row__path">
-                                    <a href="#"><i class="fa fa-folder-open-o"></i> /Public/Events/Public/Events//Public/Events/Public/Events/Public/Events/Public/Events/Public/Events/Public/Events/2017</a>
+                                    <a href="#"><i class="fa fa-folder-open-o"></i> /Public/Events/2017</a>
                                 </div>
                             </div>
                             <div class="iris-favorite-files-row__ttl2">
@@ -1463,7 +1463,7 @@
                         </div>
                         <!---->
                         <div class="iris-dropdown-menu iris-favorite-files-menu"
-                             ng-include="listTemplateUrl" style="display:none;">
+                             ng-include="listTemplateUrl" style="">
                             <!---->
                             <div class="iris-favorite-files-menu__body">
                                 <ul class="iris-favorite-files-menu__list">

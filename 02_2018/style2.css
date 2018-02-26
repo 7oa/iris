@@ -151,3 +151,89 @@
 .iris-favorite-files-menu__bottom .fa-trash{
     color: #CC4433;
 }
+
+/*menu*/
+.sidebar-menu-body ul li:hover{
+    background-color: rgba(245,245,245,0.3);
+}
+.sidebar-menu-body ul a.active{
+    border: 0;
+    border-left: 6px solid #93BE3D;
+    background-color: transparent;
+    color: #fff;
+}
+.sidebar-menu-body ul a.active .fa,
+.iris-modules-list .iris-sidebar-icon-caption.active{
+    color: #fff;
+}
+.sidebar-menu-body ul li{
+    position: relative;
+}
+.sidebar-menu-body ul li.parent:after{
+    display: block;
+    content:'';
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #969BA0;
+    border-left: 8px solid transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 3px;
+    margin-right: 3px;
+}
+.sidebar-menu-body{
+    overflow: unset;
+}
+.app-sidebar-left.left.open{
+    overflow: unset;
+}
+.iris-modules-list li:hover a:not(.active) .fa, .iris-modules-list li:hover span:not(.active){
+    color: #C3C6C8;
+}
+.sidebar-menu-body li ul.sidebar-submenu{
+    display: none;
+    border-radius: 3px;
+    background-color: #39434D;
+    position: absolute;
+    left: 80px;
+    top: 0;
+    z-index: 99;
+    padding: 4px 0;
+}
+.sidebar-menu-body li.open{
+    background-color: rgba(245,245,245,0.3);
+    color: #C3C6C8;
+}
+.sidebar-menu-body li.open .sidebar-menu-icn,
+.sidebar-menu-body li.open .iris-sidebar-icon-caption{
+    color: #C3C6C8;
+}
+.sidebar-menu-body li.open ul.sidebar-submenu{
+    display: block;
+}
+.sidebar-menu-body ul.sidebar-submenu li a{
+    display: flex;
+    align-items: center;
+    color: #969BA0;
+    padding: 8px 20px 8px 12px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.sidebar-menu-body ul.sidebar-submenu li a .fa{
+    font-size: 24px;
+    line-height: 24px;
+    margin-right: 8px;
+}
+.iris-modules-list li:hover ul.sidebar-submenu .fa,
+.iris-modules-list li:hover ul.sidebar-submenu span{
+    color: #969BA0 !important;
+}
+.sidebar-menu-body ul.sidebar-submenu li a:hover{
+    /*background-color: rgba(245,245,245,0.3);*/
+    color: #C3C6C8;
+}
+.iris-modules-list li:hover ul.sidebar-submenu a:hover .fa,
+.iris-modules-list li:hover ul.sidebar-submenu a:hover span{
+    color: #C3C6C8 !important;
+}
