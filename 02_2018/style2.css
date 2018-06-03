@@ -183,10 +183,10 @@
     margin-right: 3px;
 }
 .sidebar-menu-body{
-    overflow: unset;
+    /*overflow: unset;*/
 }
 .app-sidebar-left.left.open{
-    overflow: unset;
+    /*overflow: unset;*/
 }
 .iris-modules-list li:hover a:not(.active) .fa, .iris-modules-list li:hover span:not(.active){
     color: #C3C6C8;
